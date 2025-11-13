@@ -7,7 +7,6 @@ Regex2\n
 RegexN\n
 */
 
-
 #include <fstream>
 #include <iostream>
 #include <string>
@@ -15,21 +14,22 @@ RegexN\n
 #include <numeric>
 
 #include <hs/hs.h>
-
+#include "./regex_handler.h"
 
 using namespace std;
 
-vector<string> read_regex_file(string filename) {
+RegexHandler::RegexHandler(string filename_) {
+    filename = filename_;
+}
 
+void RegexHandler::read_regex_file() {
     ifstream file(filename);
     string line;
-
-    vector<string> rgxs_strings;
 
     if (file.is_open()) {
 
         while (getline(file, line)) {
-            rgxs_strings.push_back(line);
+            rgxs_strings_vector.push_back(line);
         }
         file.close();
 
@@ -37,23 +37,19 @@ vector<string> read_regex_file(string filename) {
         cerr << "Unable to open regex file!" << endl; 
     }
 
-    return rgxs_strings; 
+    size = rgxs_strings_vector.size();
 
+    for (int i = 0; i < size; i++) {
+        rgxs_ptrs_vector.push_back((rgxs_strings_vector[i]).c_str());
+    }
+
+    rgxs = rgxs_ptrs_vector.data();
+    
 }
 
 
-hs_database_t* precompile_regexes(vector<string> rgxs_strings) {
-
-    hs_database_t *database;
+void RegexHandler::precompile_regexes() {
     hs_compile_error_t *compile_err;
-
-    vector<const char*> rgxs_refrences;
-    for (int i = 0; i < rgxs_strings.size(); i++) {
-        rgxs_refrences.push_back((rgxs_strings[i]).c_str());
-    }
-
-    const char* const* rgxs = rgxs_refrences.data();
-    int size = rgxs_strings.size();
 
     vector<unsigned int> flags(size, HS_FLAG_DOTALL);
 
@@ -68,24 +64,14 @@ hs_database_t* precompile_regexes(vector<string> rgxs_strings) {
             rgxs, compile_err->message);
             hs_free_compile_error(compile_err);
     }
-
-    return database;
 }
 
 int main() {
-    vector<string> rgxs_strings = read_regex_file("./regexTest.rgx");
+    RegexHandler sixseven("./regexTest.rgx");
+    sixseven.read_regex_file();
 
-    vector<const char*> rgxs_refrences;
-    for (int i = 0; i < rgxs_strings.size(); i++) {
-        rgxs_refrences.push_back((rgxs_strings[i]).c_str());
-    }
-
-    const char* const* rgxs = rgxs_refrences.data();
-    int size = rgxs_strings.size();
-
-
-    for (int i = 0; i < size; i++) {
-        cout << rgxs[i] << endl;
+    for (int i = 0; i < sixseven.size; i++) {
+        cout << sixseven.rgxs_strings_vector[i] << endl;
     }
     return 1;
 }
