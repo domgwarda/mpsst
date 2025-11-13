@@ -2,6 +2,8 @@
 #include <string>
 #include <boost/program_options.hpp>
 
+#include "regex_handler.h"
+
 namespace po = boost::program_options;
 
 int main(int argc, char* argv[]){
@@ -38,6 +40,10 @@ int main(int argc, char* argv[]){
         std::cout << desc <<"\n";
         return 1;
     }
+
+    RegexHandler regex_handler("regexTest.rgx");
+    regex_handler.load_regex_file();
+    regex_handler.compile_regexes();
 
     return 0;
 };
