@@ -18,11 +18,9 @@ RegexN\n
 
 using namespace std;
 
-RegexHandler::RegexHandler(string filename_) {
-    filename = filename_;
-}
+RegexHandler::RegexHandler(string filename_) : filename(filename_) {}
 
-void RegexHandler::read_regex_file() {
+void RegexHandler::load_regex_file() {
     ifstream file(filename);
     string line;
 
@@ -48,7 +46,7 @@ void RegexHandler::read_regex_file() {
 }
 
 
-void RegexHandler::precompile_regexes() {
+void RegexHandler::compile_regexes() {
     hs_compile_error_t *compile_err;
 
     vector<unsigned int> flags(size, HS_FLAG_DOTALL);
@@ -66,12 +64,6 @@ void RegexHandler::precompile_regexes() {
     }
 }
 
-int main() {
-    RegexHandler sixseven("./regexTest.rgx");
-    sixseven.read_regex_file();
-
-    for (int i = 0; i < sixseven.size; i++) {
-        cout << sixseven.rgxs_strings_vector[i] << endl;
-    }
-    return 1;
+hs_database_t* RegexHandler::get_database() {
+    return database;
 }

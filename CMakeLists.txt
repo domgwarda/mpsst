@@ -8,11 +8,10 @@ find_package(PkgConfig REQUIRED)
 find_package(Boost REQUIRED COMPONENTS program_options)
 pkg_check_modules(PC_HYPERSCAN REQUIRED IMPORTED_TARGET libhs)
 
-add_executable(main main.cpp)
+add_executable(main 
+    main.cpp regex_handler.cpp)
 
-add_executable(regex_handler regex_handler.cpp)
-target_link_libraries(regex_handler hs)
-
+target_link_libraries(main hs)
 
 target_link_libraries(main 
     PkgConfig::PC_HYPERSCAN
