@@ -30,7 +30,7 @@ int main(int argc, char* argv[]){
     } else {
         std::cout << "Regex path is missing \n";
         std::cout << desc <<"\n";
-        return 1;
+        return 2;
     }
 
     if (vm.count("file")) {
@@ -38,10 +38,10 @@ int main(int argc, char* argv[]){
     } else {
         std::cout << "Root path is missing \n" ;
         std::cout << desc <<"\n";
-        return 1;
+        return 3;
     }
 
-    RegexHandler regex_handler("regexTest.rgx");
+    RegexHandler regex_handler(regex_path);
     regex_handler.load_regex_file();
     regex_handler.compile_regexes();
 
