@@ -1,24 +1,41 @@
-#!/usr/bin/env bash
+#!/bin/sh
+# Test checks if RegexHandler correctly loads all regex patterns from a file.
+
 set -e
-# Checks whether the program prints a message when --file argument is missing
+TMPDIR=$(mktemp -d)
+trap "rm -rf $TMPDIR" EXIT
 
-BIN=build/main
-if [ ! -x "$BIN" ]; then
-    echo "03_only_regex: FAIL (binary not found, run 01_build.sh first)"
-    exit 2
-fi
+BIN_DIR=$(pwd)   
 
-# Run program with only --regex argument, capture all output
-OUTPUT=$("$BIN" --regex regexTest.rgx 2>&1 || true)
+echo -e "aaa\naba\ncc" > "$TMPDIR/test.rgx"
 
-# Always print the program output for visibility
-echo "$OUTPUT"
+cat > "$TMPDIR/test_load.cpp" << EOF
+#include <iostream>
+#include <string>
+#include "$BIN_DIR/regex_handler.h"
 
-# Check for expected message
-if echo "$OUTPUT" | grep -q "Root path is missing"; then
-    echo "03_only_regex: PASS"
-    exit 0
-else
-    echo "03_only_regex: FAIL (expected message 'Root path is missing' not found)"
+int main() {
+    RegexHandler rh("$TMPDIR/test.rgx");
+    rh.load_regex_file();
+    std::cout << rh.size << std::endl;
+    return 0;
+}
+EOF
+
+g++ -std=c++20 "$TMPDIR/test_load.cpp" "$BIN_DIR/regex_handler.cpp" -I"$BIN_DIR" -lhs -o "$TMPDIR/test_load"
+
+OUTPUT=$("$TMPDIR/test_load")
+RET=$?
+
+RET=$?
+if [ $RET -ne 0 ]; then
+    echo "TEST 3 FAIL: Test program returned non-zero exit code $RET"
     exit 1
 fi
+
+if [ "$OUTPUT" -ne 3 ]; then
+    echo "TEST 3 FAIL: expected 3 regexes, got $OUTPUT"
+    exit 1
+fi
+
+echo "TEST 3 PASS"
