@@ -5,6 +5,7 @@
 
 #include "hs_regex_handler.h"
 #include "directory_scanner.h"
+#include "hs_file_scanner.h"
 
 namespace po = boost::program_options;
 
@@ -61,8 +62,11 @@ int main(int argc, char* argv[]){
     // Optional debug / single file test
     //regex_handler.scan_file();
     //regex_handler.debug_scan_literal();
+
+    hs_database_t *db = regex_handler.get_database();
     
-    DirectoryScanner scanner(regex_handler);
+    HSFileScanner fscanner(db);
+    DirectoryScanner scanner(fscanner);
     scanner.scan(root_path);
 
     return 0;

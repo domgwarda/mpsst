@@ -20,12 +20,12 @@ to scan every file encountered.
 
 #pragma once
 #include <string>
-#include "hs_regex_handler.h"
+#include "abstract_file_scanner.h"
 
 class DirectoryScanner {
 public:
-    explicit DirectoryScanner(HSRegexHandler &handler);
+    explicit DirectoryScanner(AbstractFileScanner &handler);
     void scan(const std::string &root);
 private:
-    HSRegexHandler &handler_;
+    AbstractFileScanner &handler_;
 };

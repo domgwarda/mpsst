@@ -73,7 +73,5 @@ class HSRegexHandler : public AbstractRegexHandler {
         void load_regex_database(const string& filename) override; 
         void save_regex_database(const string& filename) override;
         void compile_regexes() override;
-        void scan_file(const string &path);
-        void debug_scan_literal();
 };      
 

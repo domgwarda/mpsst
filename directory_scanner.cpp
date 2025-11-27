@@ -4,7 +4,7 @@
 
 namespace fs = std::filesystem;
 
-DirectoryScanner::DirectoryScanner(HSRegexHandler &handler) : handler_(handler) {}
+DirectoryScanner::DirectoryScanner(AbstractFileScanner &handler) : handler_(handler) {}
 
 void DirectoryScanner::scan(const std::string &root) {
     std::error_code ec;

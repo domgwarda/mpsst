@@ -14,6 +14,7 @@ add_executable(main
     main.cpp
     hs_regex_handler.cpp
     directory_scanner.cpp
+    hs_file_scanner.cpp
 )
 
 target_link_libraries(main 
