@@ -16,7 +16,6 @@ add_executable(main
     directory_scanner.cpp
 )
 
-
 target_link_libraries(main 
     PkgConfig::PC_HYPERSCAN
     Boost::program_options

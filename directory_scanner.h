@@ -26,6 +26,6 @@ class DirectoryScanner {
 public:
     explicit DirectoryScanner(RegexHandler &handler);
     void scan(const std::string &root);
-// private:
-//     RegexHandler &handler_;
+private:
+    RegexHandler &handler_;
 };

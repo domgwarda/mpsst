@@ -62,19 +62,20 @@ class RegexHandler {
     public:
         int size;
         vector<string> rgxs_strings_vector;
-        const string filename;
 
         // block scan threshold
         static constexpr std::size_t BLOCK_THRESHOLD = 4 * 1024 * 1024; // 4 MB
 
-        RegexHandler(string filename_);
+        RegexHandler();
         ~RegexHandler();
 
         hs_database_t* get_database();
-        void load_regex_file();
+        void load_regex_file(const string& filename);
+        void load_regex_database(const string& filename);
+        void save_regex_database(const string& filename);
         void compile_regexes();
 
-        void scan_file(const std::string &path);
+        void scan_file(const string &path);
         
         void debug_scan_literal();
 
