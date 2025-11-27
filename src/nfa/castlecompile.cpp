@@ -281,7 +281,7 @@ vector<vector<u32>> checkExclusion(u32 &streamStateSize,
     size_t total = 0;
     while (lower < trigSize) {
         vector<CliqueVertex> vertices;
-        unique_ptr<CliqueGraph> cg = make_unique<CliqueGraph>();
+        unique_ptr<CliqueGraph> cg = ue2::make_unique<CliqueGraph>();
 
         vector<vector<size_t>> min_reset_dist;
         size_t upper = min(lower + CLIQUE_GRAPH_MAX_SIZE, trigSize);

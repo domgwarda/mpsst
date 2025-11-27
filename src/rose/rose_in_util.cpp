@@ -93,7 +93,7 @@ private:
 
 unique_ptr<RoseInGraph> cloneRoseGraph(const RoseInGraph &ig) {
     assert(hasCorrectlyNumberedVertices(ig));
-    unique_ptr<RoseInGraph> out = make_unique<RoseInGraph>();
+    unique_ptr<RoseInGraph> out = ue2::make_unique<RoseInGraph>();
 
     unordered_map<const NGHolder *, shared_ptr<NGHolder>> graph_map;
     unordered_map<const raw_som_dfa *, shared_ptr<raw_som_dfa>> haig_map;

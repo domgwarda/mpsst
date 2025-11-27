@@ -249,7 +249,7 @@ unique_ptr<NGHolder> populate_holder(const simple_anchored_info &sai,
                                      const flat_set<u32> &exit_ids) {
     DEBUG_PRINTF("populating holder for ^.{%u,%u}%s\n", sai.min_bound,
                  sai.max_bound, dumpString(sai.literal).c_str());
-    auto h_ptr = make_unique<NGHolder>();
+    auto h_ptr = ue2::make_unique<NGHolder>();
     NGHolder &h = *h_ptr;
     auto ends = addDotsToGraph(h, h.start, sai.min_bound, sai.max_bound,
                                CharReach::dot());
