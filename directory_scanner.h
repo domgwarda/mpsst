@@ -20,7 +20,7 @@ to scan every file encountered.
 
 #pragma once
 #include <string>
-#include "regex_handler.h"
+#include "hs_regex_handler.h"
 
 class DirectoryScanner {
 public:

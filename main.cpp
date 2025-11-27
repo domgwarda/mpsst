@@ -2,7 +2,7 @@
 #include <string>
 #include <boost/program_options.hpp>
 
-#include "regex_handler.h"
+#include "hs_regex_handler.h"
 #include "directory_scanner.h"
 
 namespace po = boost::program_options;

@@ -12,7 +12,7 @@ pkg_check_modules(PC_HYPERSCAN REQUIRED IMPORTED_TARGET libhs)
 include_directories(/usr/local/include)
 add_executable(main
     main.cpp
-    regex_handler.cpp
+    hs_regex_handler.cpp
     directory_scanner.cpp
 )
 
