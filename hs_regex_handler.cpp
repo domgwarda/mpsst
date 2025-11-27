@@ -1,21 +1,22 @@
 #include "hs_regex_handler.h"
 
+#include <cstddef>
 #include <fstream>
+#include <hs/hs_common.h>
+#include <ios>
 #include <iostream>
+#include <ostream>
 #include <string>
 #include <vector>
 #include <numeric>
 #include <cstdio>
-#include <cstdint>
-#include <filesystem>
 #include <cstring> // strdup
 #include <cstdlib> // free
 
 
 using namespace std;
-namespace fs = std::filesystem;
 
-HSRegexHandler::HSRegexHandler(string filename_) : AbstractRegexHandler(filename_) {}
+HSRegexHandler::HSRegexHandler() {}
 
 HSRegexHandler::~HSRegexHandler() {
     if (database) {
@@ -24,7 +25,7 @@ HSRegexHandler::~HSRegexHandler() {
     }
 }
 
-void HSRegexHandler::load_regex_file() {
+void HSRegexHandler::load_regex_file(const string& filename) {
     ifstream file(filename);
     string line;
 
@@ -83,119 +84,65 @@ void HSRegexHandler::compile_regexes() {
     }
 }
 
+void HSRegexHandler::load_regex_database(const std::string& filename){
+    ifstream file(filename, std::ios::binary|std::ios::ate);
+
+    if (!file.good()){
+        cerr<<"Unabele to open binary regex file: "<<filename<<"\n";
+        return;
+    }
+
+    streamsize size = file.tellg();
+    file.seekg(0, std::ios::beg);
+    if (size == 0) {
+        cerr << "Error: File " << filename << " is empty!\n";
+        return;
+    }
+
+    std::vector<char> buffer(size);
+
+    if(!file.read(buffer.data(), size)){
+        cerr<<"Error while reading from file\n";
+        return;
+    }
+
+    hs_error_t err = hs_deserialize_database(buffer.data(), size, &database);
+
+    if (err!=HS_SUCCESS){
+        cerr<<"Error deserializing database from binary file. Error code: "<<err<<"\n";
+        database=nullptr;
+        return;
+    } else {
+        cout<<"Successfully loaded compiled database from " << filename << "\n";
+    }
+}
+
+void HSRegexHandler::save_regex_database(const string& filename){
+    if (database==nullptr) {
+        cerr<<"No database to save, compile regexs first\n";
+    }
+
+    char *bytes = nullptr;
+    size_t length = 0;
+
+    hs_error_t err = hs_serialize_database(database, &bytes, &length);
+
+    if (err!=HS_SUCCESS){
+        cerr<<"Error serializing database. Error code: "<<err<<"\n";
+    } 
+
+    ofstream file(filename,ios::binary);
+    if (file.is_open()){
+        file.write(bytes, length);
+        file.close();
+        cout<<"Database saved to: "<<filename<<"\n";
+    } else {
+        cerr<<"Unable to open file:"<<filename<<"\n";
+    }
+
+    free(bytes);
+}
+
 hs_database_t* HSRegexHandler::get_database() {
     return database;
 }
-
-static int on_match(unsigned int id, unsigned long long from, unsigned long long to, unsigned int flags, void *ctx) {
-    const char* path = static_cast<const char*>(ctx);
-    printf("%s:%llu:%llu:id=%u\n", path, from, to, id);
-    fprintf(stderr, "[on_match] %s %llu..%llu id=%u\n", path, from, to, id);
-    return 0; 
-}
-
-void HSRegexHandler::scan_file(const std::string &path) {
-    if (!database) {
-        std::cerr << "Database not compiled. Call compile_regexes() first.\n";
-        return;
-    }
-    
-    hs_scratch_t *scratch = nullptr;    // hs_scratch_t in Hyperscan is a temporary, per-thread workspace required for scanning
-
-    if (hs_alloc_scratch(database, &scratch) != HS_SUCCESS) {
-        std::cerr << "Failed to allocate scratch space\n";
-        return;
-    }
-
-    hs_stream_t *stream = nullptr;
-    if (hs_open_stream(database, 0, &stream) != HS_SUCCESS) {
-        std::cerr << "Failed to open Hyperscan stream\n";
-        hs_free_scratch(scratch);
-        return;
-    }
-
-    const size_t BUFSIZE = 1 << 20;
-    std::vector<char> buf(BUFSIZE);
-
-    std::ifstream in(path, std::ios::binary);
-    if (!in) {
-        std::cerr << "Cannot open file for streaming scan: " << path << "\n";
-        hs_close_stream(stream, scratch, nullptr, nullptr);
-        hs_free_scratch(scratch);
-        return;
-    }
-
-    char *ctx_path = strdup(path.c_str());
-
-    while (in) {
-        in.read(buf.data(), static_cast<std::streamsize>(buf.size()));
-        std::streamsize readn = in.gcount();
-        std::cerr << "[scan_file] read bytes: " << readn << " from file " << path << std::endl;
-
-        if (readn <= 0) break;
-
-        hs_error_t rv = hs_scan_stream(stream,
-                               buf.data(),
-                               static_cast<unsigned int>(readn),
-                               0,
-                               scratch,
-                               on_match,
-                               (void*)ctx_path);
-
-        if (rv != HS_SUCCESS) {
-            std::cerr << "hs_scan_stream failed with code " << rv << " for file " << path << "\n";
-            break;
-        }
-    }
-
-    hs_error_t close_rv = hs_close_stream(stream, scratch, nullptr, nullptr);
-
-    std::cerr << "[scan_file] hs_close_stream rv=" << close_rv << " for file " << path << std::endl;
-
-    free(ctx_path);
-
-    hs_free_scratch(scratch);
-    in.close();
-}
-
-void HSRegexHandler::debug_scan_literal() {
-    if (!database) {
-        std::cerr << "[debug] Database not compiled.\n";
-        return;
-    }
-
-    const char *data = "xxx\naaa\nyyy\naba\ncc\n";
-    const unsigned int len = static_cast<unsigned int>(strlen(data));
-    const char *ctx_literal = "debug_literal";
-
-    hs_scratch_t *scratch_block = nullptr;
-    if (hs_alloc_scratch(database, &scratch_block) != HS_SUCCESS) {
-        std::cerr << "[debug] Failed to allocate scratch for block\n";
-    } else {
-        hs_error_t rv_block = hs_scan(database, data, len, 0, scratch_block, on_match, (void*)ctx_literal);
-        std::cerr << "[debug] hs_scan (block) rv=" << rv_block << " for literal (" << len << " bytes)\n";
-        hs_free_scratch(scratch_block);
-    }
-
-    hs_scratch_t *scratch = nullptr;
-    if (hs_alloc_scratch(database, &scratch) != HS_SUCCESS) {
-        std::cerr << "[debug] Failed to allocate scratch for stream\n";
-        return;
-    }
-
-    hs_stream_t *stream = nullptr;
-    if (hs_open_stream(database, 0, &stream) != HS_SUCCESS) {
-        std::cerr << "[debug] Failed to open stream\n";
-        hs_free_scratch(scratch);
-        return;
-    }
-
-    hs_error_t rv_stream_scan = hs_scan_stream(stream, data, len, 0, scratch, on_match, (void*)ctx_literal);
-    std::cerr << "[debug] hs_scan_stream (with on_match) rv=" << rv_stream_scan << " for literal (" << len << " bytes)\n";
-
-    hs_error_t close_rv = hs_close_stream(stream, scratch, nullptr, nullptr);
-    std::cerr << "[debug] hs_close_stream rv=" << close_rv << "\n";
-
-    hs_free_scratch(scratch);
-}
-

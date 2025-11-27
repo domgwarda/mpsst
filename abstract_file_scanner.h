@@ -1,3 +1,5 @@
+#pragma once
+
 #include <vector>
 #include <string>
 #include <hs/hs.h>
@@ -8,8 +10,8 @@ class AbstractFileScanner {
     protected:
         hs_database_t *database;
     public:
-        HSFileScanner(hs_database_t *database);
-        ~HSFileScanner() override;
-        void scan_file(const std::string &path) override;
-        void debug_scan_literal() override;
+        explicit AbstractFileScanner(hs_database_t *database_): database(database_) {};
+        virtual ~AbstractFileScanner() = default;
+        virtual void scan_file(const std::string &path) = 0;
+        virtual void debug_scan_literal(hs_database_t *database) = 0;
 };      
