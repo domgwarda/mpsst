@@ -680,7 +680,7 @@ unique_ptr<raw_dfa> buildDfa(LitTrie &trie, bool nocase) {
     // Construct DFA states in BFS order.
     const auto state_ids = makeStateMap(trie, ordering);
 
-    auto rdfa = make_unique<raw_dfa>(NFA_OUTFIX);
+    auto rdfa = ue2::make_unique<raw_dfa>(NFA_OUTFIX);
 
     // Calculate alphabet.
     array<u16, ALPHABET_SIZE> unalpha;
