@@ -30,7 +30,7 @@ int main(int argc, char* argv[]){
     std::string regex_path = vm["regex"].as<std::string>();
     std::string root_path  = vm["file"].as<std::string>();
 
-    RegexHandler regex_handler(regex_path);
+    HSRegexHandler regex_handler(regex_path);
     regex_handler.load_regex_file();
     regex_handler.compile_regexes();
 

@@ -24,8 +24,8 @@ to scan every file encountered.
 
 class DirectoryScanner {
 public:
-    explicit DirectoryScanner(RegexHandler &handler);
+    explicit DirectoryScanner(HSRegexHandler &handler);
     void scan(const std::string &root);
-// private:
-//     RegexHandler &handler_;
+private:
+    HSRegexHandler &handler_;
 };
