@@ -3,7 +3,7 @@
 #include <string>
 #include <boost/program_options.hpp>
 
-#include "regex_handler.h"
+#include "hs_regex_handler.h"
 #include "directory_scanner.h"
 
 namespace po = boost::program_options;
@@ -42,7 +42,7 @@ int main(int argc, char* argv[]){
 
     root_path  = vm["file"].as<std::string>();
 
-    RegexHandler regex_handler;
+    HSRegexHandler regex_handler;
     
     if(!regex_path.empty()){
         regex_handler.load_regex_file(regex_path);

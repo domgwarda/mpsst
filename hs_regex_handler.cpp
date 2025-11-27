@@ -1,4 +1,4 @@
-#include "regex_handler.h"
+#include "hs_regex_handler.h"
 
 #include <cstddef>
 #include <fstream>
@@ -16,15 +16,16 @@
 
 using namespace std;
 
-RegexHandler::RegexHandler() {}
-RegexHandler::~RegexHandler() {
+HSRegexHandler::HSRegexHandler() {}
+
+HSRegexHandler::~HSRegexHandler() {
     if (database) {
         hs_free_database(database);
         database = nullptr;
     }
 }
 
-void RegexHandler::load_regex_file(const string& filename) {
+void HSRegexHandler::load_regex_file(const string& filename) {
     ifstream file(filename);
     string line;
 
@@ -55,7 +56,7 @@ void RegexHandler::load_regex_file(const string& filename) {
     }
 }
 
-void RegexHandler::compile_regexes() {
+void HSRegexHandler::compile_regexes() {
     if (size == 0 || rgxs == nullptr) {
         cerr << "No regexes to compile\n";
         return;
@@ -83,7 +84,7 @@ void RegexHandler::compile_regexes() {
     }
 }
 
-void RegexHandler::load_regex_database(const std::string& filename){
+void HSRegexHandler::load_regex_database(const std::string& filename){
     ifstream file(filename, std::ios::binary|std::ios::ate);
 
     if (!file.good()){
@@ -116,7 +117,7 @@ void RegexHandler::load_regex_database(const std::string& filename){
     }
 }
 
-void RegexHandler::save_regex_database(const string& filename){
+void HSRegexHandler::save_regex_database(const string& filename){
     if (database==nullptr) {
         cerr<<"No database to save, compile regexs first\n";
     }
@@ -142,7 +143,7 @@ void RegexHandler::save_regex_database(const string& filename){
     free(bytes);
 }
 
-hs_database_t* RegexHandler::get_database() {
+hs_database_t* HSRegexHandler::get_database() {
     return database;
 }
 
@@ -153,7 +154,7 @@ static int on_match(unsigned int id, unsigned long long from, unsigned long long
     return 0; 
 }
 
-void RegexHandler::scan_file(const std::string &path) {
+void HSRegexHandler::scan_file(const std::string &path) {
     if (!database) {
         std::cerr << "Database not compiled. Call compile_regexes() first.\n";
         return;
@@ -217,7 +218,7 @@ void RegexHandler::scan_file(const std::string &path) {
     in.close();
 }
 
-void RegexHandler::debug_scan_literal() {
+void HSRegexHandler::debug_scan_literal() {
     if (!database) {
         std::cerr << "[debug] Database not compiled.\n";
         return;
