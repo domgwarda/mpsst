@@ -19,6 +19,7 @@ add_executable(main
     hs_regex_handler.cpp
     directory_scanner.cpp
     hs_file_scanner.cpp
+    engine_regex_handler.h
 )
 
 

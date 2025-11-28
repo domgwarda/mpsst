@@ -6,6 +6,7 @@
 #include "hs_regex_handler.h"
 #include "directory_scanner.h"
 #include "hs_file_scanner.h"
+#include "engine_regex_handler.h"
 
 namespace po = boost::program_options;
 
@@ -43,17 +44,18 @@ int main(int argc, char* argv[]){
 
     root_path  = vm["file"].as<std::string>();
 
-    HSRegexHandler regex_handler;
+    EngineRegex engine(Hyperscan);
+    AbstractRegexHandler* regex_handler = engine.get_engine();
     
     if(!regex_path.empty()){
-        regex_handler.load_regex_file(regex_path);
-        regex_handler.compile_regexes();
+        regex_handler->load_regex_file(regex_path);
+        regex_handler->compile_regexes();
 
         if (!bin_regex_path.empty()) {
-            regex_handler.save_regex_database(bin_regex_path);
+            regex_handler->save_regex_database(bin_regex_path);
         }
     } else if (!bin_regex_path.empty()) {
-        regex_handler.load_regex_database(bin_regex_path);
+        regex_handler->load_regex_database(bin_regex_path);
     } else {
         cerr<< "Error: You must provide either a regex source file (-r) or a binary database (-b).\n";
         return 1;
@@ -62,12 +64,16 @@ int main(int argc, char* argv[]){
     // Optional debug / single file test
     //regex_handler.scan_file();
     //regex_handler.debug_scan_literal();
+    vector<string> rgxs_vector = regex_handler->get_regexs_vector();
+    for (int i = 0; i < regex_handler->get_regexs_vector_size(); i++) {
+        cout << rgxs_vector[i] << endl;
+    }
 
-    hs_database_t *db = regex_handler.get_database();
+    hs_database_t *db = regex_handler->get_database();
     
     HSFileScanner fscanner(db);
     DirectoryScanner scanner(fscanner);
-    scanner.scan(root_path);
+    // scanner.scan(root_path);
 
     return 0;
 }

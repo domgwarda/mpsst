@@ -58,10 +58,9 @@ class HSRegexHandler : public AbstractRegexHandler {
         vector<const char*> rgxs_ptrs_vector;
         const char* const* rgxs;
         hs_database_t *database = nullptr;
-    public:
         int size;
         vector<string> rgxs_strings_vector;
-
+    public:
         // block scan threshold
         static constexpr std::size_t BLOCK_THRESHOLD = 4 * 1024 * 1024; // 4 MB
 
@@ -73,5 +72,7 @@ class HSRegexHandler : public AbstractRegexHandler {
         void load_regex_database(const string& filename) override; 
         void save_regex_database(const string& filename) override;
         void compile_regexes() override;
-};      
 
+        vector<string> get_regexs_vector() override;
+        int get_regexs_vector_size() override;
+};      
