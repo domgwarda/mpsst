@@ -1,91 +1,29 @@
-#include "regex_handler.h"
-
+#include <cstddef>
 #include <fstream>
+#include <hs/hs_common.h>
+#include <ios>
 #include <iostream>
+#include <ostream>
 #include <string>
 #include <vector>
 #include <numeric>
 #include <cstdio>
-#include <cstdint>
-#include <filesystem>
-#include <cstring> // strdup
-#include <cstdlib> // free
+#include <cstring>
+#include <cstdlib>
+
+#include "hs_file_scanner.h"
 
 
 using namespace std;
-namespace fs = std::filesystem;
 
-HSRegexHandler::HSRegexHandler(string filename_) : AbstractRegexHandler(filename_) {}
+HSFileScanner::HSFileScanner(hs_database_t *database): AbstractFileScanner(database) {};
 
-HSRegexHandler::~HSRegexHandler() {
+HSFileScanner::~HSFileScanner() {
     if (database) {
         hs_free_database(database);
         database = nullptr;
     }
-}
-
-void HSRegexHandler::load_regex_file() {
-    ifstream file(filename);
-    string line;
-
-    rgxs_strings_vector.clear();
-    rgxs_ptrs_vector.clear();
-    rgxs = nullptr;
-
-    if (file.is_open()) {
-        while (getline(file, line)) {
-            if (line.empty()) continue;
-            rgxs_strings_vector.push_back(line);
-        }
-        file.close();
-    } else {
-        cerr << "Unable to open regex file: " << filename << endl;
-    }
-
-    size = static_cast<int>(rgxs_strings_vector.size());
-
-    for (int i = 0; i < size; ++i) {
-        rgxs_ptrs_vector.push_back(rgxs_strings_vector[i].c_str());
-    }
-
-    if (!rgxs_ptrs_vector.empty()) {
-        rgxs = rgxs_ptrs_vector.data();
-    } else {
-        rgxs = nullptr;
-    }
-}
-
-void HSRegexHandler::compile_regexes() {
-    if (size == 0 || rgxs == nullptr) {
-        cerr << "No regexes to compile\n";
-        return;
-    }
-
-    hs_compile_error_t *compile_err = nullptr;
-
-    vector<unsigned int> flags(size, HS_FLAG_DOTALL);
-    vector<unsigned int> ids(size);
-    iota(ids.begin(), ids.end(), 1);
-
-    unsigned int mode = HS_MODE_STREAM;
-
-    if (hs_compile_multi(rgxs, flags.data(), ids.data(), size, mode, nullptr,
-                         &database, &compile_err) != HS_SUCCESS) {
-        if (compile_err && compile_err->message) {
-            fprintf(stderr, "ERROR: Unable to compile pattern: %s\n", compile_err->message);
-            hs_free_compile_error(compile_err);
-        } else {
-            fprintf(stderr, "ERROR: Unable to compile patterns.\n");
-        }
-        database = nullptr;
-    } else {
-        cout << "Compiled " << size << " regex(es) into Hyperscan database\n";
-    }
-}
-
-hs_database_t* HSRegexHandler::get_database() {
-    return database;
-}
+};
 
 static int on_match(unsigned int id, unsigned long long from, unsigned long long to, unsigned int flags, void *ctx) {
     const char* path = static_cast<const char*>(ctx);
@@ -94,7 +32,7 @@ static int on_match(unsigned int id, unsigned long long from, unsigned long long
     return 0; 
 }
 
-void HSRegexHandler::scan_file(const std::string &path) {
+void HSFileScanner::scan_file(const string &path) {
     if (!database) {
         std::cerr << "Database not compiled. Call compile_regexes() first.\n";
         return;
@@ -158,7 +96,7 @@ void HSRegexHandler::scan_file(const std::string &path) {
     in.close();
 }
 
-void HSRegexHandler::debug_scan_literal() {
+void HSFileScanner::debug_scan_literal(hs_database_t *database) {
     if (!database) {
         std::cerr << "[debug] Database not compiled.\n";
         return;

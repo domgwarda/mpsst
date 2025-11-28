@@ -1,0 +1,9 @@
+Compiled 1 regex(es) into Hyperscan database
+[scan_file] read bytes: 25 from file test/infiles/f_test1/file1.txt
+[scan_file] hs_close_stream rv=0 for file test/infiles/f_test1/file1.txt
+[scan_file] read bytes: 12 from file test/infiles/f_test1/subdir2/nested/file3.txt
+[scan_file] hs_close_stream rv=0 for file test/infiles/f_test1/subdir2/nested/file3.txt
+[scan_file] read bytes: 17 from file test/infiles/f_test1/subdir2/other.bin
+[scan_file] hs_close_stream rv=0 for file test/infiles/f_test1/subdir2/other.bin
+[scan_file] read bytes: 21 from file test/infiles/f_test1/subdir1/file2.log
+[scan_file] hs_close_stream rv=0 for file test/infiles/f_test1/subdir1/file2.log

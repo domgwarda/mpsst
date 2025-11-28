@@ -16,8 +16,9 @@ add_subdirectory(third_party/hyperscan_mini)
 
 add_executable(main
     main.cpp
-    regex_handler.cpp
+    hs_regex_handler.cpp
     directory_scanner.cpp
+    hs_file_scanner.cpp
 )
 
 
