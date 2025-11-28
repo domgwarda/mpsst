@@ -21,3 +21,12 @@ For example to scan files from regex file and save compiled HS database run: `./
 From the project root run 
 `base64 /dev/urandom | head -c 2GB > test2gb.txt`
 to create test file (size 2GB) 
+
+# Run tests
+From the project root run 
+`./test/all_tests.sh`
+to run all tests
+
+From the project root run 
+`./test/test1.sh`
+to run test1
