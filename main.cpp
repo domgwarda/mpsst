@@ -1,20 +1,26 @@
 #include <boost/program_options/value_semantic.hpp>
 #include <iostream>
 #include <string>
+#include <vector>
+#include <cstring>
 #include <boost/program_options.hpp>
 
 #include "hs_regex_handler.h"
 #include "directory_scanner.h"
 #include "hs_file_scanner.h"
 
+#include "directory_scanner_parallel.h"
+
 namespace po = boost::program_options;
 
 int main(int argc, char* argv[]){
+
     po::options_description desc("REQUIRED options");
     desc.add_options()
         ("regex,r", po::value<std::string>(), "Path to regex file or binary database (-b)")
         ("file,f", po::value<std::string>(), "Path to the root of the files to search")
         ("binDatabase,b", po::value<std::string>(), "Path to regex file compressd to binary format or normal regex file (-r)");
+        ("parallel,p", po::value<int>()->implicit_value(0), "Enable parallel scanning. Optional numeric value = number of workers (0 = autodetect)");
 
     po::variables_map vm;
     try {
@@ -22,6 +28,7 @@ int main(int argc, char* argv[]){
         po::notify(vm);
     } catch (const po::error& e) {
         std::cerr << "Error: " << e.what() << "\n";
+        std::cout << desc << "\n";
         return 1;
     }
 
@@ -64,10 +71,27 @@ int main(int argc, char* argv[]){
     //regex_handler.debug_scan_literal();
 
     hs_database_t *db = regex_handler.get_database();
-    
+
+    if (!db) {
+        std::cerr << "Error: Hyperscan database not available\n";
+        return 1;
+    }
+
     HSFileScanner fscanner(db);
-    DirectoryScanner scanner(fscanner);
-    scanner.scan(root_path);
+
+    
+    const bool use_parallel = false; // config sequential vs parallel
+    const int workers = 8;
+
+
+    if (use_parallel) {
+        DirectoryScannerParallel pscanner(fscanner, static_cast<unsigned>(workers));
+        pscanner.scan(root_path);
+    } else {
+        DirectoryScanner scanner(fscanner);
+        scanner.scan(root_path);
+    }
+    
 
     return 0;
 }

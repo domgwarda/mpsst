@@ -11,6 +11,10 @@
 #include <cstring>
 #include <cstdlib>
 
+#include <chrono>
+#include <iomanip>
+#include <mutex>
+
 #include "hs_file_scanner.h"
 
 
@@ -19,20 +23,24 @@ using namespace std;
 HSFileScanner::HSFileScanner(hs_database_t *database): AbstractFileScanner(database) {};
 
 HSFileScanner::~HSFileScanner() {
-    if (database) {
-        hs_free_database(database);
+    
         database = nullptr;
-    }
+   
 };
+
+static std::mutex hs_print_mutex; //timing prints
 
 static int on_match(unsigned int id, unsigned long long from, unsigned long long to, unsigned int flags, void *ctx) {
     const char* path = static_cast<const char*>(ctx);
     printf("%s:%llu:%llu:id=%u\n", path, from, to, id);
-    fprintf(stderr, "[on_match] %s %llu..%llu id=%u\n", path, from, to, id);
+   // fprintf(stderr, "[on_match] %s %llu..%llu id=%u\n", path, from, to, id);
     return 0; 
 }
 
 void HSFileScanner::scan_file(const string &path) {
+    using clock = std::chrono::steady_clock;
+    auto t_start = clock::now();
+
     if (!database) {
         std::cerr << "Database not compiled. Call compile_regexes() first.\n";
         return;
@@ -54,6 +62,7 @@ void HSFileScanner::scan_file(const string &path) {
 
     const size_t BUFSIZE = 1 << 20;
     std::vector<char> buf(BUFSIZE);
+    std::uint64_t total_bytes = 0;
 
     std::ifstream in(path, std::ios::binary);
     if (!in) {
@@ -68,7 +77,7 @@ void HSFileScanner::scan_file(const string &path) {
     while (in) {
         in.read(buf.data(), static_cast<std::streamsize>(buf.size()));
         std::streamsize readn = in.gcount();
-        std::cerr << "[scan_file] read bytes: " << readn << " from file " << path << std::endl;
+        //std::cerr << "[scan_file] read bytes: " << readn << " from file " << path << std::endl;
 
         if (readn <= 0) break;
 
@@ -88,7 +97,24 @@ void HSFileScanner::scan_file(const string &path) {
 
     hs_error_t close_rv = hs_close_stream(stream, scratch, nullptr, nullptr);
 
-    std::cerr << "[scan_file] hs_close_stream rv=" << close_rv << " for file " << path << std::endl;
+    auto t_end = clock::now();
+    std::chrono::duration<double> elapsed = t_end - t_start;
+    double secs = elapsed.count();
+    double mb = static_cast<double>(total_bytes) / (1024.0 * 1024.0);
+    double mbps = (secs > 0.0) ? (mb / secs) : 0.0;
+
+    {
+        std::scoped_lock lk(hs_print_mutex);
+        std::cerr << std::fixed << std::setprecision(3)
+                  << "[timing] file=" << path
+                  << " bytes=" << total_bytes
+                  << " time=" << secs << "s"
+                  << " rate=" << mbps << " MB/s"
+                  << " hs_close_stream_rv=" << close_rv
+                  << std::endl;
+    }
+
+    //std::cerr << "[scan_file] hs_close_stream rv=" << close_rv << " for file " << path << std::endl;
 
     free(ctx_path);
 

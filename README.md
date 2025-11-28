@@ -21,3 +21,14 @@ For example to scan files from regex file and save compiled HS database run: `./
 From the project root run 
 `base64 /dev/urandom | head -c 2GB > test2gb.txt`
 to create test file (size 2GB) 
+
+to create big test folder for multi-thread testing run
+mkdir -p test_parallel
+for i in {1..10}; do
+    base64 /dev/urandom | head -c 2G > test_parallel/test${i}.txt &
+done
+wait
+
+## Time/Performance evaluation
+./build/main -r file.rgx -f search_dir_head &> timing.log
+timings: stderr(default) -> .log file
