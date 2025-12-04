@@ -19,10 +19,10 @@ using namespace std;
 HSFileScanner::HSFileScanner(hs_database_t *database): AbstractFileScanner(database) {};
 
 HSFileScanner::~HSFileScanner() {
-    if (database) {
-        hs_free_database(database);
-        database = nullptr;
-    }
+    // if (database) {
+        // hs_free_database(database);
+        // database = nullptr;
+    // }
 };
 
 static int on_match(unsigned int id, unsigned long long from, unsigned long long to, unsigned int flags, void *ctx) {

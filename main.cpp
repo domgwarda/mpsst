@@ -73,7 +73,7 @@ int main(int argc, char* argv[]){
     
     HSFileScanner fscanner(db);
     DirectoryScanner scanner(fscanner);
-    // scanner.scan(root_path);
+    scanner.scan(root_path);
 
     return 0;
 }

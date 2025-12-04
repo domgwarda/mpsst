@@ -1,9 +1,24 @@
-Compiled 1 regex(es) into Hyperscan database
-[scan_file] read bytes: 25 from file test/infiles/f_test1/file1.txt
+aaa
+aba
+cc
+Compiled 3 regex(es) into Hyperscan database
+[on_match] test/infiles/f_test1/file1.txt 0..23 id=2
+[on_match] test/infiles/f_test1/file1.txt 0..9 id=1
+[on_match] test/infiles/f_test1/subdir1/file2.log 0..15 id=3
+[on_match] test/infiles/f_test1/subdir2/nested/file3.txt 0..10 id=3
+[on_match] test/infiles/f_test1/subdir2/nested/file3.txt 0..3 id=1
+[on_match] test/infiles/f_test1/subdir2/nested/file3.txt 0..7 id=2
 [scan_file] hs_close_stream rv=0 for file test/infiles/f_test1/file1.txt
-[scan_file] read bytes: 12 from file test/infiles/f_test1/subdir2/nested/file3.txt
-[scan_file] hs_close_stream rv=0 for file test/infiles/f_test1/subdir2/nested/file3.txt
-[scan_file] read bytes: 17 from file test/infiles/f_test1/subdir2/other.bin
-[scan_file] hs_close_stream rv=0 for file test/infiles/f_test1/subdir2/other.bin
-[scan_file] read bytes: 21 from file test/infiles/f_test1/subdir1/file2.log
 [scan_file] hs_close_stream rv=0 for file test/infiles/f_test1/subdir1/file2.log
+[scan_file] hs_close_stream rv=0 for file test/infiles/f_test1/subdir2/nested/file3.txt
+[scan_file] hs_close_stream rv=0 for file test/infiles/f_test1/subdir2/other.bin
+[scan_file] read bytes: 12 from file test/infiles/f_test1/subdir2/nested/file3.txt
+[scan_file] read bytes: 17 from file test/infiles/f_test1/subdir2/other.bin
+[scan_file] read bytes: 21 from file test/infiles/f_test1/subdir1/file2.log
+[scan_file] read bytes: 25 from file test/infiles/f_test1/file1.txt
+test/infiles/f_test1/file1.txt:0:23:id=2
+test/infiles/f_test1/file1.txt:0:9:id=1
+test/infiles/f_test1/subdir1/file2.log:0:15:id=3
+test/infiles/f_test1/subdir2/nested/file3.txt:0:10:id=3
+test/infiles/f_test1/subdir2/nested/file3.txt:0:3:id=1
+test/infiles/f_test1/subdir2/nested/file3.txt:0:7:id=2
