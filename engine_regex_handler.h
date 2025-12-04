@@ -1,11 +1,10 @@
+#pragma once
+
+#include "engine.h"
 #include "abstract_regex_handler.h"
 #include "hs_regex_handler.h"
 
 using namespace std;
-
-enum Engine {
-    Hyperscan = 1,
-};
 
 class EngineRegex {
 private:

@@ -7,6 +7,8 @@
 #include "directory_scanner.h"
 #include "hs_file_scanner.h"
 #include "engine_regex_handler.h"
+#include "engine_file_scanner.h"
+
 
 namespace po = boost::program_options;
 
@@ -70,9 +72,13 @@ int main(int argc, char* argv[]){
     }
 
     RegexDatabase db_variant = regex_handler->get_database();
-    HSFileScanner fscanner(db_variant);
 
-    DirectoryScanner scanner(fscanner);
+    EngineFileScanner engine_file_scanner(Hyperscan, db_variant);
+    AbstractFileScanner* fscanner = engine_file_scanner.get_engine();
+
+    // HSFileScanner fscanner(db_variant);
+
+    DirectoryScanner scanner(*fscanner);
     scanner.scan(root_path);
 
     return 0;
