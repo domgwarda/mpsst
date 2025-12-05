@@ -2,7 +2,8 @@
 
 #include <vector>
 #include <string>
-#include <hs/hs.h>
+#include "regex_database.h"
+
 using namespace std;
 
 class AbstractRegexHandler {
@@ -10,7 +11,7 @@ class AbstractRegexHandler {
     public:
         AbstractRegexHandler(){};
         virtual ~AbstractRegexHandler() = default;
-        virtual hs_database_t* get_database() = 0;
+        virtual RegexDatabase get_database() = 0;
         virtual void load_regex_file(const string& filename) = 0;
         virtual void compile_regexes() = 0;
         virtual void load_regex_database(const string& filename) = 0;

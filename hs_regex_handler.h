@@ -67,7 +67,7 @@ class HSRegexHandler : public AbstractRegexHandler {
         HSRegexHandler();
         ~HSRegexHandler();
 
-        hs_database_t* get_database() override;
+        RegexDatabase get_database() override;
         void load_regex_file(const string& filename) override;
         void load_regex_database(const string& filename) override; 
         void save_regex_database(const string& filename) override;

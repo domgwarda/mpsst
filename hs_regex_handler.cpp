@@ -143,10 +143,9 @@ void HSRegexHandler::save_regex_database(const string& filename){
     free(bytes);
 }
 
-hs_database_t* HSRegexHandler::get_database() {
+RegexDatabase HSRegexHandler::get_database() {
     return database;
 }
-
 
 vector<string> HSRegexHandler::get_regexs_vector() {
     return rgxs_strings_vector;

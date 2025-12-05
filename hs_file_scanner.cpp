@@ -11,12 +11,21 @@
 #include <cstring>
 #include <cstdlib>
 
+#include <hs/hs.h>
+
+
 #include "hs_file_scanner.h"
 
 
 using namespace std;
 
-HSFileScanner::HSFileScanner(hs_database_t *database): AbstractFileScanner(database) {};
+HSFileScanner::HSFileScanner(RegexDatabase db_variant): AbstractFileScanner(db_variant) {        
+    if (auto hs_db_ptr = get_if<hs_database_t*>(&db_variant)) {
+        database = *hs_db_ptr;
+    } else {
+        cerr << "Error: Cannot get database"  << endl;
+    }    
+};
 
 HSFileScanner::~HSFileScanner() {
     if (database) {
