@@ -8,6 +8,8 @@
 #include "hs_file_scanner.h"
 #include "engine_regex_handler.h"
 #include "engine_file_scanner.h"
+#include "match_pcre.cpp"
+
 
 
 namespace po = boost::program_options;
@@ -46,8 +48,9 @@ int main(int argc, char* argv[]){
 
     root_path  = vm["file"].as<std::string>();
 
-    EngineRegex engine(Hyperscan);
+    EngineRegex engine(PCRE2);
     AbstractRegexHandler* regex_handler = engine.get_engine();
+    RegexDatabase db_variant = regex_handler->get_database();
     
     if(!regex_path.empty()){
         regex_handler->load_regex_file(regex_path);
@@ -63,23 +66,41 @@ int main(int argc, char* argv[]){
         return 1;
     }
 
+    for (string r : regex_handler->get_regexs_vector()) {
+        cout << r << endl;
+    }
+
+    vector<pcre2_code*> database;
+    
+    if (auto db_ptr = get_if<vector<pcre2_code*>>(&db_variant)) {
+        database = *db_ptr;
+    } else {
+        cerr << "Error: Cannot get database"  << endl;
+    }    
+
+    cout << "Database size: " << database.size() << endl;
+
+
+    match("test2gb.txt", database);
     // Optional debug / single file test
     //regex_handler.scan_file();
     //regex_handler.debug_scan_literal();
-    vector<string> rgxs_vector = regex_handler->get_regexs_vector();
-    for (int i = 0; i < regex_handler->get_regexs_vector_size(); i++) {
-        cout << rgxs_vector[i] << endl;
-    }
 
-    RegexDatabase db_variant = regex_handler->get_database();
+    //COMMENTED IN PCRE UPDATE
+    // vector<string> rgxs_vector = regex_handler->get_regexs_vector();
+    // for (int i = 0; i < regex_handler->get_regexs_vector_size(); i++) {
+    //     cout << rgxs_vector[i] << endl;
+    // }
 
-    EngineFileScanner engine_file_scanner(Hyperscan, db_variant);
-    AbstractFileScanner* fscanner = engine_file_scanner.get_engine();
+    // RegexDatabase db_variant = regex_handler->get_database();
 
-    // HSFileScanner fscanner(db_variant);
+    // EngineFileScanner engine_file_scanner(Hyperscan, db_variant);
+    // AbstractFileScanner* fscanner = engine_file_scanner.get_engine();
 
-    DirectoryScanner scanner(*fscanner);
-    scanner.scan(root_path);
+    // DirectoryScanner scanner(*fscanner);
+    // scanner.scan(root_path);
+    //HERE STOP
+
 
     return 0;
 }

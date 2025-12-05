@@ -3,6 +3,8 @@
 #include "engine.h"
 #include "abstract_regex_handler.h"
 #include "hs_regex_handler.h"
+#include "pcre_regex_handler.h"
+
 
 using namespace std;
 
@@ -14,6 +16,9 @@ public:
         switch (eng_) {
             case Hyperscan:
                 regex_handler = new HSRegexHandler();
+                break;
+            case PCRE2:
+                regex_handler = new PCRERegexHandler();
                 break;
             default:
                 cerr << "Unknown engine type" << endl;
