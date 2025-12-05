@@ -1,12 +1,12 @@
-#include "directory_scanner.h"
+#include "hs_dir_scanner.h"
 #include <filesystem>
 #include <iostream>
 
 namespace fs = std::filesystem;
 
-DirectoryScanner::DirectoryScanner(AbstractFileScanner &handler) : handler_(handler) {}
+HSDirScanner::HSDirScanner(AbstractFileScanner &handler) : AbstractDirScanner(handler) {}
 
-void DirectoryScanner::scan(const std::string &root) {
+void HSDirScanner::scan(const std::string &root) {
     std::error_code ec;
     fs::path p(root);
 

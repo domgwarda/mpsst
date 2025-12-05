@@ -3,10 +3,12 @@
 #include <string>
 #include <boost/program_options.hpp>
 
-#include "hs_regex_handler.h"
-#include "directory_scanner.h"
-#include "hs_file_scanner.h"
+#include "abstract_regex_handler.h"
+#include "abstract_dir_scanner.h"
+#include "abstract_file_scanner.h"
+
 #include "engine_regex_handler.h"
+#include "engine_dir_scanner.h"
 #include "engine_file_scanner.h"
 
 
@@ -78,8 +80,10 @@ int main(int argc, char* argv[]){
 
     // HSFileScanner fscanner(db_variant);
 
-    DirectoryScanner scanner(*fscanner);
-    scanner.scan(root_path);
+    EngineDirScanner engine_dir_scanner(Hyperscan, fscanner);
+    AbstractDirScanner* scanner = engine_dir_scanner.get_engine();
+
+    scanner->scan(root_path);
 
     return 0;
 }

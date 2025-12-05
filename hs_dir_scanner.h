@@ -20,12 +20,10 @@ to scan every file encountered.
 
 #pragma once
 #include <string>
-#include "abstract_file_scanner.h"
+#include "abstract_dir_scanner.h"
 
-class DirectoryScanner {
+class HSDirScanner : public AbstractDirScanner {
 public:
-    explicit DirectoryScanner(AbstractFileScanner &handler);
+    explicit HSDirScanner(AbstractFileScanner &handler);
     void scan(const std::string &root);
-private:
-    AbstractFileScanner &handler_;
 };
