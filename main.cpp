@@ -11,6 +11,8 @@
 #include "engine_dir_scanner.h"
 #include "engine_file_scanner.h"
 
+#include "pcre_regex_handler.h"
+// #include "pcre_file_scanner.h"
 
 namespace po = boost::program_options;
 
@@ -48,11 +50,13 @@ int main(int argc, char* argv[]){
 
     root_path  = vm["file"].as<std::string>();
 
-    EngineRegex engine(Hyperscan);
+    // EngineRegex engine(Hyperscan);
+    Engine selected_engine = PCRE2;
+    EngineRegex engine(selected_engine);
     AbstractRegexHandler* regex_handler = engine.get_engine();
     
     if(!regex_path.empty()){
-        regex_handler->load_regex_file(regex_path);
+        regex_handler->load_regex_file(regex_path); 
         regex_handler->compile_regexes();
 
         if (!bin_regex_path.empty()) {
@@ -70,20 +74,22 @@ int main(int argc, char* argv[]){
     //regex_handler.debug_scan_literal();
     vector<string> rgxs_vector = regex_handler->get_regexs_vector();
     for (int i = 0; i < regex_handler->get_regexs_vector_size(); i++) {
-        cout << rgxs_vector[i] << endl;
+        std::cout << rgxs_vector[i] << std::endl;
     }
 
     RegexDatabase db_variant = regex_handler->get_database();
 
-    EngineFileScanner engine_file_scanner(Hyperscan, db_variant);
+    EngineFileScanner engine_file_scanner(selected_engine, db_variant);
     AbstractFileScanner* fscanner = engine_file_scanner.get_engine();
+
+    fscanner->scan_file(root_path);
 
     // HSFileScanner fscanner(db_variant);
 
-    EngineDirScanner engine_dir_scanner(Hyperscan, fscanner);
-    AbstractDirScanner* scanner = engine_dir_scanner.get_engine();
+    // EngineDirScanner engine_dir_scanner(selected_engine, fscanner);
+    // AbstractDirScanner* scanner = engine_dir_scanner.get_engine();
 
-    scanner->scan(root_path);
+    // scanner->scan(root_path);
 
     return 0;
 }
