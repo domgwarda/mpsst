@@ -4,8 +4,21 @@ Multi Pattern String Search Tool
 ## Building
 Building:\
 From the project root run
+`rm -rf build && cmake -S . -B build && cmake --build build -j$(nproc)`
+or
 `cmake -S . -B build && cmake --build build`
-to generate the build files and build inside the `build` directory
+
+# to generate the build files and build inside the `build` directory
+
+# PCRE2
+
+From the project root run 
+
+```bash
+git clone https://github.com/PCRE2Project/pcre2.git
+cd pcre2/
+cmake -B build .
+cmake --build build
 
 ## Arguments:
 ```
@@ -30,15 +43,3 @@ to run all tests
 From the project root run 
 `./test/test1.sh`
 to run test1
-
-
-
-# for PCRE2
-
-FroFrom the project root run 
-
-```bash
-git clone https://github.com/PCRE2Project/pcre2.git
-cd pcre2/
-cmake -B build .
-cmake --build build/
