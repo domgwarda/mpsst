@@ -1,10 +1,10 @@
 #!/bin/bash
 
-testdir="test"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 passed=0
 failed=0
 
-for tfile in "$testdir"/*.sh; do
+for tfile in "$SCRIPT_DIR"/*.sh; do
     if [ "$(basename "$tfile")" != "all_tests.sh" ]; then
         echo "Running $tfile..."
         bash "$tfile"
