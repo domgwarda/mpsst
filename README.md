@@ -8,7 +8,7 @@ From the project root run
 or
 `cmake -S . -B build && cmake --build build`
 
-# to generate the build files and build inside the `build` directory
+to generate the build files and build inside the `build` directory
 
 # PCRE2
 
