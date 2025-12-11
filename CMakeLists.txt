@@ -22,6 +22,7 @@ add_executable(main
     src/regex_handler/hs_regex_handler.cpp
     src/regex_handler/regex_database.cpp
     src/regex_handler/pcre_regex_handler.cpp
+    src/file_scanner/pcre_file_scanner.cpp
 )
 
 
