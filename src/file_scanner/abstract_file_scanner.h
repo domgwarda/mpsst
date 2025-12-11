@@ -13,5 +13,5 @@ class AbstractFileScanner {
         explicit AbstractFileScanner(RegexDatabase database_variant_): database_variant(database_variant_) {};
         virtual ~AbstractFileScanner() = default;
         virtual void scan_file(const std::string &path) = 0;
-        virtual void debug_scan_literal(hs_database_t *database) = 0;
+        // virtual void debug_scan_literal(RegexDatabase *database) = 0;
 };      

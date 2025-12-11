@@ -105,44 +105,44 @@ void HSFileScanner::scan_file(const string &path) {
     in.close();
 }
 
-void HSFileScanner::debug_scan_literal(hs_database_t *database) {
-    if (!database) {
-        std::cerr << "[debug] Database not compiled.\n";
-        return;
-    }
+// void HSFileScanner::debug_scan_literal(hs_database_t *database) {
+//     if (!database) {
+//         std::cerr << "[debug] Database not compiled.\n";
+//         return;
+//     }
 
-    const char *data = "xxx\naaa\nyyy\naba\ncc\n";
-    const unsigned int len = static_cast<unsigned int>(strlen(data));
-    const char *ctx_literal = "debug_literal";
+//     const char *data = "xxx\naaa\nyyy\naba\ncc\n";
+//     const unsigned int len = static_cast<unsigned int>(strlen(data));
+//     const char *ctx_literal = "debug_literal";
 
-    hs_scratch_t *scratch_block = nullptr;
-    if (hs_alloc_scratch(database, &scratch_block) != HS_SUCCESS) {
-        std::cerr << "[debug] Failed to allocate scratch for block\n";
-    } else {
-        hs_error_t rv_block = hs_scan(database, data, len, 0, scratch_block, on_match, (void*)ctx_literal);
-        std::cerr << "[debug] hs_scan (block) rv=" << rv_block << " for literal (" << len << " bytes)\n";
-        hs_free_scratch(scratch_block);
-    }
+//     hs_scratch_t *scratch_block = nullptr;
+//     if (hs_alloc_scratch(database, &scratch_block) != HS_SUCCESS) {
+//         std::cerr << "[debug] Failed to allocate scratch for block\n";
+//     } else {
+//         hs_error_t rv_block = hs_scan(database, data, len, 0, scratch_block, on_match, (void*)ctx_literal);
+//         std::cerr << "[debug] hs_scan (block) rv=" << rv_block << " for literal (" << len << " bytes)\n";
+//         hs_free_scratch(scratch_block);
+//     }
 
-    hs_scratch_t *scratch = nullptr;
-    if (hs_alloc_scratch(database, &scratch) != HS_SUCCESS) {
-        std::cerr << "[debug] Failed to allocate scratch for stream\n";
-        return;
-    }
+//     hs_scratch_t *scratch = nullptr;
+//     if (hs_alloc_scratch(database, &scratch) != HS_SUCCESS) {
+//         std::cerr << "[debug] Failed to allocate scratch for stream\n";
+//         return;
+//     }
 
-    hs_stream_t *stream = nullptr;
-    if (hs_open_stream(database, 0, &stream) != HS_SUCCESS) {
-        std::cerr << "[debug] Failed to open stream\n";
-        hs_free_scratch(scratch);
-        return;
-    }
+//     hs_stream_t *stream = nullptr;
+//     if (hs_open_stream(database, 0, &stream) != HS_SUCCESS) {
+//         std::cerr << "[debug] Failed to open stream\n";
+//         hs_free_scratch(scratch);
+//         return;
+//     }
 
-    hs_error_t rv_stream_scan = hs_scan_stream(stream, data, len, 0, scratch, on_match, (void*)ctx_literal);
-    std::cerr << "[debug] hs_scan_stream (with on_match) rv=" << rv_stream_scan << " for literal (" << len << " bytes)\n";
+//     hs_error_t rv_stream_scan = hs_scan_stream(stream, data, len, 0, scratch, on_match, (void*)ctx_literal);
+//     std::cerr << "[debug] hs_scan_stream (with on_match) rv=" << rv_stream_scan << " for literal (" << len << " bytes)\n";
 
-    hs_error_t close_rv = hs_close_stream(stream, scratch, nullptr, nullptr);
-    std::cerr << "[debug] hs_close_stream rv=" << close_rv << "\n";
+//     hs_error_t close_rv = hs_close_stream(stream, scratch, nullptr, nullptr);
+//     std::cerr << "[debug] hs_close_stream rv=" << close_rv << "\n";
 
-    hs_free_scratch(scratch);
-}
+//     hs_free_scratch(scratch);
+// }
 
