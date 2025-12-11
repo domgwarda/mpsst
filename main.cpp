@@ -82,14 +82,14 @@ int main(int argc, char* argv[]){
     EngineFileScanner engine_file_scanner(selected_engine, db_variant);
     AbstractFileScanner* fscanner = engine_file_scanner.get_engine();
 
-    fscanner->scan_file(root_path);
+    // fscanner->scan_file(root_path);
 
     // HSFileScanner fscanner(db_variant);
 
-    // EngineDirScanner engine_dir_scanner(selected_engine, fscanner);
-    // AbstractDirScanner* scanner = engine_dir_scanner.get_engine();
+    EngineDirScanner engine_dir_scanner(selected_engine, fscanner);
+    AbstractDirScanner* scanner = engine_dir_scanner.get_engine();
 
-    // scanner->scan(root_path);
+    scanner->scan(root_path);
 
     return 0;
 }

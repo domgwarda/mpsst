@@ -25,5 +25,5 @@ to scan every file encountered.
 class HSDirScanner : public AbstractDirScanner {
 public:
     explicit HSDirScanner(AbstractFileScanner &handler);
-    void scan(const std::string &root);
+    void scan(const std::string &root) override;
 };

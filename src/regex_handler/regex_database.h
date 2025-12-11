@@ -13,5 +13,3 @@ using namespace std;
 class AbstractRegexHandler;
 
 using RegexDatabase = variant<hs_database_t*, vector<pcre2_code*>>;
-
-void test_handler(AbstractRegexHandler* handler);
