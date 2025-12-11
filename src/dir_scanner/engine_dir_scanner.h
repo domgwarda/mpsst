@@ -3,7 +3,7 @@
 #include "engine.h"
 #include "abstract_dir_scanner.h"
 #include "hs_dir_scanner.h"
-
+#include "pcre_dir_scanner.h"
 
 using namespace std;
 
@@ -16,6 +16,9 @@ public:
         switch (eng_) {
             case Hyperscan:
                 regex_dir_scanner = new HSDirScanner(*file_scanner);
+                break;
+            case PCRE2:
+                regex_dir_scanner = new PcreDirScanner(*file_scanner);
                 break;
             default:
                 cerr << "Unknown engine type" << endl;
