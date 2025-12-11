@@ -3,13 +3,13 @@
 #include <string>
 #include <boost/program_options.hpp>
 
-#include "hs_regex_handler.h"
-#include "directory_scanner.h"
-#include "hs_file_scanner.h"
-#include "engine_regex_handler.h"
-#include "engine_file_scanner.h"
-#include "match_pcre.cpp"
+#include "abstract_regex_handler.h"
+#include "abstract_dir_scanner.h"
+#include "abstract_file_scanner.h"
 
+#include "engine_regex_handler.h"
+#include "engine_dir_scanner.h"
+#include "engine_file_scanner.h"
 
 
 namespace po = boost::program_options;
@@ -48,7 +48,7 @@ int main(int argc, char* argv[]){
 
     root_path  = vm["file"].as<std::string>();
 
-    EngineRegex engine(PCRE2);
+    EngineRegex engine(Hyperscan);
     AbstractRegexHandler* regex_handler = engine.get_engine();
     
     if(!regex_path.empty()){
@@ -65,43 +65,25 @@ int main(int argc, char* argv[]){
         return 1;
     }
 
-    for (string r : regex_handler->get_regexs_vector()) {
-        cout << r << endl;
-    }
-    RegexDatabase db_variant = regex_handler->get_database();
-
-
-    vector<pcre2_code*> database;
-    
-    if (auto db_ptr = get_if<vector<pcre2_code*>>(&db_variant)) {
-        database = *db_ptr;
-    } else {
-        cerr << "Error: Cannot get database"  << endl;
-    }    
-
-    cout << "Database size: " << database.size() << endl;
-
-
-    match("test2gb.txt", database);
     // Optional debug / single file test
     //regex_handler.scan_file();
     //regex_handler.debug_scan_literal();
+    vector<string> rgxs_vector = regex_handler->get_regexs_vector();
+    for (int i = 0; i < regex_handler->get_regexs_vector_size(); i++) {
+        cout << rgxs_vector[i] << endl;
+    }
 
-    //COMMENTED IN PCRE UPDATE
-    // vector<string> rgxs_vector = regex_handler->get_regexs_vector();
-    // for (int i = 0; i < regex_handler->get_regexs_vector_size(); i++) {
-    //     cout << rgxs_vector[i] << endl;
-    // }
+    RegexDatabase db_variant = regex_handler->get_database();
 
-    // RegexDatabase db_variant = regex_handler->get_database();
+    EngineFileScanner engine_file_scanner(Hyperscan, db_variant);
+    AbstractFileScanner* fscanner = engine_file_scanner.get_engine();
 
-    // EngineFileScanner engine_file_scanner(Hyperscan, db_variant);
-    // AbstractFileScanner* fscanner = engine_file_scanner.get_engine();
+    // HSFileScanner fscanner(db_variant);
 
-    // DirectoryScanner scanner(*fscanner);
-    // scanner.scan(root_path);
-    //HERE STOP
+    EngineDirScanner engine_dir_scanner(Hyperscan, fscanner);
+    AbstractDirScanner* scanner = engine_dir_scanner.get_engine();
 
+    scanner->scan(root_path);
 
     return 0;
 }

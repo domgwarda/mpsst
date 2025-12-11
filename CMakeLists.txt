@@ -17,11 +17,13 @@ add_subdirectory(pcre2)
 
 add_executable(main
     main.cpp
-    hs_regex_handler.cpp
-    directory_scanner.cpp
-    hs_file_scanner.cpp
-    pcre_regex_handler.cpp
+    src/file_scanner/hs_file_scanner.cpp
+    src/dir_scanner/hs_dir_scanner.cpp
+    src/regex_handler/hs_regex_handler.cpp
+    src/regex_handler/regex_database.cpp
+    src/regex_handler/pcre_regex_handler.cpp
 )
+
 
 
 target_link_libraries(main
@@ -33,7 +35,12 @@ target_link_libraries(main
 )
 
 
+
 target_include_directories(main
     PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}
+        src/file_scanner
+        src/dir_scanner
+        src/regex_handler
         ${CMAKE_CURRENT_SOURCE_DIR}/third_party/hyperscan_mini/include
 )
