@@ -4,7 +4,9 @@ Multi Pattern String Search Tool
 ## Building
 Building:\
 From the project root run
-`cmake -S . -B build && cmake --build build`
+`cmake -S . -B build`
+`cmake --build build -j$(nproc)`
+
 to generate the build files and build inside the `build` directory
 
 ## Arguments:
@@ -34,6 +36,11 @@ to run test1 (.rgx regex file)
 From the project root run
 `./test/unit_test/test2.sh`
 to run test2 (binary regex file)
+
+## Performance test
+From the project root run
+`./test/performance_test/test.sh`
+to run test
 
 
 
