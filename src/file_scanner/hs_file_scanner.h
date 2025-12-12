@@ -14,5 +14,5 @@ class HSFileScanner : public AbstractFileScanner {
         explicit HSFileScanner(RegexDatabase database_variant);
         ~HSFileScanner() override;
         void scan_file(const std::string &path) override;
-        void debug_scan_literal(hs_database_t *database) override;
+        // void debug_scan_literal(RegexDatabase *database) override;
 };      

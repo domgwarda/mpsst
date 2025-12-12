@@ -19,21 +19,19 @@ cd ..
 ### 2. Build MPSST
 You can build the project using CMake from the project root.
 
-**Option A: Clean Build (Recommended)**
+Option A: Clean Build (Recommended)
 ```bash
 rm -rf build
 cmake -S . -B build
 cmake --build build -j$(nproc)
 ```
 
-or
-
+Option B:
 ```bash
 # From the project root
 cmake -S . -B build
 cmake --build build
 ```
-
 to generate the build files and build inside the `build` directory
 
 # Run mpsst
@@ -56,12 +54,21 @@ to create test file (size 2GB)
 
 # Run tests
 From the project root run 
-`./test/all_tests.sh`
+`./test/unit_test/all_tests.sh`
 to run all tests
 
 From the project root run 
-`./test/test1.sh`
-to run test1
+`./test/unit_test/test1.sh`
+to run test1 (.rgx regex file)
+
+From the project root run
+`./test/unit_test/test2.sh`
+to run test2 (binary regex file)
+
+## Performance test
+From the project root run
+`./test/performance_test/test.sh`
+to run test
 
 # Docs
 

@@ -3,6 +3,7 @@
 #include "engine.h"
 #include "abstract_file_scanner.h"
 #include "hs_file_scanner.h"
+#include "pcre_file_scanner.h"
 
 using namespace std;
 
@@ -15,6 +16,9 @@ public:
         switch (eng_) {
             case Hyperscan:
                 regex_file_scanner = new HSFileScanner(database_variant);
+                break;
+            case PCRE2:
+                regex_file_scanner = new PCREFileScanner(database_variant);
                 break;
             default:
                 cerr << "Unknown engine type" << endl;

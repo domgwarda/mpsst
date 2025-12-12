@@ -1,6 +1,7 @@
 #include <boost/program_options/value_semantic.hpp>
 #include <iostream>
 #include <string>
+#include <chrono>
 #include <boost/program_options.hpp>
 
 #include "abstract_regex_handler.h"
@@ -51,7 +52,7 @@ int main(int argc, char* argv[]){
     root_path  = vm["file"].as<std::string>();
 
     // EngineRegex engine(Hyperscan);
-    Engine selected_engine = PCRE2;
+    Engine selected_engine = Hyperscan; //PCRE2;
     EngineRegex engine(selected_engine);
     AbstractRegexHandler* regex_handler = engine.get_engine();
     
@@ -69,27 +70,40 @@ int main(int argc, char* argv[]){
         return 1;
     }
 
-    // Optional debug / single file test
-    //regex_handler.scan_file();
-    //regex_handler.debug_scan_literal();
-    vector<string> rgxs_vector = regex_handler->get_regexs_vector();
-    for (int i = 0; i < regex_handler->get_regexs_vector_size(); i++) {
-        std::cout << rgxs_vector[i] << std::endl;
-    }
-
     RegexDatabase db_variant = regex_handler->get_database();
 
     EngineFileScanner engine_file_scanner(selected_engine, db_variant);
     AbstractFileScanner* fscanner = engine_file_scanner.get_engine();
 
-    // fscanner->scan_file(root_path);
-
-    // HSFileScanner fscanner(db_variant);
-
     EngineDirScanner engine_dir_scanner(selected_engine, fscanner);
     AbstractDirScanner* scanner = engine_dir_scanner.get_engine();
 
-    scanner->scan(root_path);
+    
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+    unsigned int iterations = 5;
+    std::vector<double> times(iterations);
+
+    for(int i = 0; i < iterations; i++)
+    {
+        auto start = std::chrono::steady_clock::now();
+
+        scanner->scan(root_path);
+
+        auto end = std::chrono::steady_clock::now();
+        auto duration = std::chrono::duration_cast<std::chrono::seconds>(end - start).count();  //seconds or microseconds
+        times[i] = duration;
+    }
+    double mean = 0;
+    for(int i = 0; i < iterations; i++)
+    {
+        if(i > 1)   //discard first two runs (warm-ups)
+            mean += times[i];
+        std::cout << i+1 << ": " << times[i] << "s" << std::endl;
+
+    }
+    std::cout << "mean = " << mean/(iterations-2) << std::endl;
 
     return 0;
 }

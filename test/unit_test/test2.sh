@@ -1,10 +1,12 @@
 #!/bin/bash
 
-prog="./build/main"
-indir="test/infiles/f_test1"
-resdir="test/results"
-expdir="test/expOut"
-bin_regex="test/regex/regexTest.bin"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+prog="$SCRIPT_DIR/../../build/main"
+indir="$SCRIPT_DIR/infiles/f_test1"
+resdir="$SCRIPT_DIR/results"
+expdir="$SCRIPT_DIR/expOut"
+bin_regex="$SCRIPT_DIR/regex/regexTest.bin"
 cpu=10
 climit=1000000
 
@@ -23,19 +25,20 @@ if [ $retv -ne 0 ]; then
     exit $retv
 else
     ulimit -t ${cpu}
-    ${prog} -f "${indir}" -b "${bin_regex}" 2>&1 | head -c ${climit} > "${ofile}"
+    ${prog} -f "${indir}" -b "${bin_regex}" 2>&1 | head -c ${climit} \
+        | sed "s|$SCRIPT_DIR/|test/|" > "${ofile}"
 
     sort -o "${ofile}" "${ofile}"
-    # sort -o "${efile}" "${efile}"
+    sort -o "${efile}" "${efile}"
 
     if diff "${ofile}" "${efile}" &> "${dfile}"; then
         echo "test 2 passed"
-        rm "$dfile"
+        rm "${dfile}"
         exit 0
     else
         echo "test 2 failed"
         cat "${dfile}"
-        rm "$dfile"
+        rm "${dfile}"
         exit 1
     fi
 fi
