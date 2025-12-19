@@ -1,6 +1,3 @@
-aaa
-aba
-cc
 Compiled 3 regex(es) into Hyperscan database
 [on_match] test/infiles/f_test1/file1.txt 0..23 id=2
 [on_match] test/infiles/f_test1/file1.txt 0..9 id=1
@@ -16,6 +13,9 @@ Compiled 3 regex(es) into Hyperscan database
 [scan_file] read bytes: 17 from file test/infiles/f_test1/subdir2/other.bin
 [scan_file] read bytes: 21 from file test/infiles/f_test1/subdir1/file2.log
 [scan_file] read bytes: 25 from file test/infiles/f_test1/file1.txt
+aaa
+aba
+cc
 test/infiles/f_test1/file1.txt:0:23:id=2
 test/infiles/f_test1/file1.txt:0:9:id=1
 test/infiles/f_test1/subdir1/file2.log:0:15:id=3

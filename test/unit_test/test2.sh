@@ -17,7 +17,7 @@ dfile=$(mktemp)
 mkdir -p "$resdir"
 
 ulimit -t ${cpu}
-${prog} -f "${indir}" -b "${bin_regex}" &> /dev/null
+${prog} -f "${indir}" -b "${bin_regex}" -e "hs" &> /dev/null
 retv=$?
 
 if [ $retv -ne 0 ]; then
@@ -25,7 +25,7 @@ if [ $retv -ne 0 ]; then
     exit $retv
 else
     ulimit -t ${cpu}
-    ${prog} -f "${indir}" -b "${bin_regex}" 2>&1 | head -c ${climit} \
+    ${prog} -f "${indir}" -b "${bin_regex}" -e "hs"  2>&1 | head -c ${climit} \
         | sed "s|$SCRIPT_DIR/|test/|" > "${ofile}"
 
     sort -o "${ofile}" "${ofile}"
