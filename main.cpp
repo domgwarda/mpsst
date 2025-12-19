@@ -21,8 +21,11 @@ int main(int argc, char* argv[]){
         ("regex,r", po::value<std::string>(), "Path to regex file or binary database (-b)")
         ("file,f", po::value<std::string>(), "Path to the root of the files to search")
         ("binDatabase,b", po::value<std::string>(), "Path to regex file compressd to binary format or normal regex file (-r)")
-        ("measureTime,t", "If the -t flag is passed, measure the program's execution time")
-        ("engine,e", po::value<std::string>(), "Choose an engine type: hs (Hyperscan) or pcre (PCRE2), if none defult is pcre");
+        ("engine,e", po::value<std::string>(), "Choose an engine type: hs (Hyperscan) or pcre (PCRE2), if none defult is pcre")
+        ("measureTime,t", po::value<int>()->implicit_value(1)->default_value(0), "Number of measured runs, If the -t flag is passed, measure the program's execution time")
+        ("warmup,w", po::value<int>()->default_value(0),  "Number of warm-up runs (not measured)")
+
+    ;
 
     po::variables_map vm;
     try {
@@ -51,7 +54,6 @@ int main(int argc, char* argv[]){
 
     root_path  = vm["file"].as<std::string>();
 
-    chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
 
    Engine selected_engine;
     if (vm.count("engine")){
@@ -89,10 +91,10 @@ int main(int argc, char* argv[]){
     // Optional debug / single file test
     //regex_handler.scan_file();
     //regex_handler.debug_scan_literal();
-    vector<string> rgxs_vector = regex_handler->get_regexs_vector();
-    for (int i = 0; i < regex_handler->get_regexs_vector_size(); i++) {
-        std::cout << rgxs_vector[i] << std::endl;
-    }
+    //vector<string> rgxs_vector = regex_handler->get_regexs_vector();
+    //for (int i = 0; i < regex_handler->get_regexs_vector_size(); i++) {
+    //    std::cout << rgxs_vector[i] << std::endl;
+    //}
 
     RegexDatabase db_variant = regex_handler->get_database();
 
@@ -106,12 +108,47 @@ int main(int argc, char* argv[]){
     EngineDirScanner engine_dir_scanner(selected_engine, fscanner);
     AbstractDirScanner* scanner = engine_dir_scanner.get_engine();
 
-    scanner->scan(root_path);
 
-    chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
-    if (vm.count("measureTime")){
-        cout << "Time difference = " << std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count() << "[ms]" << std::endl;
+    int warmup = vm["warmup"].as<int>();
+    if (warmup < 0)
+        warmup = 0;
+
+    int tests = vm["measureTime"].as<int>();
+    if (tests < 0)
+        tests = 0;
+    bool measure = (tests > 0);
+
+    
+    if(!measure)
+        scanner->scan(root_path);
+
+    else{
+
+        if(warmup > 0){
+        
+            for(int i=0; i<warmup; i++)
+                scanner->scan(root_path);
+        }
+        
+        std::vector<long long> times;
+        double avg = 0;
+        for(int i=0; i<tests; i++){
+            chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
+            scanner->scan(root_path);
+            chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
+
+            auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count();
+            times.push_back(duration);
+            avg += duration;
+        }
+        
+        avg /= tests;
+
+        std::cout << "Times for: engine= " << vm["engine"].as<std::string>() << " warmup= " << warmup << " test= " << tests << endl;
+        std::cout << "avg= " << avg << " ms" << endl;
+
     }
+
 
     return 0;
 }
