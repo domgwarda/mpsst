@@ -12,6 +12,7 @@
 #include <cstdio>
 #include <cstring> // strdup
 #include <cstdlib> // free
+#include "debug_log.h"
 
 
 using namespace std;
@@ -80,7 +81,7 @@ void HSRegexHandler::compile_regexes() {
         }
         database = nullptr;
     } else {
-        cout << "Compiled " << size << " regex(es) into Hyperscan database\n";
+        LOGT("Compiled %d regex(es) into Hyperscan database", size);
     }
 }
 
@@ -113,7 +114,7 @@ void HSRegexHandler::load_regex_database(const std::string& filename){
         database=nullptr;
         return;
     } else {
-        cout<<"Successfully loaded compiled database from " << filename << "\n";
+        LOGT("Successfully loaded compiled database from %s", filename.c_str());
     }
 }
 
@@ -135,7 +136,7 @@ void HSRegexHandler::save_regex_database(const string& filename){
     if (file.is_open()){
         file.write(bytes, length);
         file.close();
-        cout<<"Database saved to: "<<filename<<"\n";
+        LOGT("Database saved to: %s", filename.c_str());
     } else {
         cerr<<"Unable to open file:"<<filename<<"\n";
     }

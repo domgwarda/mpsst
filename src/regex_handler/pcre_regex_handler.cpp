@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "debug_log.h"
 
 using namespace std;
 
@@ -137,7 +138,7 @@ void PCRERegexHandler::save_regex_database(const string& filename){
     if (file.is_open()){
         file.write(reinterpret_cast<char*>(bytes), bytescount);
         file.close();
-        cout<<"Database saved to: "<<filename<<"\n";
+        LOGT("Database saved to: %s", filename.c_str());
     } else {
         cerr<<"Unable to open file:"<<filename<<"\n";
     }

@@ -9,12 +9,12 @@ regex="$2"
 
 hs_time=$(
   ${prog} -f "${indir}" -r "${regex}" -e hs -t 2>/dev/null \
-  | grep "Time difference"
+  | grep "avg="
 )
 
 pcre_time=$(
   ${prog} -f "${indir}" -r "${regex}" -e pcre -t 2>/dev/null \
-  | grep "Time difference"
+  | grep "avg="
 )
 
 echo "HS   ${hs_time}"

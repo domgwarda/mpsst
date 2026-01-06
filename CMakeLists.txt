@@ -36,6 +36,7 @@ target_link_libraries(main
 target_include_directories(main
     PRIVATE
         ${CMAKE_CURRENT_SOURCE_DIR}
+        src
         src/file_scanner
         src/dir_scanner
         src/regex_handler

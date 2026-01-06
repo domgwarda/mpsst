@@ -10,6 +10,7 @@
 #include <cstdio>
 #include <cstring>
 #include <cstdlib>
+#include "debug_log.h"
 
 #include <hs/hs.h>
 
@@ -23,7 +24,7 @@ HSFileScanner::HSFileScanner(RegexDatabase db_variant): AbstractFileScanner(db_v
     if (auto hs_db_ptr = get_if<hs_database_t*>(&db_variant)) {
         database = *hs_db_ptr;
     } else {
-        cerr << "Error: Cannot get database"  << endl;
+        cerr << "Error HS: Cannot get database"  << endl;
     }    
 };
 
@@ -37,7 +38,8 @@ HSFileScanner::~HSFileScanner() {
 static int on_match(unsigned int id, unsigned long long from, unsigned long long to, unsigned int flags, void *ctx) {
     const char* path = static_cast<const char*>(ctx);
     printf("%s:%llu:%llu:id=%u\n", path, from, to, id);
-    fprintf(stderr, "[on_match] %s %llu..%llu id=%u\n", path, from, to, id);
+    LOGT("[on_match] %s %llu..%llu id=%u",
+         path, from, to, id);
     return 0; 
 }
 
@@ -77,7 +79,8 @@ void HSFileScanner::scan_file(const string &path) {
     while (in) {
         in.read(buf.data(), static_cast<std::streamsize>(buf.size()));
         std::streamsize readn = in.gcount();
-        std::cerr << "[scan_file] read bytes: " << readn << " from file " << path << std::endl;
+        LOGT("[scan_file] read bytes: %lld from file %s",
+            (long long)readn, path.c_str());
 
         if (readn <= 0) break;
 
@@ -97,7 +100,8 @@ void HSFileScanner::scan_file(const string &path) {
 
     hs_error_t close_rv = hs_close_stream(stream, scratch, nullptr, nullptr);
 
-    std::cerr << "[scan_file] hs_close_stream rv=" << close_rv << " for file " << path << std::endl;
+    LOGT("[scan_file] hs_close_stream rv=%d for file %s",
+        (int)close_rv, path.c_str());
 
     free(ctx_path);
 

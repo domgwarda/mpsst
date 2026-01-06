@@ -39,7 +39,8 @@ void PCREFileScanner:: scan_file(const std::string &path){
     PCRE2_SPTR subject = reinterpret_cast<PCRE2_SPTR>(content.c_str());
     PCRE2_SIZE subject_size = content.length();
 
-    for (pcre2_code* re : *compiled_regexs){
+    for (size_t id = 1; id <= compiled_regexs->size(); id++) {
+        pcre2_code* re = (*compiled_regexs)[id - 1];
         if (!re) continue;
 
         pcre2_match_data* match_data = pcre2_match_data_create_from_pattern(re, NULL);
@@ -61,9 +62,7 @@ void PCREFileScanner:: scan_file(const std::string &path){
                 }
 
             PCRE2_SIZE* ovector = pcre2_get_ovector_pointer(match_data);
-            std::cout << "Pattern found in " << path 
-                        << " at offset: " << ovector[0] 
-                        << " to " << ovector[1] << std::endl;
+            std::cout << path << ":" << ovector[0] << ":" << ovector[1] << ":id=" << id << "\n";
 
             start_offset = ovector[1];
             if (ovector[0] == ovector[1]) {
