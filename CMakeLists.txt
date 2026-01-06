@@ -41,32 +41,3 @@ target_include_directories(main
         src/regex_handler
         ${CMAKE_CURRENT_SOURCE_DIR}/third_party/hyperscan_mini/include
 )
-
-
-
-# main_perf_test
-add_executable(main_perf_test
-    test/performance_test/main_perf_test.cpp
-    src/file_scanner/hs_file_scanner.cpp
-    src/dir_scanner/hs_dir_scanner.cpp
-    src/regex_handler/hs_regex_handler.cpp
-    src/regex_handler/pcre_regex_handler.cpp
-    src/file_scanner/pcre_file_scanner.cpp
-    src/dir_scanner/pcre_dir_scanner.cpp
-)
-
-target_link_libraries(main_perf_test
-    PRIVATE
-        hs
-        Boost::program_options
-        pcre2-8
-)
-
-target_include_directories(main_perf_test
-    PRIVATE
-        ${CMAKE_CURRENT_SOURCE_DIR}
-        src/file_scanner
-        src/dir_scanner
-        src/regex_handler
-        ${CMAKE_CURRENT_SOURCE_DIR}/third_party/hyperscan_mini/include
-)

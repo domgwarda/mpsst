@@ -4,3 +4,7 @@ vectorscan
 notatki
 /pcre2
 help-dummy.o
+/test/perf_test/
+test/performance_test/data
+test/performance_test/test_enron.sh
+test/performance_test/test_spam.sh

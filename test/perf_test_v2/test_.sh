@@ -4,8 +4,8 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 prog="$SCRIPT_DIR/../../build/main"
 
-DATAFILE="$1"
-REGEXFILE="$2"
+indir="$1"
+regex="$2"
 
 start_hs=$(date +%s%3N)   
 ${prog} -f "${indir}" -r "${regex}" -e hs >/dev/null 2>&1
