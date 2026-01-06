@@ -38,7 +38,7 @@ HSFileScanner::~HSFileScanner() {
 static int on_match(unsigned int id, unsigned long long from, unsigned long long to, unsigned int flags, void *ctx) {
     const char* path = static_cast<const char*>(ctx);
     printf("%s:%llu:%llu:id=%u\n", path, from, to, id);
-    LOGT("[on_match] %s %llu..%llu id=%u",
+    DEBUG("[on_match] %s %llu..%llu id=%u",
          path, from, to, id);
     return 0; 
 }
@@ -79,7 +79,7 @@ void HSFileScanner::scan_file(const string &path) {
     while (in) {
         in.read(buf.data(), static_cast<std::streamsize>(buf.size()));
         std::streamsize readn = in.gcount();
-        LOGT("[scan_file] read bytes: %lld from file %s",
+        DEBUG("[scan_file] read bytes: %lld from file %s",
             (long long)readn, path.c_str());
 
         if (readn <= 0) break;
@@ -100,7 +100,7 @@ void HSFileScanner::scan_file(const string &path) {
 
     hs_error_t close_rv = hs_close_stream(stream, scratch, nullptr, nullptr);
 
-    LOGT("[scan_file] hs_close_stream rv=%d for file %s",
+    DEBUG("[scan_file] hs_close_stream rv=%d for file %s",
         (int)close_rv, path.c_str());
 
     free(ctx_path);

@@ -81,7 +81,7 @@ void HSRegexHandler::compile_regexes() {
         }
         database = nullptr;
     } else {
-        LOGT("Compiled %d regex(es) into Hyperscan database", size);
+        DEBUG("Compiled %d regex(es) into Hyperscan database", size);
     }
 }
 
@@ -114,7 +114,7 @@ void HSRegexHandler::load_regex_database(const std::string& filename){
         database=nullptr;
         return;
     } else {
-        LOGT("Successfully loaded compiled database from %s", filename.c_str());
+        DEBUG("Successfully loaded compiled database from %s", filename.c_str());
     }
 }
 
@@ -136,7 +136,7 @@ void HSRegexHandler::save_regex_database(const string& filename){
     if (file.is_open()){
         file.write(bytes, length);
         file.close();
-        LOGT("Database saved to: %s", filename.c_str());
+        DEBUG("Database saved to: %s", filename.c_str());
     } else {
         cerr<<"Unable to open file:"<<filename<<"\n";
     }
