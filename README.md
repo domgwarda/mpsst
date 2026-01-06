@@ -34,6 +34,21 @@ cmake --build build
 ```
 to generate the build files and build inside the `build` directory
 
+## Build options
+
+### Enable debug logging (cerr)
+Enables internal debug (non-error) messages printed to `cerr`.
+
+```bash
+cmake -S . -B build -DDEBUG_LOG=ON
+```
+### Disable regex match output (stdout):
+Disables printing of regex match results to stdout (useful for benchmarks).
+
+```bash
+cmake -S . -B build -DNO_OUTPUT=ON
+```
+
 # Run mpsst
 
 

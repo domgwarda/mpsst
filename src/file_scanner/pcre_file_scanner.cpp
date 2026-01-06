@@ -6,6 +6,7 @@
 #include <pcre2.h>
 #include <variant>
 #include <vector>
+#include "output_log.h"
 
 PCREFileScanner::PCREFileScanner(RegexDatabase database_variant_) 
     : AbstractFileScanner(database_variant_) {
@@ -62,7 +63,8 @@ void PCREFileScanner:: scan_file(const std::string &path){
                 }
 
             PCRE2_SIZE* ovector = pcre2_get_ovector_pointer(match_data);
-            std::cout << path << ":" << ovector[0] << ":" << ovector[1] << ":id=" << id << "\n";
+            OUTPUT_stream(std::cout << path << ":" << (size_t)ovector[0] << ":" << (size_t)ovector[1]
+              << ":id=" << id << "\n");
 
             start_offset = ovector[1];
             if (ovector[0] == ovector[1]) {
