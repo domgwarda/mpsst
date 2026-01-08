@@ -36,8 +36,24 @@ target_link_libraries(main
 target_include_directories(main
     PRIVATE
         ${CMAKE_CURRENT_SOURCE_DIR}
+        src
         src/file_scanner
         src/dir_scanner
         src/regex_handler
         ${CMAKE_CURRENT_SOURCE_DIR}/third_party/hyperscan_mini/include
 )
+
+option(DEBUG_LOG "Enable debug logging (stderr)" OFF)
+
+if(DEBUG_LOG)
+    target_compile_definitions(main PRIVATE DEBUG_LOG)
+endif()
+
+
+option(NO_OUTPUT "Disable match output" OFF)
+
+if(NO_OUTPUT)
+    target_compile_definitions(main PRIVATE NO_OUTPUT)
+endif()
+
+
