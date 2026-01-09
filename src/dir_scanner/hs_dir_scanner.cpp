@@ -16,13 +16,7 @@ void worker(TQueue<std::string> &queue, AbstractFileScanner &handler) {
         auto file = queue.Pop();
 
         if (!file.has_value()) break;
-        if (file->empty()) break;
-
-        std::cout << "Thread " << std::this_thread::get_id()
-            << " processing: " << *file << "\n";
-
-
-
+        // std::cout <<"Thread " << this_thread::get_id() << " file: " << *file << endl;
         handler.scan_file(file.value());
     }
 }
@@ -46,7 +40,7 @@ void HSDirScanner::scan(const std::string &root) {
     TQueue<string> queue;
 
     thread t1(worker, ref(queue), ref(handler_));
-    thread t2(worker, ref(queue), ref(handler_));
+    // thread t2(worker, ref(queue), ref(handler_));
 
     try {
         for (auto &entry : fs::recursive_directory_iterator(p)) {
@@ -60,7 +54,7 @@ void HSDirScanner::scan(const std::string &root) {
     queue.Close();
 
     t1.join();
-    t2.join();
+    // t2.join();
 
 
 }

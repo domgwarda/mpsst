@@ -24,8 +24,7 @@ public:
         m_cond.notify_all();
     }
 
-    void PushItem(T item)
-    {
+    void PushItem(T item) {
         {
             unique_lock<mutex> lock(m_mutex);
             m_queue.push(item);
@@ -34,13 +33,12 @@ public:
     }
 
 
-    optional<T> Pop()
-    {
+    optional<T> Pop() {
         unique_lock<mutex> lock(m_mutex);
         m_cond.wait(lock, [this]() { return m_closed || !m_queue.empty();  });
 
         if (m_queue.empty()) {
-            return nullopt; // kolejka zamknięta i pusta
+            return nullopt;
         }
         T item = m_queue.front();
         m_queue.pop();
@@ -48,8 +46,7 @@ public:
         return item;
     }
 
-    bool Empty()
-    {
+    bool Empty() {
         unique_lock<mutex> lock(m_mutex);
         return m_queue.empty();
     }
