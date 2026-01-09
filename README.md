@@ -34,6 +34,21 @@ cmake --build build
 ```
 to generate the build files and build inside the `build` directory
 
+## Build options
+
+### Enable debug logging (cerr)
+Enables internal debug (non-error) messages printed to `cerr`.
+
+```bash
+cmake -S . -B build -DDEBUG_LOG=ON
+```
+### Disable regex match output (stdout):
+Disables printing of regex match results to stdout (useful for benchmarks).
+
+```bash
+cmake -S . -B build -DNO_OUTPUT=ON
+```
+
 # Run mpsst
 
 
@@ -46,6 +61,8 @@ REQUIRED options:
                            normal regex file (-r)
   -t [ --measureTime ]     If the -t flag is passed, measure the program's 
                            execution time
+  -e [ --engine ] arg      Choose an engine type: hs (Hyperscan) or pcre, if none defult is
+                           pcre
 ```
 For example to scan files from regex file and save compiled HS database run: `./build/main -b regexTest.bin -f test_tree -r regexTest.rgx`
 
