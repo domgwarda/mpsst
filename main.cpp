@@ -54,7 +54,7 @@ int main(int argc, char* argv[]){
 
 
     // EngineRegex engine(Hyperscan);
-    Engine selected_engine = PCRE2;
+    Engine selected_engine = Hyperscan;
     EngineRegex engine(selected_engine);
     AbstractRegexHandler* regex_handler = engine.get_engine();
     

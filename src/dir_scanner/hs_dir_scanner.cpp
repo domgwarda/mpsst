@@ -1,8 +1,31 @@
 #include "hs_dir_scanner.h"
+#include "t_queue.cpp"
 #include <filesystem>
 #include <iostream>
 
+#include <thread>
+#include <condition_variable>
+#include <mutex>
+#include <queue>
+
+
 namespace fs = std::filesystem;
+
+void worker(TQueue<std::string> &queue, AbstractFileScanner &handler) {
+    while (true) {
+        auto file = queue.Pop();
+
+        if (!file.has_value()) break;
+        if (file->empty()) break;
+
+        std::cout << "Thread " << std::this_thread::get_id()
+            << " processing: " << *file << "\n";
+
+
+
+        handler.scan_file(file.value());
+    }
+}
 
 HSDirScanner::HSDirScanner(AbstractFileScanner &handler) : AbstractDirScanner(handler) {}
 
@@ -20,12 +43,24 @@ void HSDirScanner::scan(const std::string &root) {
         return;
     }
 
+    TQueue<string> queue;
+
+    thread t1(worker, ref(queue), ref(handler_));
+    thread t2(worker, ref(queue), ref(handler_));
+
     try {
         for (auto &entry : fs::recursive_directory_iterator(p)) {
             if (!entry.is_regular_file()) continue;
-            handler_.scan_file(entry.path().string());
+            queue.PushItem(entry.path().string());
         }
     } catch (const fs::filesystem_error &e) {
         std::cerr << "Filesystem error while scanning " << root << ": " << e.what() << "\n";
     }
+
+    queue.Close();
+
+    t1.join();
+    t2.join();
+
+
 }
