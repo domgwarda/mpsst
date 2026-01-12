@@ -18,11 +18,11 @@ add_subdirectory(pcre2)
 add_executable(main
     main.cpp
     src/file_scanner/hs_file_scanner.cpp
-    src/dir_scanner/hs_dir_scanner.cpp
     src/regex_handler/hs_regex_handler.cpp
     src/regex_handler/pcre_regex_handler.cpp
     src/file_scanner/pcre_file_scanner.cpp
-    src/dir_scanner/pcre_dir_scanner.cpp
+    src/dir_scanner/dir_scanner.cpp
+
 )
 
 target_link_libraries(main
