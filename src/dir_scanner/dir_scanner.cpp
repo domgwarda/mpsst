@@ -1,4 +1,4 @@
-#include "hs_dir_scanner.h"
+#include "dir_scanner.h"
 #include "t_queue.cpp"
 #include <filesystem>
 #include <iostream>
@@ -21,9 +21,8 @@ void worker(TQueue<std::string> &queue, AbstractFileScanner &handler) {
     }
 }
 
-HSDirScanner::HSDirScanner(AbstractFileScanner &handler) : AbstractDirScanner(handler) {}
 
-void HSDirScanner::scan(const std::string &root) {
+void DirScanner::scan(const std::string &root) {
     std::error_code ec;
     fs::path p(root);
 

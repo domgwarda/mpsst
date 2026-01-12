@@ -5,11 +5,11 @@
 #include <boost/program_options.hpp>
 
 #include "abstract_regex_handler.h"
-#include "abstract_dir_scanner.h"
 #include "abstract_file_scanner.h"
 
+#include "dir_scanner.h"
+
 #include "engine_regex_handler.h"
-#include "engine_dir_scanner.h"
 #include "engine_file_scanner.h"
 
 
@@ -105,9 +105,7 @@ int main(int argc, char* argv[]){
 
     // HSFileScanner fscanner(db_variant);
 
-    EngineDirScanner engine_dir_scanner(selected_engine, fscanner);
-    AbstractDirScanner* scanner = engine_dir_scanner.get_engine();
-
+    DirScanner scanner(*fscanner);
 
     int warmup = vm["warmup"].as<int>();
     if (warmup < 0)
@@ -120,21 +118,21 @@ int main(int argc, char* argv[]){
 
     
     if(!measure)
-        scanner->scan(root_path);
+        scanner.scan(root_path);
 
     else{
 
         if(warmup > 0){
         
             for(int i=0; i<warmup; i++)
-                scanner->scan(root_path);
+                scanner.scan(root_path);
         }
         
         std::vector<long long> times;
         double avg = 0;
         for(int i=0; i<tests; i++){
             chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
-            scanner->scan(root_path);
+            scanner.scan(root_path);
             chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
 
             auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count();
