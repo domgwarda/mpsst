@@ -38,8 +38,11 @@ void DirScanner::scan(const std::string &root) {
 
     TQueue<string> queue;
 
-    thread t1(worker, ref(queue), ref(handler_));
-    // thread t2(worker, ref(queue), ref(handler_));
+    vector<thread> threads;
+
+    for (int i=0; i<threads_; i++) {
+        threads.emplace_back(worker, ref(queue), ref(handler_));
+    }
 
     try {
         for (auto &entry : fs::recursive_directory_iterator(p)) {
@@ -52,8 +55,8 @@ void DirScanner::scan(const std::string &root) {
 
     queue.Close();
 
-    t1.join();
-    // t2.join();
-
+    for (auto &t : threads) {
+        t.join();
+    }
 
 }

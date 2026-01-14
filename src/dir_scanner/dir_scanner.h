@@ -25,7 +25,8 @@ to scan every file encountered.
 class DirScanner {
 private:
     AbstractFileScanner &handler_;
+    int threads_;
 public:
-    explicit DirScanner(AbstractFileScanner &handler): handler_(handler) {};
+    explicit DirScanner(AbstractFileScanner &handler, int threads): handler_(handler),threads_(threads) {};
     void scan(const std::string &root);
 };
