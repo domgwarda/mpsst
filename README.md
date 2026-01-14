@@ -57,12 +57,18 @@ cmake -S . -B build -DNO_OUTPUT=ON
 REQUIRED options:
   -r [ --regex ] arg       Path to regex file or binary database (-b)
   -f [ --file ] arg        Path to the root of the files to search
-  -b [ --binDatabase ] arg Path to regex file compressd to binary format or 
-                           normal regex file (-r)
-  -t [ --measureTime ]     If the -t flag is passed, measure the program's 
-                           execution time
-  -e [ --engine ] arg      Choose an engine type: hs (Hyperscan) or pcre, if none defult is
-                           pcre
+
+  -b [ --binDatabase ] arg Path to regex file compressd to binary format or ormal regex file (-r)
+
+  -t [ --measureTime ]     If the -t flag is passed, measure the program's execution time
+
+  -e [ --engine ] arg      Choose an engine type: hs (Hyperscan) or pcre, if none defult is pcre
+
+  -t [ --measureTime ]     Number of measured runs, If the -t flag is passed, measure the program's execution time
+  
+  -w [ --warmup ]          Number of warm-up runs (not measured), if none default is 0
+
+  -h [ --threads ]         Number of running threads, if none default is 0
 ```
 For example to scan files from regex file and save compiled HS database run: `./build/main -b regexTest.bin -f test_tree -r regexTest.rgx`
 

@@ -24,6 +24,7 @@ int main(int argc, char* argv[]){
         ("engine,e", po::value<std::string>(), "Choose an engine type: hs (Hyperscan) or pcre (PCRE2), if none defult is pcre")
         ("measureTime,t", po::value<int>()->implicit_value(1)->default_value(0), "Number of measured runs, If the -t flag is passed, measure the program's execution time")
         ("warmup,w", po::value<int>()->default_value(0),  "Number of warm-up runs (not measured)")
+        ("threads,h", po::value<int>()->default_value(1), "Number of running threads")
 
     ;
 
@@ -105,7 +106,7 @@ int main(int argc, char* argv[]){
 
     // HSFileScanner fscanner(db_variant);
 
-    DirScanner scanner(*fscanner);
+    DirScanner scanner(*fscanner, vm["threads"].as<int>());
 
     int warmup = vm["warmup"].as<int>();
     if (warmup < 0)
