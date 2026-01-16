@@ -155,3 +155,11 @@ Acts as a wrapper to manage "File Scanners" for the specific engine implementati
 ### File Scanners
 
 TODO
+
+# Tests
+
+## Test 4
+Test4 checks how HS/PCRE handle regular expressions (6), simulating sensitive data detection in 10MB files.
+
+## Test 6
+Test4 checks how HS/PCRE handle simple regular expression detection in many (100,000) small files (10 KB).
