@@ -8,3 +8,4 @@ help-dummy.o
 test/performance_test/data
 test/performance_test/test_enron.sh
 test/performance_test/test_spam.sh
+test_data
