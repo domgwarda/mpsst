@@ -1,0 +1,189 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[T1]{fontenc}        % poprawne łamanie polskich znaków
+\usepackage[utf8]{inputenc}     % kodowanie UTF-8
+\usepackage[polish]{babel}      % język polski (nowocześniej niż \usepackage{polski})
+\usepackage{microtype}
+
+\setlength{\headheight}{16pt}
+\usepackage{enumerate}
+
+\usepackage{amssymb}		% pakiet do symboli
+\usepackage{amsmath}		% pakiet do matmy
+
+\usepackage{microtype}          % lepsze łamanie wierszy (bardzo polecane)
+\usepackage[a4paper, margin=1.5cm, top=2cm, bottom=1.8cm]{geometry}
+
+\usepackage{enumerate}
+\usepackage{subcaption} % for subfigure environment
+\usepackage{enumitem}		% punktowanie (a), (b), ...
+
+\usepackage{graphicx}		% wstawianie obrazkow
+\usepackage{float}			% wstawianie obrazkow w dowolnym miejscu
+% \usepackage{tabstackengine} 	% macierze
+\usepackage{fancyhdr}		% ładniejszy wygląd stronki
+% \usepackage{color}   		% kolorowanie linków / odnośników
+\usepackage{hyperref} %do linków
+\hypersetup{
+    colorlinks=true, 	% set true if you want colored links
+    linktoc=all,     	% set to all if you want both sections and subsections linked
+    linkcolor=black,  	% choose some color if you want links to stand out
+}
+\usepackage{titling}
+
+
+\usepackage{newclude}
+\usepackage{xinttools}
+\usepackage{color}
+
+\usepackage[a4paper, margin=1.5cm, top=2cm, bottom=1.8cm]{geometry}
+
+
+% for + / -
+\usepackage{tikz}
+\newcommand{\Mypm}{\mathbin{\tikz [x=1.4ex,y=1.4ex,line width=.1ex] \draw (0.0,0) -- (1.0,0) (0.5,0.08) -- (0.5,0.92) (0.0,0.5) -- (1.0,0.5);}}%
+
+
+\renewcommand\labelitemi{\raisebox{-0.3ex}{\huge\boldmath$\cdot$}} % obniżenie pkt + zmniejszenie
+% przeciwko dzieleniu słów np bez- (enter) względny
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+
+% \stackMath
+
+% nowe komendy dla wygodniejszego pisania :)
+\newcommand{\subtitle}[1]{ \posttitle{ \par\end{center} \begin{center}\large#1\end{center} \vskip0.5em}}
+% \newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
+
+% Wyglad strony:
+% \pagestyle{fancy}
+\fancyhf{}
+\chead{\leftmark}
+\cfoot{\thepage}
+
+
+% \author{}
+\title{\textbf{HyperScan vs PCRE}\\
+Raport z projektu}
+\author{Autorzy: \textbf{}}
+
+
+
+% \subtitle{Redukcja}
+\date{}
+
+\begin{document}
+\thispagestyle{empty}
+\maketitle
+\mbox{}
+
+\section{Wydajności czasowe}
+
+\subsection{Jak ilość regexów wpływa na czas wykonania się programu?}
+
+\subsubsection{Podział wzorców regex}
+
+W celu analizy wpływu charakteru wyrażeń regularnych na wydajność silników
+Hyperscan i PCRE, zastosowane wzorce podzielono na cztery grupy różniące się
+złożonością oraz właściwościami obliczeniowymi.
+
+\begin{itemize}
+    \item \textbf{Grupa 1 – literały (słowa)}
+    Pojedyncze ciągi znaków bez metaznaków regex.
+    Brak ograniczeń początku dopasowania, duża liczba potencjalnych trafień.
+
+    \item \textbf{Grupa 2 – regexy literalne z granicami słowa }
+    Długie literały ograniczone granicami słowa.
+    Mała liczba pozycji startowych i bardzo niska częstość dopasowań.
+
+    \item \textbf{Grupa 3 – regexy strukturalne}
+    Wzorce o określonej strukturze (klasy znaków, kwantyfikatory, alternacje).
+    Szybkie odrzucanie niedopasowanych fragmentów tekstu.
+
+    \item \textbf{Grupa 4 – regexy z szerokim dopasowaniem}
+    Wzorce zawierające wildcardy (\verb|.*|, \verb|.{0,200}|), alternacje i powtórzenia.
+    Duża przestrzeń dopasowania i potencjalnie wysoki koszt obliczeniowy.
+\end{itemize}
+
+Podział ten umożliwia porównanie zachowania silników dla wzorców o rosnącej
+złożoności oraz analizę wpływu typu regexów na skalowanie czasowe.
+
+\newpage
+
+\subsubsection{Wyniki}
+\begin{figure}[h!]
+\centering
+
+\begin{subfigure}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{bench_plot.png}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{bench_plot_regex_easy.png}
+\end{subfigure}
+
+\vspace{0.5em}
+
+\begin{subfigure}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{bench_plot_regex_normal.png}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{bench_plot_regex_hard.png}
+\end{subfigure}
+
+
+\end{figure}
+
+
+\subsubsection{Wnioski}
+
+\begin{itemize}
+    \item Wraz ze wzrostem liczby wzorców Hyperscan wyraźnie lepiej radzi sobie
+    z szukaniem wzorców niż PCRE. Różnica pomiędzy silnikami rośnie wraz
+    z liczbą regexów i dla dużych zbiorów osiąga kilka rzędów wielkości.
+
+    \item Najlepsze wyniki dla obu silników uzyskano w przypadku regexów
+    strukturalnych. Wzorce o jasno określonej strukturze umożliwiają szybkie
+    odrzucanie niedopasowanych fragmentów tekstu, co przekłada się na niski
+    i stabilny czas wykonania.
+
+    \item Hyperscan charakteryzuje się bardzo wysoką wydajnością we wszystkich
+    analizowanych przypadkach, jednak najlepsze rezultaty uzyskuje dla regexów
+    literalnych z granicami słowa oraz dla regexów strukturalnych.
+
+    \item Silnik PCRE zdecydowanie najlepiej radzi sobie właśnie z regexami
+    strukturalnymi, osiągając dla nich znacznie lepsze wyniki niż dla pozostałych
+    kategorii wzorców. W pozostałych grupach czas działania PCRE rośnie
+    zauważalnie szybciej.
+
+    \item Krótkie literały bez ograniczeń początku dopasowania oraz regexy
+    z szerokim dopasowaniem i alternacjami stanowią dla Hyperscana większe
+    obciążenie, choć nawet w tych przypadkach jego wydajność pozostaje
+    znacząco wyższa niż w przypadku PCRE.
+
+\end{itemize}
+
+Uzyskane wyniki wskazują, że im większa jest liczba jednocześnie
+    analizowanych wzorców, tym przewaga Hyperscana nad PCRE staje się
+    wyraźniejsza, co czyni go szczególnie dobrze przystosowanym do zadań
+    typu multi-pattern matching.
+
+
+
+
+
+
+
+\subsection{Jak ilość wątków wpływa na czas wykonania się programu?}
+\subsection{Jak ilość regexów vs ilość wątków wpływa na czas wykonania się programu?}
+
+
+
+
+\end{document}
