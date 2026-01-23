@@ -140,7 +140,26 @@ Acts as a wrapper to manage "Directory Scanners" for the specific engine impleme
 
 ### Directory Scanners
 
-TODO
+### DirScanner 
+
+Directory scanner responsible for filesystem traversal and file dispatching.
+
+DirScanner processes a root path that may represent either a file or a directory.
+
+For directories, it goes through all files in each subfolder and distributes them to worker threads for parallel scanning. Each worker invokes the configured file scanner on the files it receives.
+
+The traversal follows a depth-first search (DFS) order.
+
+* **Attributes:**
+
+  * `AbstractFileScanner& handler_`: Reference to the file scanner used to process individual files.
+  * `int threads_`: Number of worker threads used for parallel file scanning.
+
+* **Methods:**
+
+  * `void scan(const std::string &root)`: Scans a single file or recursively scans a directory, ensuring that all regular files are passed to the file scanner.
+  * `DirScanner(AbstractFileScanner& handler, int threads)`: Initializes the directory scanner with a file scanner instance and the number of worker threads to use.
+  * `void worker(TQueue<std::string>& queue, AbstractFileScanner& handler)`: Continuously retrieves file paths from the queue and calls scan_file on the file scanner.
 
 #### EngineFileScanner Class
 Acts as a wrapper to manage "File Scanners" for the specific engine implementation.
@@ -154,7 +173,28 @@ Acts as a wrapper to manage "File Scanners" for the specific engine implementati
 
 ### File Scanners
 
-TODO
+### HSFileScanner 
+
+Scans the contents of a single file against a compiled Hyperscan database and reports all pattern matches.
+
+HSFileScanner extracts a Hyperscan database from the generic `RegexDatabase` variant and uses it to scan files.
+
+It relies on Hyperscan’s streaming API, allowing large files to be scanned incrementally.
+Hyperscan uses a compiled automaton to scan input data incrementally in chunks, rather than evaluating patterns one-by-one.
+
+The engine is designed to match many regular expressions simultaneously.
+
+* **Attributes:**
+
+  * `hs_database_t* database`: Pointer to the compiled regex database used for HS file scanning.
+  * `RegexDatabase database_variant (inherited)`: Container holding regex database.
+
+* **Methods:**
+
+  * `HSFileScanner(RegexDatabase db_variant)`: Constructs the scanner and initializes it with a compiled regex database.
+  * `~HSFileScanner()`: Destroys the file scanner instance.
+  * `void scan_file(const std::string &path)`: Opens the specified file and scans its contents using the Hyperscan engine, emitting detected matches.
+  * `static int on_match(...)`: Hyperscan match callback used internally to report pattern matches during scanning.
 
 # Tests
 
