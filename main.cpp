@@ -143,8 +143,10 @@ int main(int argc, char* argv[]){
         
         avg /= tests;
 
-        std::cout << "Times for: engine= " << vm["engine"].as<std::string>() << "; warmup= " << warmup << "; test= " << tests << "; threads= " << vm["threads"].as<int>() <<  ";" <<endl;
-        std::cout << "avg= " << avg << " ms" << endl;
+        // std::cout << "Times for: engine= " << vm["engine"].as<std::string>() << "; warmup= " << warmup << "; test= " << tests << "; threads= " << vm["threads"].as<int>() <<  ";" <<endl;
+        // std::cout << "avg= " << avg << " ms" << endl;
+        std::cout << avg << endl;
+
 
     }
 

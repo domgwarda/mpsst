@@ -5,6 +5,8 @@
 \usepackage[polish]{babel}      % język polski (nowocześniej niż \usepackage{polski})
 \usepackage{microtype}
 
+\usepackage{listings}
+
 \setlength{\headheight}{16pt}
 \usepackage{enumerate}
 
@@ -15,6 +17,7 @@
 \usepackage[a4paper, margin=1.5cm, top=2cm, bottom=1.8cm]{geometry}
 
 \usepackage{enumerate}
+\usepackage{wrapfig} % enables wrapfigure environment
 \usepackage{subcaption} % for subfigure environment
 \usepackage{enumitem}		% punktowanie (a), (b), ...
 
@@ -183,6 +186,35 @@ Uzyskane wyniki wskazują, że im większa jest liczba jednocześnie
 \subsection{Jak ilość wątków wpływa na czas wykonania się programu?}
 \subsection{Jak ilość regexów vs ilość wątków wpływa na czas wykonania się programu?}
 
+\subsection{Jak ilość małych ($\leq 3$\,MB) plików wpływa na czas wykonywania?}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{hs_300rgx_4000files.png}
+\end{figure}
+
+Pliki użyte w teście miały nie więcej niż $3$\,MB i zostały wygenerowane poleceniem:
+\begin{quote}
+\texttt{base64 /dev/urandom | head -c 3MB > ...}
+\end{quote}
+Do testów wykorzystano 100 wątków, a każdy program miał 3 podejścia do problemu. Wynikiem przedstawionym na wykresie jest średnia arytmetyczna całkowitego czasu wykonania.
+
+\subsubsection{Przykłady regexów użytych w teście}
+
+\begin{itemize}[leftmargin=*, itemsep=2pt]
+    \item \lstinline!^[0-9]+(\.[0-9]+)?\s?(l|ml)$!
+    \item \lstinline!^Saldo:\s-?[0-9]+,[0-9]{2}\sPLN$!
+    \item \lstinline!^Dawka:\s[0-9]+(mg|ml)$!
+\end{itemize}
+
+\subsubsection{Wnioski z wykresu}
+
+\begin{itemize}[leftmargin=*, itemsep=2pt]
+    \item Do około 100 plików, zarówno HS, jak i PCRE radziły sobie podobnie, z czasem wykonywania od 2 do 200\,ms.
+    \item Wraz ze wzrostem liczby plików czas wykonywania PCRE rośnie znacznie szybciej niż HS.
+    \item Przyspieszenie PCRE jest zdecydowanie większe niż przyspieszenie HS.
+    \item HS lepiej radzi sobie z łączeniem skomplikowanych regexów przy pracy na wielu plikach.
+\end{itemize}
 
 
 
