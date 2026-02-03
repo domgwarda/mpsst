@@ -394,10 +394,12 @@ Do testów wykorzystano 100 wątków, a każdy program miał 3 podejścia do pro
 \subsubsection{Wnioski z wykresu}
 
 \begin{itemize}[leftmargin=*, itemsep=2pt]
-    \item Do około 100 plików, zarówno HS, jak i PCRE radziły sobie podobnie, z czasem wykonywania od 2 do 200\,ms.
+    \item Do około 100 plików, zarówno HS, jak i PCRE radziły sobie podobnie, z czasem wykonywania od 2 do 200\,milisekund.
     \item Wraz ze wzrostem liczby plików czas wykonywania PCRE rośnie znacznie szybciej niż HS.
     \item Przyspieszenie PCRE jest zdecydowanie większe niż przyspieszenie HS.
+    \item Czas dzialania HS dla 4000 plikow nie przekracza 4s, a czas dzialania PCRE przewyzsza 120 sekund.
     \item HS lepiej radzi sobie z łączeniem skomplikowanych regexów przy pracy na wielu plikach.
+
 \end{itemize}
 
 

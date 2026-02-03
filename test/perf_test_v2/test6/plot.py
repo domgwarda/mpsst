@@ -9,8 +9,8 @@ df_pcre['time'] = df_pcre['time']/1000
 
 print(df_hs.columns)
 
-sns.lineplot(data=df_hs, x='files', y='time', marker='o', c='green', label='HyperScan')
-sns.lineplot(data=df_pcre, x='files', y='time', marker='o', c='red', label='PCRE')
+sns.lineplot(data=df_hs, x='files', y='time', marker='o', label='HyperScan')
+sns.lineplot(data=df_pcre, x='files', y='time', marker='o', label='PCRE')
 plt.xlabel('n Files')
 plt.ylabel('Time (in seconds)')
 plt.title('Lineplot -- many files (max 3mb) vs many regexes (~300)')
