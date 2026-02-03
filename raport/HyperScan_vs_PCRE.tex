@@ -34,6 +34,8 @@
 }
 \usepackage{titling}
 
+\usepackage{tcolorbox}
+\usepackage{listings}   % do ładnego kodu/regexów
 
 \usepackage{newclude}
 \usepackage{xinttools}
@@ -92,25 +94,83 @@ Hyperscan i PCRE, zastosowane wzorce podzielono na cztery grupy różniące się
 złożonością oraz właściwościami obliczeniowymi.
 
 \begin{itemize}
-    \item \textbf{Grupa 1 – literały (słowa)}
-    Pojedyncze ciągi znaków bez metaznaków regex.
+    \item \textbf{Grupa 1 – literały (słowa)}  
+    Pojedyncze ciągi znaków bez metaznaków regex.  
     Brak ograniczeń początku dopasowania, duża liczba potencjalnych trafień.
 
-    \item \textbf{Grupa 2 – regexy literalne z granicami słowa }
-    Długie literały ograniczone granicami słowa.
+    \lstset{
+      basicstyle=\ttfamily\small,
+      backgroundcolor=\color{gray!5},
+      frame=single,
+      rulecolor=\color{gray!60}
+    }
+    \begin{lstlisting}
+    Marketing
+    Download
+    upon
+    needed
+    \end{lstlisting}
+
+    \item \textbf{Grupa 2 – regexy literalne z granicami słowa }  
+    Długie literały ograniczone granicami słowa.  
     Mała liczba pozycji startowych i bardzo niska częstość dopasowań.
 
-    \item \textbf{Grupa 3 – regexy strukturalne}
-    Wzorce o określonej strukturze (klasy znaków, kwantyfikatory, alternacje).
+    \lstset{
+      basicstyle=\ttfamily\small,
+      backgroundcolor=\color{gray!5},
+      frame=single,
+      rulecolor=\color{gray!60}
+    }
+    \begin{lstlisting}
+    (^|[^A-Za-z0-9_])uuro($|[^A-Za-z0-9_])
+    (^|[^A-Za-z0-9_])ipxlydil($|[^A-Za-z0-9_])
+    (^|[^A-Za-z0-9_])kbvu($|[^A-Za-z0-9_])
+    (^|[^A-Za-z0-9_])dvgsgo($|[^A-Za-z0-9_])
+    \end{lstlisting}
+
+
+    \item \textbf{Grupa 3 – regexy strukturalne}  
+    Wzorce o określonej strukturze (klasy znaków, kwantyfikatory, alternacje).  
     Szybkie odrzucanie niedopasowanych fragmentów tekstu.
 
-    \item \textbf{Grupa 4 – regexy z szerokim dopasowaniem}
-    Wzorce zawierające wildcardy (\verb|.*|, \verb|.{0,200}|), alternacje i powtórzenia.
+    \lstset{
+      basicstyle=\ttfamily\small,
+      backgroundcolor=\color{gray!5},
+      frame=single,
+      rulecolor=\color{gray!60}
+    }
+    \begin{lstlisting}
+    (sygjyojr|tqoeytlphoi)[ _-]?[0-9]{5}
+    vwqujeqbus[._-]?sxcds
+    (tzsv|oatwzycjn)[ _-]?[0-9]{3}
+    uafffats[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+    \end{lstlisting}
+
+    \item \textbf{Grupa 4 – regexy z szerokim dopasowaniem}  
+    Wzorce zawierające wildcardy (\verb|.*|, \verb|.{0,200}|), alternacje i powtórzenia.  
     Duża przestrzeń dopasowania i potencjalnie wysoki koszt obliczeniowy.
+
+    \lstset{
+      basicstyle=\ttfamily\small,
+      backgroundcolor=\color{gray!5},
+      frame=single,
+      rulecolor=\color{gray!60}
+    }
+    \begin{lstlisting}
+    (?:zzblc|krnelhlomj|cbnrfmltbjnl)[^\n]{50,300}
+    (?:flnrhy|nkyoscvqvs|ggbciouzrgqc).{0,200}(?:id|code|ref)[=:]?\d+
+    (?:ohoceuukl\s*){2,6}ykhzzboa
+    (?:[A-Za-z0-9_-]+/)+yljpnfnsdo
+    \end{lstlisting}
+
+    
 \end{itemize}
 
 Podział ten umożliwia porównanie zachowania silników dla wzorców o rosnącej
 złożoności oraz analizę wpływu typu regexów na skalowanie czasowe.
+
+
+
 
 \newpage
 
@@ -169,7 +229,7 @@ złożoności oraz analizę wpływu typu regexów na skalowanie czasowe.
     z szerokim dopasowaniem i alternacjami stanowią dla Hyperscana większe
     obciążenie, choć nawet w tych przypadkach jego wydajność pozostaje
     znacząco wyższa niż w przypadku PCRE.
-
+    
 \end{itemize}
 
 Uzyskane wyniki wskazują, że im większa jest liczba jednocześnie
@@ -184,7 +244,131 @@ Uzyskane wyniki wskazują, że im większa jest liczba jednocześnie
 
 
 \subsection{Jak ilość wątków wpływa na czas wykonania się programu?}
+
+\subsubsection{Wyniki - 100 regexów}
+\begin{figure}[h!]
+\centering
+
+\begin{subfigure}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{bench_plot_threads_words_100.png}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{bench_plot_threads_easy_100.png}
+\end{subfigure}
+
+\vspace{0.5em}
+
+\begin{subfigure}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{bench_plot_threads_normal_100.png}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{bench_plot_threads_hard_100.png}
+\end{subfigure}
+
+
+\end{figure}
+
+\newpage
+
+\subsubsection{Wyniki - 1000 regexów}
+\begin{figure}[h!]
+\centering
+
+\begin{subfigure}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{bench_plot_threads_words_1000.png}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{bench_plot_threads_easy_1000.png}
+\end{subfigure}
+
+\vspace{0.5em}
+
+\begin{subfigure}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{bench_plot_threads_normal_1000.png}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{bench_plot_threads_hard_1000.png}
+\end{subfigure}
+
+
+\end{figure}
+
+\newpage
+
 \subsection{Jak ilość regexów vs ilość wątków wpływa na czas wykonania się programu?}
+
+\subsubsection{literały (słowa)}
+\begin{figure}[h!]
+\centering
+
+\begin{subfigure}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{words_hs.png}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{words_pcre.png}
+\end{subfigure}
+\end{figure}
+
+\subsubsection{regexy literalne z granicami słów}
+\begin{figure}[h!]
+\centering
+
+\begin{subfigure}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{easy_hs.png}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{easy_pcre.png}
+\end{subfigure}
+\end{figure}
+
+\subsubsection{regexy strukturalne}
+\begin{figure}[h!]
+\centering
+
+\begin{subfigure}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{normal_hs.png}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{normal_pcre.png}
+\end{subfigure}
+\end{figure}
+
+
+\subsubsection{regexy z szerokim dopasowaniem i alternacjami}
+\begin{figure}[h!]
+\centering
+
+\begin{subfigure}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{hard_hs.png}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{hard_pcre.png}
+\end{subfigure}
+\end{figure}
 
 \subsection{Jak ilość małych ($\leq 3$\,MB) plików wpływa na czas wykonywania?}
 
