@@ -1,1000 +1,1000 @@
 hghrdcy[._-]?ndqeofgvlx
 kibxvyko[._-]?vutqxamvfzb
-btuxjmeaybe\s?(?:id|code|ref)\s?\d+
-[A-Z]{5,5}-\d{5}
-(?:ERR|WARN|INFO)-\d{6}
-(?:ERR|WARN|INFO)-\d{4}
-qxopdaeomb\s?(?:id|code|ref)\s?\d+
-(?:veoom|vqljec)[ _-]?\d{2}
-(?:mumhjcnpxpqj|lvbqyzcuj)[ _-]?\d{4}
+btuxjmeaybe[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+[A-Z]{5,5}-[0-9]{5}
+(ERR|WARN|INFO)-[0-9]{6}
+(ERR|WARN|INFO)-[0-9]{4}
+qxopdaeomb[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(veoom|vqljec)[ _-]?[0-9]{2}
+(mumhjcnpxpqj|lvbqyzcuj)[ _-]?[0-9]{4}
 nomfxim[._-]?rlzzmmd
-[A-Z]{4,4}-\d{4}
-(?:zdafqeunwhyb|jrhceerq)[ _-]?\d{4}
-(?:hoaek|mhzd)[ _-]?\d{4}
+[A-Z]{4,4}-[0-9]{4}
+(zdafqeunwhyb|jrhceerq)[ _-]?[0-9]{4}
+(hoaek|mhzd)[ _-]?[0-9]{4}
 zrtypigcfhca[._-]?jhfjqjqeuba
 kyfogycfy[._-]?hhggdrye
-flqrbshp\s?(?:id|code|ref)\s?\d+
-[A-Z]{4,3}-\d{3}
-cjcpuw\s?(?:id|code|ref)\s?\d+
-arotgmepr\s?(?:id|code|ref)\s?\d+
+flqrbshp[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+[A-Z]{3,4}-[0-9]{4}
+cjcpuw[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+arotgmepr[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 vjntm[._-]?dxyvon
-(?:ERR|WARN|INFO)-\d{3}
+(ERR|WARN|INFO)-[0-9]{3}
 lwuenu[._-]?gbujfbvqwat
 oyzxpt[._-]?skdhf
-(?:oiqovgn|nhzgby)[ _-]?\d{4}
-(?:uylikadddfq|wrzgcxgbleo)[ _-]?\d{5}
-(?:woiqbpugjkp|pcuucqknfldy)[ _-]?\d{5}
-(?:urigri|zgnhlghiag)[ _-]?\d{4}
-bccp\s?(?:id|code|ref)\s?\d+
-[A-Z]{3,5}-\d{5}
-guehotmbftg\s?(?:id|code|ref)\s?\d+
+(oiqovgn|nhzgby)[ _-]?[0-9]{4}
+(uylikadddfq|wrzgcxgbleo)[ _-]?[0-9]{5}
+(woiqbpugjkp|pcuucqknfldy)[ _-]?[0-9]{5}
+(urigri|zgnhlghiag)[ _-]?[0-9]{4}
+bccp[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+[A-Z]{3,5}-[0-9]{5}
+guehotmbftg[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 jkjwskt[._-]?yauvv
-dfabqufln\s?(?:id|code|ref)\s?\d+
-(?:ykxsoospwly|mhqepv)[ _-]?\d{4}
-(?:bbttubg|enxppxef)[ _-]?\d{5}
+dfabqufln[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(ykxsoospwly|mhqepv)[ _-]?[0-9]{4}
+(bbttubg|enxppxef)[ _-]?[0-9]{5}
 zthc[._-]?uhsxnpqsbl
 zpkdhsdpmauz[._-]?khheeqjosweo
-(?:jachgqrhsnhl|cjpceiwhpgrl)[ _-]?\d{3}
+(jachgqrhsnhl|cjpceiwhpgrl)[ _-]?[0-9]{3}
 nsen[._-]?iwscpurhb
 usokw[._-]?gwqrktu
 bngqlcxq[._-]?vyfkespr
-[A-Z]{3,4}-\d{4}
 qzixzkgilan[._-]?ueqcxz
-mwofh\s?(?:id|code|ref)\s?\d+
-jevhgqtxu\s?(?:id|code|ref)\s?\d+
+mwofh[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+jevhgqtxu[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 rqepuviqmxx[._-]?rgljdmnidjz
-(?:aaykfqvbuhub|ffpaxcrjifa)[ _-]?\d{3}
-(?:ftjkic|usrgbckxmfk)[ _-]?\d{4}
-[A-Z]{5,3}-\d{3}
-[A-Z]{4,6}-\d{6}
-(?:whcy|auwmiwv)[ _-]?\d{2}
-(?:skhudxft|jalzb)[ _-]?\d{4}
-iibr\s?(?:id|code|ref)\s?\d+
-jxhxi\s?(?:id|code|ref)\s?\d+
+(aaykfqvbuhub|ffpaxcrjifa)[ _-]?[0-9]{3}
+(ERR|WARN|INFO)-[0-9]{5}
+(ftjkic|usrgbckxmfk)[ _-]?[0-9]{4}
+[A-Z]{4,6}-[0-9]{6}
+(whcy|auwmiwv)[ _-]?[0-9]{2}
+(skhudxft|jalzb)[ _-]?[0-9]{4}
+iibr[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+jxhxi[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 jbwcil[._-]?qbdztet
-(?:lnxwlpngu|zeqdkte)[ _-]?\d{4}
-(?:taut|snymuojafihu)[ _-]?\d{5}
-(?:spas|fzsn)[ _-]?\d{2}
-tzqfm\s?(?:id|code|ref)\s?\d+
-(?:anxobduyxuji|miwaofaqrvtz)[ _-]?\d{5}
-(?:juwy|qzboh)[ _-]?\d{4}
-[A-Z]{5,6}-\d{6}
-qdxilcz\s?(?:id|code|ref)\s?\d+
+(lnxwlpngu|zeqdkte)[ _-]?[0-9]{4}
+(taut|snymuojafihu)[ _-]?[0-9]{5}
+(spas|fzsn)[ _-]?[0-9]{2}
+tzqfm[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(anxobduyxuji|miwaofaqrvtz)[ _-]?[0-9]{5}
+(juwy|qzboh)[ _-]?[0-9]{4}
+[A-Z]{5,6}-[0-9]{6}
+qdxilcz[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 qoisn[._-]?wjdigrjemv
-(?:sdfm|gfoj)[ _-]?\d{3}
-faxanfzre\s?(?:id|code|ref)\s?\d+
-(?:ciirpohjp|nluqjch)[ _-]?\d{3}
-yqdcq\s?(?:id|code|ref)\s?\d+
-(?:wybcmtg|ezskcvo)[ _-]?\d{2}
-(?:ERR|WARN|INFO)-\d{5}
-(?:ixhs|nfklvfr)[ _-]?\d{4}
+(sdfm|gfoj)[ _-]?[0-9]{3}
+faxanfzre[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(ciirpohjp|nluqjch)[ _-]?[0-9]{3}
+yqdcq[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(wybcmtg|ezskcvo)[ _-]?[0-9]{2}
+(ixhs|nfklvfr)[ _-]?[0-9]{4}
 mepcvz[._-]?wvhsayxrhoxz
-bjtymnoran\s?(?:id|code|ref)\s?\d+
+bjtymnoran[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 tzwlawogvl[._-]?dyrx
 evmzoo[._-]?scwqhwhar
 anjnwdkx[._-]?qtjdqzhkhmm
-(?:naveuinq|jtxxyljohp)[ _-]?\d{3}
-ddhbmtqpdxam\s?(?:id|code|ref)\s?\d+
-iofuhe\s?(?:id|code|ref)\s?\d+
-(?:autvimizo|rxujnqw)[ _-]?\d{5}
-yuymvz\s?(?:id|code|ref)\s?\d+
+(naveuinq|jtxxyljohp)[ _-]?[0-9]{3}
+ddhbmtqpdxam[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+iofuhe[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(autvimizo|rxujnqw)[ _-]?[0-9]{5}
+yuymvz[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 fmftgsqizhi[._-]?chktb
 usrnqnbzjozv[._-]?czklzbw
-ozfjkgfpgz\s?(?:id|code|ref)\s?\d+
-fthx\s?(?:id|code|ref)\s?\d+
-(?:eakeicz|zckb)[ _-]?\d{2}
+ozfjkgfpgz[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+fthx[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(eakeicz|zckb)[ _-]?[0-9]{2}
 vqtzh[._-]?epow
 luoukwohw[._-]?saugrgi
-(?:lqrbnqobqu|ugrlrihbhk)[ _-]?\d{5}
-[A-Z]{2,3}-\d{3}
-lilytvgew\s?(?:id|code|ref)\s?\d+
-(?:mpbyaboewd|zsoyjnytvd)[ _-]?\d{2}
-(?:gpxssyrbyct|zmyylmwipmpy)[ _-]?\d{3}
-aakqszhp\s?(?:id|code|ref)\s?\d+
-(?:gqckkpebut|yhrkltvdq)[ _-]?\d{3}
-(?:kcrr|gswczzfij)[ _-]?\d{2}
-yhvjmdsp\s?(?:id|code|ref)\s?\d+
-vjkxdke\s?(?:id|code|ref)\s?\d+
-(?:dgqohxm|ehfeio)[ _-]?\d{4}
-(?:ajtdq|aedeyyyvz)[ _-]?\d{4}
-ydyndgsdc\s?(?:id|code|ref)\s?\d+
-(?:aexdbvegl|zshozlpbqrn)[ _-]?\d{4}
-wvuapnph\s?(?:id|code|ref)\s?\d+
-ebeewlkth\s?(?:id|code|ref)\s?\d+
-(?:lhdu|dbptid)[ _-]?\d{4}
-acneonzjrlf\s?(?:id|code|ref)\s?\d+
-(?:qligbzataz|tndjcubgvv)[ _-]?\d{3}
-sptkhpo\s?(?:id|code|ref)\s?\d+
-(?:kxvqaxw|bicfohjd)[ _-]?\d{3}
-[A-Z]{2,5}-\d{5}
-(?:sxauxkqyfklq|vzjhr)[ _-]?\d{2}
-(?:zyszembutad|thykmseuc)[ _-]?\d{3}
-[A-Z]{5,4}-\d{4}
-(?:ipxuuiewadd|eqnttqcrnws)[ _-]?\d{4}
-(?:yafabje|csfkslnoavz)[ _-]?\d{5}
+(lqrbnqobqu|ugrlrihbhk)[ _-]?[0-9]{5}
+[A-Z]{2,3}-[0-9]{3}
+lilytvgew[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(mpbyaboewd|zsoyjnytvd)[ _-]?[0-9]{2}
+(gpxssyrbyct|zmyylmwipmpy)[ _-]?[0-9]{3}
+aakqszhp[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(gqckkpebut|yhrkltvdq)[ _-]?[0-9]{3}
+(kcrr|gswczzfij)[ _-]?[0-9]{2}
+yhvjmdsp[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+vjkxdke[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(dgqohxm|ehfeio)[ _-]?[0-9]{4}
+(ajtdq|aedeyyyvz)[ _-]?[0-9]{4}
+ydyndgsdc[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(aexdbvegl|zshozlpbqrn)[ _-]?[0-9]{4}
+wvuapnph[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+ebeewlkth[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(lhdu|dbptid)[ _-]?[0-9]{4}
+acneonzjrlf[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(qligbzataz|tndjcubgvv)[ _-]?[0-9]{3}
+sptkhpo[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(kxvqaxw|bicfohjd)[ _-]?[0-9]{3}
+[A-Z]{2,5}-[0-9]{5}
+(sxauxkqyfklq|vzjhr)[ _-]?[0-9]{2}
+(zyszembutad|thykmseuc)[ _-]?[0-9]{3}
+[A-Z]{4,5}-[0-9]{5}
+(ipxuuiewadd|eqnttqcrnws)[ _-]?[0-9]{4}
+(yafabje|csfkslnoavz)[ _-]?[0-9]{5}
 evldvvkkiqyx[._-]?qubt
-ztza\s?(?:id|code|ref)\s?\d+
-(?:zavzeju|pzexfjkimlh)[ _-]?\d{4}
-kdggnxk\s?(?:id|code|ref)\s?\d+
+ztza[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(zavzeju|pzexfjkimlh)[ _-]?[0-9]{4}
+kdggnxk[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 kefzhsjso[._-]?hcmmylyfqqg
-(?:rpbhtkh|otbna)[ _-]?\d{4}
+(rpbhtkh|otbna)[ _-]?[0-9]{4}
 qdprkt[._-]?phtdhujyyeyk
 gslvjjzuiw[._-]?vpspa
-zfabuyxziedv\s?(?:id|code|ref)\s?\d+
-(?:nahnqkrkxcmw|qkxtvworjhr)[ _-]?\d{2}
+zfabuyxziedv[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(nahnqkrkxcmw|qkxtvworjhr)[ _-]?[0-9]{2}
 gpwvuskefkgk[._-]?xbgtvlvks
-(?:jrstml|zjasxfgma)[ _-]?\d{3}
-(?:afquszve|iduktjgdciox)[ _-]?\d{2}
-jmpxaesu\s?(?:id|code|ref)\s?\d+
-cbagfuqzh\s?(?:id|code|ref)\s?\d+
-(?:xfmtyaloqs|ablohhpl)[ _-]?\d{4}
+(jrstml|zjasxfgma)[ _-]?[0-9]{3}
+(afquszve|iduktjgdciox)[ _-]?[0-9]{2}
+jmpxaesu[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+cbagfuqzh[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(xfmtyaloqs|ablohhpl)[ _-]?[0-9]{4}
 rpndwh[._-]?dpuwas
-(?:kqxbcd|chyfhaegzhh)[ _-]?\d{2}
+(kqxbcd|chyfhaegzhh)[ _-]?[0-9]{2}
 dpbyczqatvdm[._-]?lrhqxclhbzxs
 jytgs[._-]?surcrplgg
-zovip\s?(?:id|code|ref)\s?\d+
+zovip[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 npvm[._-]?zpte
-(?:lhzyqw|hbzqodlhso)[ _-]?\d{5}
+(lhzyqw|hbzqodlhso)[ _-]?[0-9]{5}
 maik[._-]?bdskwnyprb
 rfdsd[._-]?qeunl
-(?:ssibgrqjse|jsbndudvpcr)[ _-]?\d{3}
-(?:nclrn|rpcomriume)[ _-]?\d{2}
-tgmd\s?(?:id|code|ref)\s?\d+
-(?:wabzfy|pmwzpbliih)[ _-]?\d{3}
+(ssibgrqjse|jsbndudvpcr)[ _-]?[0-9]{3}
+(nclrn|rpcomriume)[ _-]?[0-9]{2}
+tgmd[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(wabzfy|pmwzpbliih)[ _-]?[0-9]{3}
 lhbjjltyyh[._-]?ggkt
-[A-Z]{4,5}-\d{5}
-(?:nmwvuc|fafmx)[ _-]?\d{4}
+(nmwvuc|fafmx)[ _-]?[0-9]{4}
 pjsrj[._-]?athmhnhcnh
-(?:hjhgubeijuze|azzr)[ _-]?\d{3}
-jmbcxpful\s?(?:id|code|ref)\s?\d+
-[A-Z]{2,4}-\d{4}
+(hjhgubeijuze|azzr)[ _-]?[0-9]{3}
+jmbcxpful[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+[A-Z]{2,4}-[0-9]{4}
 lnmbxewusfh[._-]?sseaxop
-(?:sldvvoy|caqrst)[ _-]?\d{2}
-jzswmxbxxsy\s?(?:id|code|ref)\s?\d+
-nkobzhvxaaq\s?(?:id|code|ref)\s?\d+
+(sldvvoy|caqrst)[ _-]?[0-9]{2}
+jzswmxbxxsy[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+nkobzhvxaaq[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 rfgjnh[._-]?hvmubyxqsvq
 tdievzczbrq[._-]?cisde
-vabckpweqnc\s?(?:id|code|ref)\s?\d+
-(?:cjvbdri|wxjuxbo)[ _-]?\d{5}
-[A-Z]{3,6}-\d{6}
-lpjimuf\s?(?:id|code|ref)\s?\d+
-(?:jjialjssh|vdpovmjzaxv)[ _-]?\d{5}
-(?:frslnuaum|yxjijciqnxj)[ _-]?\d{4}
+vabckpweqnc[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(cjvbdri|wxjuxbo)[ _-]?[0-9]{5}
+[A-Z]{3,6}-[0-9]{6}
+lpjimuf[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(jjialjssh|vdpovmjzaxv)[ _-]?[0-9]{5}
+(frslnuaum|yxjijciqnxj)[ _-]?[0-9]{4}
 nmisem[._-]?snpmppdq
 lfpzebqke[._-]?fqspsfcotlq
 hgpgobeguf[._-]?ikjwsf
 wnjoqg[._-]?ebyyng
 cvhu[._-]?otozih
 egoczzvx[._-]?vhtfmihoelsd
-[A-Z]{3,3}-\d{3}
-(?:oidclnogm|rypmrytbao)[ _-]?\d{5}
-(?:rhfmmrux|stvaqu)[ _-]?\d{3}
-scopba\s?(?:id|code|ref)\s?\d+
+[A-Z]{3,3}-[0-9]{3}
+(oidclnogm|rypmrytbao)[ _-]?[0-9]{5}
+(rhfmmrux|stvaqu)[ _-]?[0-9]{3}
+scopba[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 nvkule[._-]?fqlrsvakyszv
-ytcfv\s?(?:id|code|ref)\s?\d+
-sjhcb\s?(?:id|code|ref)\s?\d+
-jxawfoartb\s?(?:id|code|ref)\s?\d+
-(?:kdtteauke|kgnknwegwgfx)[ _-]?\d{4}
-(?:nimyarcsmqz|gppidjipjosv)[ _-]?\d{2}
-vktvepmgp\s?(?:id|code|ref)\s?\d+
-gctw\s?(?:id|code|ref)\s?\d+
-sipsm\s?(?:id|code|ref)\s?\d+
-(?:lgqqtkola|fnkpxlohii)[ _-]?\d{3}
-(?:onwzt|lqdljmlpznzn)[ _-]?\d{5}
-nncrrklc\s?(?:id|code|ref)\s?\d+
+ytcfv[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+sjhcb[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+jxawfoartb[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(kdtteauke|kgnknwegwgfx)[ _-]?[0-9]{4}
+(nimyarcsmqz|gppidjipjosv)[ _-]?[0-9]{2}
+vktvepmgp[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+gctw[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+sipsm[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(lgqqtkola|fnkpxlohii)[ _-]?[0-9]{3}
+(onwzt|lqdljmlpznzn)[ _-]?[0-9]{5}
+nncrrklc[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 tnwqukz[._-]?svmvcuw
-(?:mygyexczgx|miid)[ _-]?\d{2}
-(?:yfnysa|ezhfdhcclyn)[ _-]?\d{3}
-vchinm\s?(?:id|code|ref)\s?\d+
+(mygyexczgx|miid)[ _-]?[0-9]{2}
+(yfnysa|ezhfdhcclyn)[ _-]?[0-9]{3}
+vchinm[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 wgeescbdl[._-]?dgec
 cmkdicc[._-]?occfn
-ubiwlrveohc\s?(?:id|code|ref)\s?\d+
-(?:tfdascki|vpkj)[ _-]?\d{5}
+ubiwlrveohc[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(tfdascki|vpkj)[ _-]?[0-9]{5}
 jukrut[._-]?ujchwfscg
-(?:oojvqsmtzwn|suepcu)[ _-]?\d{5}
-(?:nhaasa|aahibk)[ _-]?\d{2}
-gvtjo\s?(?:id|code|ref)\s?\d+
-(?:pzlx|jwohdfimv)[ _-]?\d{4}
+(oojvqsmtzwn|suepcu)[ _-]?[0-9]{5}
+(nhaasa|aahibk)[ _-]?[0-9]{2}
+gvtjo[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(pzlx|jwohdfimv)[ _-]?[0-9]{4}
 vkiqcjcmlnkc[._-]?hgxdlsnmy
-[A-Z]{2,6}-\d{6}
-(?:ttyg|oqvsebbyt)[ _-]?\d{4}
-owtqvica\s?(?:id|code|ref)\s?\d+
-zzyrxzim\s?(?:id|code|ref)\s?\d+
-pnyispseyk\s?(?:id|code|ref)\s?\d+
-hraxzszlvirq\s?(?:id|code|ref)\s?\d+
+[A-Z]{2,6}-[0-9]{6}
+(ttyg|oqvsebbyt)[ _-]?[0-9]{4}
+owtqvica[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+zzyrxzim[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+pnyispseyk[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+hraxzszlvirq[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 yfhmixbtzpfb[._-]?dkyie
-(?:wrjmqyohqppm|leczbf)[ _-]?\d{4}
-qwuwxk\s?(?:id|code|ref)\s?\d+
+(wrjmqyohqppm|leczbf)[ _-]?[0-9]{4}
+qwuwxk[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 qzjw[._-]?ewlcoqp
-(?:qdxknwk|ingpvgd)[ _-]?\d{2}
+(qdxknwk|ingpvgd)[ _-]?[0-9]{2}
 vkdrrwuwjalr[._-]?wcby
 zfrfjfalfrxv[._-]?kgtxdtc
 ixjrfwdf[._-]?dtdbpdmuv
-(?:gxfbmiqgu|aurtab)[ _-]?\d{4}
-(?:lelcwe|ewahgelrnz)[ _-]?\d{2}
-vewfduul\s?(?:id|code|ref)\s?\d+
-thbsw\s?(?:id|code|ref)\s?\d+
+(gxfbmiqgu|aurtab)[ _-]?[0-9]{4}
+(lelcwe|ewahgelrnz)[ _-]?[0-9]{2}
+vewfduul[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+thbsw[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 epyohkwvnmfq[._-]?prmd
-(?:juuhpsyfayq|jmzmifmdh)[ _-]?\d{2}
-(?:mnmgi|sadx)[ _-]?\d{3}
-glcuyxld\s?(?:id|code|ref)\s?\d+
-(?:vrtazyn|lfgxv)[ _-]?\d{2}
+(juuhpsyfayq|jmzmifmdh)[ _-]?[0-9]{2}
+(mnmgi|sadx)[ _-]?[0-9]{3}
+glcuyxld[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(vrtazyn|lfgxv)[ _-]?[0-9]{2}
 tplwseaqsvxn[._-]?zbqcrjznqbh
-wfgmyozzesv\s?(?:id|code|ref)\s?\d+
-(?:acrgqb|lrkbzyyhjn)[ _-]?\d{4}
+wfgmyozzesv[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(acrgqb|lrkbzyyhjn)[ _-]?[0-9]{4}
 elpzamf[._-]?iiqzeptz
 ohnuvzsen[._-]?cfxsz
-ekyje\s?(?:id|code|ref)\s?\d+
-(?:epyjviqbwgjb|xuvmnxg)[ _-]?\d{5}
-(?:swqm|teodda)[ _-]?\d{3}
-(?:xcqfxdzcgdjj|lbhfgsxcow)[ _-]?\d{2}
-nxquomei\s?(?:id|code|ref)\s?\d+
-lnddhjyd\s?(?:id|code|ref)\s?\d+
+ekyje[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(epyjviqbwgjb|xuvmnxg)[ _-]?[0-9]{5}
+(swqm|teodda)[ _-]?[0-9]{3}
+(xcqfxdzcgdjj|lbhfgsxcow)[ _-]?[0-9]{2}
+nxquomei[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+lnddhjyd[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 itjcvtdtjcvp[._-]?adqkstjk
-(?:sdacvnkxgegl|nitzr)[ _-]?\d{2}
-tlxlrzvv\s?(?:id|code|ref)\s?\d+
-krpd\s?(?:id|code|ref)\s?\d+
-pmntxeh\s?(?:id|code|ref)\s?\d+
-rnqvsyhi\s?(?:id|code|ref)\s?\d+
-(?:uhhsroufvbl|nudid)[ _-]?\d{2}
-ebmv\s?(?:id|code|ref)\s?\d+
-(?:jriyegl|urjkdm)[ _-]?\d{4}
+(sdacvnkxgegl|nitzr)[ _-]?[0-9]{2}
+tlxlrzvv[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+krpd[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+pmntxeh[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+rnqvsyhi[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(uhhsroufvbl|nudid)[ _-]?[0-9]{2}
+ebmv[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(jriyegl|urjkdm)[ _-]?[0-9]{4}
 uqozkfir[._-]?jtbswefnbxm
-(?:zlhtplpvuwe|abtlidcbak)[ _-]?\d{5}
+(zlhtplpvuwe|abtlidcbak)[ _-]?[0-9]{5}
 xlmmx[._-]?hdsysvmk
-vlxpgrjedu\s?(?:id|code|ref)\s?\d+
-fnpcwstmnhv\s?(?:id|code|ref)\s?\d+
-(?:lgoeyqhyt|cobrlnh)[ _-]?\d{5}
-arghepbtuthw\s?(?:id|code|ref)\s?\d+
-(?:qbdrh|ltex)[ _-]?\d{2}
+vlxpgrjedu[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+fnpcwstmnhv[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(lgoeyqhyt|cobrlnh)[ _-]?[0-9]{5}
+arghepbtuthw[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(qbdrh|ltex)[ _-]?[0-9]{2}
 gvnia[._-]?tkmt
 ymzvf[._-]?etyuu
-knhasxqjseu\s?(?:id|code|ref)\s?\d+
-(?:avxctrzvmsae|ikcpssky)[ _-]?\d{3}
+knhasxqjseu[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(avxctrzvmsae|ikcpssky)[ _-]?[0-9]{3}
 kxljr[._-]?wzqad
 jnjwp[._-]?syhunoiq
-(?:doqz|zvgscjbqoywr)[ _-]?\d{2}
+(doqz|zvgscjbqoywr)[ _-]?[0-9]{2}
 xxfcuohojhjj[._-]?owfwpgqwcww
 eiujbr[._-]?rvvigu
 bhootliqrw[._-]?mheixc
-(?:idvqlb|kcfqyksds)[ _-]?\d{2}
+(idvqlb|kcfqyksds)[ _-]?[0-9]{2}
 brjxnwakmxqj[._-]?xggntb
-zjeix\s?(?:id|code|ref)\s?\d+
-cdrmglun\s?(?:id|code|ref)\s?\d+
-(?:bznn|rnjztqt)[ _-]?\d{5}
-(?:odlz|fwuxqcl)[ _-]?\d{5}
+zjeix[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+cdrmglun[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(bznn|rnjztqt)[ _-]?[0-9]{5}
+(odlz|fwuxqcl)[ _-]?[0-9]{5}
 sluaxocekn[._-]?tadekusysigg
-(?:lkvouqgvqcw|koitvbwvvde)[ _-]?\d{5}
-qtqmzx\s?(?:id|code|ref)\s?\d+
-(?:ybhjddyxqri|jnrblcfbjn)[ _-]?\d{5}
+(lkvouqgvqcw|koitvbwvvde)[ _-]?[0-9]{5}
+qtqmzx[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(ybhjddyxqri|jnrblcfbjn)[ _-]?[0-9]{5}
 zrof[._-]?xnikhhpbpyd
 gnppbt[._-]?wnbbrnupcpj
-sazwdda\s?(?:id|code|ref)\s?\d+
-iemeobl\s?(?:id|code|ref)\s?\d+
+sazwdda[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+iemeobl[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 lnikl[._-]?hqdfke
-uajh\s?(?:id|code|ref)\s?\d+
+uajh[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 ikwfokcu[._-]?bwvmfeldgvwz
 vqyivlwlod[._-]?fioj
 qtapldpznbi[._-]?faaq
 yjgcnqy[._-]?xwmttktwe
-(?:ruhraoef|gtkuqxn)[ _-]?\d{5}
+(ruhraoef|gtkuqxn)[ _-]?[0-9]{5}
 gjitq[._-]?fykzkrvnm
 yekjxboknu[._-]?dxtwe
-fbqnsuyt\s?(?:id|code|ref)\s?\d+
-(?:inffsowst|ybxiyqlzhk)[ _-]?\d{4}
-(?:vagdcotbwh|kzinco)[ _-]?\d{5}
-hyljvnzsm\s?(?:id|code|ref)\s?\d+
-asivnmyhnkud\s?(?:id|code|ref)\s?\d+
+fbqnsuyt[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(inffsowst|ybxiyqlzhk)[ _-]?[0-9]{4}
+(vagdcotbwh|kzinco)[ _-]?[0-9]{5}
+hyljvnzsm[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+asivnmyhnkud[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 daesgbzt[._-]?wtuknckqmtr
 elxosqvidz[._-]?qnzfnvayvc
-aidxnd\s?(?:id|code|ref)\s?\d+
-(?:gnhvdjtipn|pylz)[ _-]?\d{4}
-towc\s?(?:id|code|ref)\s?\d+
+aidxnd[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(gnhvdjtipn|pylz)[ _-]?[0-9]{4}
+towc[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 hbcasbf[._-]?igoukdcz
-iispsu\s?(?:id|code|ref)\s?\d+
+iispsu[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 qrpohdu[._-]?ntuijtih
-(?:kszdit|sxgd)[ _-]?\d{3}
-qxmqgovwjwuw\s?(?:id|code|ref)\s?\d+
-iejykyndpwq\s?(?:id|code|ref)\s?\d+
-(?:tcarazmsbr|bmqi)[ _-]?\d{4}
-(?:xvipg|ayxs)[ _-]?\d{4}
+(kszdit|sxgd)[ _-]?[0-9]{3}
+qxmqgovwjwuw[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+iejykyndpwq[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(tcarazmsbr|bmqi)[ _-]?[0-9]{4}
+(xvipg|ayxs)[ _-]?[0-9]{4}
 zoua[._-]?vgrlzcmf
-(?:eoem|rmvegervjr)[ _-]?\d{2}
-xjcaxdbsoiym\s?(?:id|code|ref)\s?\d+
+(eoem|rmvegervjr)[ _-]?[0-9]{2}
+xjcaxdbsoiym[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 qmesqm[._-]?fkriclgqsyw
 scoxposodwtk[._-]?wfsor
 enewjtuf[._-]?xjvcfohbz
-gjpxkaihbau\s?(?:id|code|ref)\s?\d+
-viwy\s?(?:id|code|ref)\s?\d+
+gjpxkaihbau[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+viwy[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 knhtlfslwi[._-]?arewyc
-feqsqsdqe\s?(?:id|code|ref)\s?\d+
-rwthwwu\s?(?:id|code|ref)\s?\d+
-thihww\s?(?:id|code|ref)\s?\d+
+feqsqsdqe[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+rwthwwu[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+thihww[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 mahwgw[._-]?gkvvxrvfrons
 lzjgummrc[._-]?kyvubz
-(?:gfxkdex|ajoebaaenzt)[ _-]?\d{3}
-(?:llaxneffns|embvjbbj)[ _-]?\d{4}
-(?:xuxttn|wfbc)[ _-]?\d{2}
-jnqzsamqz\s?(?:id|code|ref)\s?\d+
-lqsrhqfg\s?(?:id|code|ref)\s?\d+
+(gfxkdex|ajoebaaenzt)[ _-]?[0-9]{3}
+(llaxneffns|embvjbbj)[ _-]?[0-9]{4}
+(xuxttn|wfbc)[ _-]?[0-9]{2}
+jnqzsamqz[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+lqsrhqfg[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 afhuasv[._-]?egqhhq
-elwf\s?(?:id|code|ref)\s?\d+
+elwf[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 hnhfxvltav[._-]?vsrbm
-nwmmxmjye\s?(?:id|code|ref)\s?\d+
-(?:tdrx|posgs)[ _-]?\d{3}
+nwmmxmjye[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(tdrx|posgs)[ _-]?[0-9]{3}
 kcvzffpsvom[._-]?pomiuxre
-etidswbvd\s?(?:id|code|ref)\s?\d+
-(?:gxrdzrjnxpi|lczqqnpxexy)[ _-]?\d{5}
-grfb\s?(?:id|code|ref)\s?\d+
-(?:fhqkg|prfpf)[ _-]?\d{5}
+etidswbvd[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(gxrdzrjnxpi|lczqqnpxexy)[ _-]?[0-9]{5}
+grfb[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(fhqkg|prfpf)[ _-]?[0-9]{5}
 ujediz[._-]?zzjv
 hwusfqc[._-]?fvwupuwygbj
-(?:ghbnwnfxp|glfjiqmt)[ _-]?\d{5}
-nupmdqr\s?(?:id|code|ref)\s?\d+
+(ghbnwnfxp|glfjiqmt)[ _-]?[0-9]{5}
+nupmdqr[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 yetgdey[._-]?ugkkzdx
 mfbxcodmuhon[._-]?yzscxhq
-(?:vgvtns|pcfudtgvdcc)[ _-]?\d{3}
+(vgvtns|pcfudtgvdcc)[ _-]?[0-9]{3}
 lbhtthjddzl[._-]?nclyvv
-(?:dwtzafjizbo|ajacnhvdll)[ _-]?\d{5}
-twslln\s?(?:id|code|ref)\s?\d+
-lynvqhq\s?(?:id|code|ref)\s?\d+
-(?:xmqghgaj|bebd)[ _-]?\d{5}
+(dwtzafjizbo|ajacnhvdll)[ _-]?[0-9]{5}
+twslln[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+lynvqhq[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(xmqghgaj|bebd)[ _-]?[0-9]{5}
 ealjvv[._-]?xttpqwobpkry
 jfeuilkmaw[._-]?toaf
 gjvmvt[._-]?kxqfefsdpef
-oqwlkgvty\s?(?:id|code|ref)\s?\d+
-(?:pzbyd|shpubrk)[ _-]?\d{3}
+oqwlkgvty[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(pzbyd|shpubrk)[ _-]?[0-9]{3}
 ptudlrxheakn[._-]?azie
 bnkagwnjpxtj[._-]?iysr
-gniszxiym\s?(?:id|code|ref)\s?\d+
-utgspt\s?(?:id|code|ref)\s?\d+
+gniszxiym[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+utgspt[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 ltpiu[._-]?znzlnzbwdhz
-(?:jxdbor|ludbvyaawh)[ _-]?\d{2}
+(jxdbor|ludbvyaawh)[ _-]?[0-9]{2}
 dxcasxxmkvf[._-]?xmgmsp
-(?:nbtdvfr|qenifoyx)[ _-]?\d{2}
-vamxfpezboac\s?(?:id|code|ref)\s?\d+
-wixjamk\s?(?:id|code|ref)\s?\d+
-qryvflg\s?(?:id|code|ref)\s?\d+
+(nbtdvfr|qenifoyx)[ _-]?[0-9]{2}
+vamxfpezboac[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+wixjamk[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+qryvflg[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 pdzpfoy[._-]?lgnpdcldiqp
-(?:gftvodds|jeksosmpqz)[ _-]?\d{3}
+(gftvodds|jeksosmpqz)[ _-]?[0-9]{3}
 rdlsrf[._-]?hphovatw
-(?:kdttojvi|tqqwdke)[ _-]?\d{2}
-pqehbcpti\s?(?:id|code|ref)\s?\d+
-szuby\s?(?:id|code|ref)\s?\d+
-kjudvmnpgn\s?(?:id|code|ref)\s?\d+
-(?:ebuctx|moddaxffebas)[ _-]?\d{4}
+(kdttojvi|tqqwdke)[ _-]?[0-9]{2}
+pqehbcpti[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+szuby[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+kjudvmnpgn[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(ebuctx|moddaxffebas)[ _-]?[0-9]{4}
 djhsbq[._-]?ybsohdbf
 klcn[._-]?verkpyt
-xtwyrax\s?(?:id|code|ref)\s?\d+
-nhosifwikxw\s?(?:id|code|ref)\s?\d+
-mtbm\s?(?:id|code|ref)\s?\d+
-(?:exppnv|ihaeh)[ _-]?\d{4}
+xtwyrax[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+nhosifwikxw[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+mtbm[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(exppnv|ihaeh)[ _-]?[0-9]{4}
 uzjyawmmwn[._-]?hzhqtnfp
 urfzghiijyo[._-]?lqwqctzrjaga
-nzhl\s?(?:id|code|ref)\s?\d+
+nzhl[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 psqrjhekdeuo[._-]?dsruy
-(?:xymxpo|tqrloce)[ _-]?\d{5}
-(?:dlabwox|cddmuswuo)[ _-]?\d{2}
-ymntkxmw\s?(?:id|code|ref)\s?\d+
-ozrrkqxwtmm\s?(?:id|code|ref)\s?\d+
-ryislh\s?(?:id|code|ref)\s?\d+
-(?:kumsln|wogvxuvpa)[ _-]?\d{3}
+(xymxpo|tqrloce)[ _-]?[0-9]{5}
+(dlabwox|cddmuswuo)[ _-]?[0-9]{2}
+ymntkxmw[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+ozrrkqxwtmm[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+ryislh[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(kumsln|wogvxuvpa)[ _-]?[0-9]{3}
 lulntaxurfh[._-]?oolmcfu
-(?:lqwam|rjljrwid)[ _-]?\d{5}
-(?:oogw|uwrhqlncrpw)[ _-]?\d{4}
+(lqwam|rjljrwid)[ _-]?[0-9]{5}
+(oogw|uwrhqlncrpw)[ _-]?[0-9]{4}
 pglaei[._-]?zvlm
-(?:chwdvz|adfoamv)[ _-]?\d{4}
+(chwdvz|adfoamv)[ _-]?[0-9]{4}
 rlruunofsjv[._-]?vdgvfe
 uyltqv[._-]?xvcigfqxppq
 kqkoprl[._-]?hett
-qffnuijqbpvv\s?(?:id|code|ref)\s?\d+
-aarnkaa\s?(?:id|code|ref)\s?\d+
-(?:ldosi|gpwzc)[ _-]?\d{3}
-bcjko\s?(?:id|code|ref)\s?\d+
-wyrmvmzm\s?(?:id|code|ref)\s?\d+
-(?:joxh|ybkvuuu)[ _-]?\d{5}
+qffnuijqbpvv[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+aarnkaa[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(ldosi|gpwzc)[ _-]?[0-9]{3}
+bcjko[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+wyrmvmzm[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(joxh|ybkvuuu)[ _-]?[0-9]{5}
 ldidyrxcwqr[._-]?crjbmniy
-(?:swqublew|msraai)[ _-]?\d{5}
+(swqublew|msraai)[ _-]?[0-9]{5}
 eujgggc[._-]?kjhcifxua
-(?:sxbalnaleb|tkknmoomjsb)[ _-]?\d{2}
-qndfaxepomk\s?(?:id|code|ref)\s?\d+
-(?:ndhf|gjlwrmq)[ _-]?\d{3}
-sabxm\s?(?:id|code|ref)\s?\d+
-(?:pvlrnldbtd|stspshqevif)[ _-]?\d{3}
-(?:xhjpukw|vezd)[ _-]?\d{2}
-(?:zjkhi|acdaxvc)[ _-]?\d{2}
+(sxbalnaleb|tkknmoomjsb)[ _-]?[0-9]{2}
+qndfaxepomk[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(ndhf|gjlwrmq)[ _-]?[0-9]{3}
+sabxm[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(pvlrnldbtd|stspshqevif)[ _-]?[0-9]{3}
+(xhjpukw|vezd)[ _-]?[0-9]{2}
+(zjkhi|acdaxvc)[ _-]?[0-9]{2}
 szyqydxisrr[._-]?uwax
 ykwmhxknyw[._-]?vfqj
-jbrghogipbd\s?(?:id|code|ref)\s?\d+
-(?:wdfa|vdteca)[ _-]?\d{4}
+jbrghogipbd[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(wdfa|vdteca)[ _-]?[0-9]{4}
 nlukvszpdfpj[._-]?beqsbkrewi
-mpxudjmxh\s?(?:id|code|ref)\s?\d+
+mpxudjmxh[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 itazudmjop[._-]?hwbsj
-(?:atennlhgg|zpiizvrxg)[ _-]?\d{2}
-qpcp\s?(?:id|code|ref)\s?\d+
+(atennlhgg|zpiizvrxg)[ _-]?[0-9]{2}
+qpcp[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 wcgct[._-]?bqva
 phzejic[._-]?ybylrf
 enwmhbm[._-]?qaxnxbmi
-ismeiwgaodbd\s?(?:id|code|ref)\s?\d+
-(?:vyegmczsc|jvrbwhtqhufq)[ _-]?\d{5}
+ismeiwgaodbd[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(vyegmczsc|jvrbwhtqhufq)[ _-]?[0-9]{5}
 aptafafvk[._-]?rryvzlnq
-adgmpqqe\s?(?:id|code|ref)\s?\d+
-dyoshcgx\s?(?:id|code|ref)\s?\d+
+adgmpqqe[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+dyoshcgx[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 yraqvxlvjn[._-]?iqfr
-(?:xbzkvuuh|btka)[ _-]?\d{2}
+(xbzkvuuh|btka)[ _-]?[0-9]{2}
 arvwqfzxeu[._-]?doxek
-xtfxoktzah\s?(?:id|code|ref)\s?\d+
-xmdzgezdyo\s?(?:id|code|ref)\s?\d+
+xtfxoktzah[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+xmdzgezdyo[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 uhimg[._-]?mujgtxyzd
-(?:deolulfm|tmtiap)[ _-]?\d{3}
+(deolulfm|tmtiap)[ _-]?[0-9]{3}
 stojaqiaqcwq[._-]?gyeevramua
-wweevpy\s?(?:id|code|ref)\s?\d+
-dsleml\s?(?:id|code|ref)\s?\d+
-(?:djwcxakdyex|ddauhcdhma)[ _-]?\d{3}
-(?:wmmxp|byvdsmn)[ _-]?\d{4}
-lppmiepaymci\s?(?:id|code|ref)\s?\d+
-(?:wytazpq|knmyupxedsw)[ _-]?\d{5}
-inrmd\s?(?:id|code|ref)\s?\d+
+wweevpy[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+dsleml[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(djwcxakdyex|ddauhcdhma)[ _-]?[0-9]{3}
+(wmmxp|byvdsmn)[ _-]?[0-9]{4}
+lppmiepaymci[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(wytazpq|knmyupxedsw)[ _-]?[0-9]{5}
+inrmd[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 hqggroxex[._-]?dcbxa
-(?:ubxnuyjnbav|ylmjhcomcxx)[ _-]?\d{4}
-(?:gobuxlxkz|ienyyknkh)[ _-]?\d{3}
+(ubxnuyjnbav|ylmjhcomcxx)[ _-]?[0-9]{4}
+(gobuxlxkz|ienyyknkh)[ _-]?[0-9]{3}
 hsazqsesszkp[._-]?udartpulujn
-(?:ltqy|sruptuyckdfl)[ _-]?\d{5}
+(ltqy|sruptuyckdfl)[ _-]?[0-9]{5}
 cagfi[._-]?shakratjs
-ertwlgjpmc\s?(?:id|code|ref)\s?\d+
-ocrcjet\s?(?:id|code|ref)\s?\d+
-xudbdvvuvh\s?(?:id|code|ref)\s?\d+
+ertwlgjpmc[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+ocrcjet[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+xudbdvvuvh[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 pkpor[._-]?tyluawt
-qqwxtawook\s?(?:id|code|ref)\s?\d+
-(?:rgzbxrgtosh|teapopu)[ _-]?\d{3}
-igcpbgm\s?(?:id|code|ref)\s?\d+
-xkfinlobawuv\s?(?:id|code|ref)\s?\d+
-wvezd\s?(?:id|code|ref)\s?\d+
-uegwvtwozge\s?(?:id|code|ref)\s?\d+
-mvavpu\s?(?:id|code|ref)\s?\d+
-vvgfgfgxq\s?(?:id|code|ref)\s?\d+
-mlmvcjjs\s?(?:id|code|ref)\s?\d+
+qqwxtawook[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(rgzbxrgtosh|teapopu)[ _-]?[0-9]{3}
+igcpbgm[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+xkfinlobawuv[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+wvezd[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+uegwvtwozge[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+mvavpu[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+vvgfgfgxq[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+mlmvcjjs[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 avcmajq[._-]?lwigmmhapbfr
-(?:jieyzazukc|emqm)[ _-]?\d{2}
+(jieyzazukc|emqm)[ _-]?[0-9]{2}
 zeaqdtbfwexk[._-]?vlmhzeekrxo
 mdxvpiem[._-]?nmpkbxa
-eyqszvyh\s?(?:id|code|ref)\s?\d+
+eyqszvyh[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 egdfu[._-]?ghyx
-(?:ougdfjoftq|ohxfskmgyln)[ _-]?\d{2}
-(?:mecw|gciextbpy)[ _-]?\d{2}
-nfhgdfrnp\s?(?:id|code|ref)\s?\d+
-ajqezry\s?(?:id|code|ref)\s?\d+
-gczwtko\s?(?:id|code|ref)\s?\d+
-argijfyvu\s?(?:id|code|ref)\s?\d+
-yetlu\s?(?:id|code|ref)\s?\d+
-(?:yazv|ebaaoq)[ _-]?\d{4}
+(ougdfjoftq|ohxfskmgyln)[ _-]?[0-9]{2}
+(mecw|gciextbpy)[ _-]?[0-9]{2}
+nfhgdfrnp[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+ajqezry[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+gczwtko[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+argijfyvu[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+yetlu[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(yazv|ebaaoq)[ _-]?[0-9]{4}
 brmoufteyaa[._-]?wfcchldfql
 eumwwesnxi[._-]?uuvlzbpbw
-qfjj\s?(?:id|code|ref)\s?\d+
+qfjj[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 opatcrtdar[._-]?rsbqz
-(?:tkmgbpp|yfjikdmtw)[ _-]?\d{2}
+(tkmgbpp|yfjikdmtw)[ _-]?[0-9]{2}
 tgtyphyjmlt[._-]?uomp
-xqthuuoy\s?(?:id|code|ref)\s?\d+
-czprywmh\s?(?:id|code|ref)\s?\d+
+xqthuuoy[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+czprywmh[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 etvqjei[._-]?jylcuqwncbjd
-fmecnb\s?(?:id|code|ref)\s?\d+
-lmhdywkn\s?(?:id|code|ref)\s?\d+
-(?:opwvwro|tqapdahwcls)[ _-]?\d{5}
-(?:plmkaybytad|hetbmb)[ _-]?\d{3}
+fmecnb[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+lmhdywkn[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(opwvwro|tqapdahwcls)[ _-]?[0-9]{5}
+(plmkaybytad|hetbmb)[ _-]?[0-9]{3}
 woppwp[._-]?ogxzzpd
-(?:jomhrye|yzydrvqi)[ _-]?\d{5}
-(?:rwbjerptd|vcrtrfy)[ _-]?\d{5}
+(jomhrye|yzydrvqi)[ _-]?[0-9]{5}
+(rwbjerptd|vcrtrfy)[ _-]?[0-9]{5}
 wfocz[._-]?oiifsbsxtkkv
-fuvk\s?(?:id|code|ref)\s?\d+
-bgcqt\s?(?:id|code|ref)\s?\d+
+fuvk[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+bgcqt[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 ldeosmjp[._-]?pyydkgmetyps
-(?:vhpeajwyhmtw|rawfutw)[ _-]?\d{4}
+(vhpeajwyhmtw|rawfutw)[ _-]?[0-9]{4}
 lrmkwcb[._-]?ywjepqpw
-spfzbpwd\s?(?:id|code|ref)\s?\d+
-(?:oszlzrtxkbq|hmgvjg)[ _-]?\d{2}
-ledq\s?(?:id|code|ref)\s?\d+
-(?:gsqeollu|ohsxt)[ _-]?\d{2}
-(?:slamqhgpnl|doqp)[ _-]?\d{2}
-qyjhh\s?(?:id|code|ref)\s?\d+
-ufgxld\s?(?:id|code|ref)\s?\d+
-(?:pizm|edrywvau)[ _-]?\d{5}
+spfzbpwd[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(oszlzrtxkbq|hmgvjg)[ _-]?[0-9]{2}
+ledq[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(gsqeollu|ohsxt)[ _-]?[0-9]{2}
+(slamqhgpnl|doqp)[ _-]?[0-9]{2}
+qyjhh[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+ufgxld[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(pizm|edrywvau)[ _-]?[0-9]{5}
 ubddfmomtgia[._-]?hvyrbpgurrz
-nedj\s?(?:id|code|ref)\s?\d+
+nedj[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 wolulpnp[._-]?mqznoo
-ijrifwnelfnn\s?(?:id|code|ref)\s?\d+
-(?:jbimcwvoem|lssc)[ _-]?\d{3}
-(?:dsby|kyhelrtsyfec)[ _-]?\d{5}
-xrvsbuwg\s?(?:id|code|ref)\s?\d+
-osll\s?(?:id|code|ref)\s?\d+
+ijrifwnelfnn[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(jbimcwvoem|lssc)[ _-]?[0-9]{3}
+(dsby|kyhelrtsyfec)[ _-]?[0-9]{5}
+xrvsbuwg[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+osll[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 irboz[._-]?wsbhknts
-iivwjgibpxec\s?(?:id|code|ref)\s?\d+
+iivwjgibpxec[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 drqfnsr[._-]?ccgujkntnced
-(?:fvdlv|psevyp)[ _-]?\d{3}
-qkmybrg\s?(?:id|code|ref)\s?\d+
-iicfhazch\s?(?:id|code|ref)\s?\d+
+(fvdlv|psevyp)[ _-]?[0-9]{3}
+qkmybrg[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+iicfhazch[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 alrygb[._-]?bbkktga
 phkazf[._-]?yirontghxkb
 waabjy[._-]?koxzg
-(?:qgjlilwxq|jjhbwjnnlil)[ _-]?\d{3}
+(qgjlilwxq|jjhbwjnnlil)[ _-]?[0-9]{3}
 gldbaks[._-]?hdrwkzbkf
-vcqjbae\s?(?:id|code|ref)\s?\d+
-(?:xzwuogmr|fsskhozo)[ _-]?\d{4}
-(?:rhjqulu|hursw)[ _-]?\d{4}
-(?:mixp|xkawvfrlap)[ _-]?\d{2}
-whajiqvzhpm\s?(?:id|code|ref)\s?\d+
+vcqjbae[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(xzwuogmr|fsskhozo)[ _-]?[0-9]{4}
+(rhjqulu|hursw)[ _-]?[0-9]{4}
+(mixp|xkawvfrlap)[ _-]?[0-9]{2}
+whajiqvzhpm[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 hrxwsw[._-]?qpdwvpx
 tpewtrivcpn[._-]?gdun
 dfttyjuahxy[._-]?cefae
-leikpr\s?(?:id|code|ref)\s?\d+
-(?:gypudfghxl|gonfxcvgm)[ _-]?\d{3}
-qqsbdb\s?(?:id|code|ref)\s?\d+
-(?:gqtqlpfxu|kxbmloq)[ _-]?\d{4}
+leikpr[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(gypudfghxl|gonfxcvgm)[ _-]?[0-9]{3}
+qqsbdb[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(gqtqlpfxu|kxbmloq)[ _-]?[0-9]{4}
 vrsvksawndl[._-]?cpzp
 wvipkltqxkyl[._-]?npdukvtht
-qtuvnrqp\s?(?:id|code|ref)\s?\d+
-(?:xdviuhapur|ncgunpndo)[ _-]?\d{3}
-(?:buqon|rgqa)[ _-]?\d{2}
+qtuvnrqp[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(xdviuhapur|ncgunpndo)[ _-]?[0-9]{3}
+(buqon|rgqa)[ _-]?[0-9]{2}
 qjxknqhevk[._-]?wrwmltgxyv
-ltxu\s?(?:id|code|ref)\s?\d+
+ltxu[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 cdnqbuhxt[._-]?byeoteuhhsw
-lyrhisbd\s?(?:id|code|ref)\s?\d+
+lyrhisbd[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 wzzeqhpogzbg[._-]?sctvsc
-bcbhfgjfj\s?(?:id|code|ref)\s?\d+
-bmolpwatnbzk\s?(?:id|code|ref)\s?\d+
-(?:rbeov|yyefk)[ _-]?\d{5}
-onor\s?(?:id|code|ref)\s?\d+
-(?:ajjapmktwbs|qwga)[ _-]?\d{3}
-guiz\s?(?:id|code|ref)\s?\d+
-ttzltk\s?(?:id|code|ref)\s?\d+
-(?:fkqgvlllugj|wpldlqyptj)[ _-]?\d{4}
-bdithuhesf\s?(?:id|code|ref)\s?\d+
-jepqw\s?(?:id|code|ref)\s?\d+
-xmvltav\s?(?:id|code|ref)\s?\d+
-wewpnpptnkgg\s?(?:id|code|ref)\s?\d+
-tgzyde\s?(?:id|code|ref)\s?\d+
+bcbhfgjfj[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+bmolpwatnbzk[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(rbeov|yyefk)[ _-]?[0-9]{5}
+onor[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(ajjapmktwbs|qwga)[ _-]?[0-9]{3}
+guiz[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+ttzltk[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(fkqgvlllugj|wpldlqyptj)[ _-]?[0-9]{4}
+bdithuhesf[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+jepqw[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+xmvltav[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+wewpnpptnkgg[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+tgzyde[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 tgbbqcpv[._-]?vmfowxm
-(?:xfwg|rcyaoe)[ _-]?\d{3}
-(?:crklcyzfyfbq|cgdqfxm)[ _-]?\d{2}
-(?:sutojpgpj|fvmx)[ _-]?\d{4}
+(xfwg|rcyaoe)[ _-]?[0-9]{3}
+(crklcyzfyfbq|cgdqfxm)[ _-]?[0-9]{2}
+(sutojpgpj|fvmx)[ _-]?[0-9]{4}
 sisb[._-]?xdfhvotbtrb
-(?:uqburiggcpvp|jlmggfvkipo)[ _-]?\d{4}
-tfutmkmku\s?(?:id|code|ref)\s?\d+
+(uqburiggcpvp|jlmggfvkipo)[ _-]?[0-9]{4}
+tfutmkmku[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 ckroc[._-]?navmeqnmsbem
-abqt\s?(?:id|code|ref)\s?\d+
-(?:kelvafbsry|zbqwolm)[ _-]?\d{5}
-(?:titlbe|xbkixxcspef)[ _-]?\d{4}
-lqmza\s?(?:id|code|ref)\s?\d+
-dsirkyf\s?(?:id|code|ref)\s?\d+
-wrjhhiufsqsu\s?(?:id|code|ref)\s?\d+
-(?:skahbafxsjx|pnnevn)[ _-]?\d{3}
+abqt[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(kelvafbsry|zbqwolm)[ _-]?[0-9]{5}
+(titlbe|xbkixxcspef)[ _-]?[0-9]{4}
+lqmza[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+dsirkyf[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+wrjhhiufsqsu[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(skahbafxsjx|pnnevn)[ _-]?[0-9]{3}
 sxpzhq[._-]?pgdttutvgrp
 icfboq[._-]?jqissjxhsut
-jadsclzbw\s?(?:id|code|ref)\s?\d+
+jadsclzbw[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 fjzhtexgly[._-]?mdusutlx
 xfrxffko[._-]?jcyczysg
-aqbsrvvtdie\s?(?:id|code|ref)\s?\d+
-(?:bgcowujgrbyh|dlgbxlzxrzec)[ _-]?\d{5}
-ebstxsv\s?(?:id|code|ref)\s?\d+
+aqbsrvvtdie[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(bgcowujgrbyh|dlgbxlzxrzec)[ _-]?[0-9]{5}
+ebstxsv[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 kqeirrg[._-]?oyujb
 wjidktfw[._-]?vfaffbskeryi
-(?:qmnk|dpsihtev)[ _-]?\d{4}
-(?:jneej|rnxvm)[ _-]?\d{3}
+(qmnk|dpsihtev)[ _-]?[0-9]{4}
+(jneej|rnxvm)[ _-]?[0-9]{3}
 claxtbsmaru[._-]?ndmbajy
-(?:uimqzno|yiunxjpzpdo)[ _-]?\d{3}
-anymfc\s?(?:id|code|ref)\s?\d+
+(uimqzno|yiunxjpzpdo)[ _-]?[0-9]{3}
+anymfc[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 gfivlrbfcbub[._-]?vrtcx
-vqzuatryd\s?(?:id|code|ref)\s?\d+
-(?:jvpdpinvxcpk|rqtp)[ _-]?\d{5}
-ctdcyy\s?(?:id|code|ref)\s?\d+
-(?:touwmlb|tyobwnyziepa)[ _-]?\d{2}
-uphoxilc\s?(?:id|code|ref)\s?\d+
-(?:evvdrhgaoldj|sfftgjfr)[ _-]?\d{3}
-(?:tqxgwclbxm|ofwvtclruesp)[ _-]?\d{5}
+vqzuatryd[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(jvpdpinvxcpk|rqtp)[ _-]?[0-9]{5}
+ctdcyy[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(touwmlb|tyobwnyziepa)[ _-]?[0-9]{2}
+uphoxilc[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(evvdrhgaoldj|sfftgjfr)[ _-]?[0-9]{3}
+(tqxgwclbxm|ofwvtclruesp)[ _-]?[0-9]{5}
 hthrvqr[._-]?xcfbfsdo
 okvmblwr[._-]?uvhyh
-(?:ocsyngpk|bxctbtuv)[ _-]?\d{3}
-(?:nzhmhbq|fbalvnsxq)[ _-]?\d{3}
-(?:tysawwj|aceu)[ _-]?\d{2}
+(ocsyngpk|bxctbtuv)[ _-]?[0-9]{3}
+(nzhmhbq|fbalvnsxq)[ _-]?[0-9]{3}
+(tysawwj|aceu)[ _-]?[0-9]{2}
 asjnmxzvsrm[._-]?efjj
-(?:scinqet|ddlkaa)[ _-]?\d{5}
-(?:ymsnxkmezud|tmbridl)[ _-]?\d{3}
+(scinqet|ddlkaa)[ _-]?[0-9]{5}
+(ymsnxkmezud|tmbridl)[ _-]?[0-9]{3}
 veivlvyk[._-]?dfrqgciwgot
-vvxtxlsfza\s?(?:id|code|ref)\s?\d+
-(?:tzkghojgko|lifvpogsvtf)[ _-]?\d{2}
+vvxtxlsfza[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(tzkghojgko|lifvpogsvtf)[ _-]?[0-9]{2}
 oswgv[._-]?nommr
 tnzt[._-]?jmndgqvch
-yxvrggvja\s?(?:id|code|ref)\s?\d+
-jrtgyrdaldto\s?(?:id|code|ref)\s?\d+
+yxvrggvja[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+jrtgyrdaldto[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 mbtgviocznd[._-]?zknrmrsen
-(?:tdvqkgngja|ezzmyzku)[ _-]?\d{2}
-wjtsbgjkzink\s?(?:id|code|ref)\s?\d+
+(tdvqkgngja|ezzmyzku)[ _-]?[0-9]{2}
+wjtsbgjkzink[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 hzphkzfy[._-]?jaiprknzu
 vanjit[._-]?vraohgyz
 qhiwkogaq[._-]?mgifi
 zafa[._-]?fvmicsdj
-(?:bthzbgpfznu|muadprpggfjj)[ _-]?\d{3}
+(bthzbgpfznu|muadprpggfjj)[ _-]?[0-9]{3}
 zkefusx[._-]?bsznmexgap
-(?:oxyyssdrtlsq|sasawepb)[ _-]?\d{4}
-fptliryvf\s?(?:id|code|ref)\s?\d+
-(?:fcyvvn|yqlsvl)[ _-]?\d{2}
-zbhqgf\s?(?:id|code|ref)\s?\d+
-(?:cjjhs|qzjeoanjkb)[ _-]?\d{3}
-(?:jivefwrm|dieklxeupeq)[ _-]?\d{2}
-fthrtcfavm\s?(?:id|code|ref)\s?\d+
-cbvku\s?(?:id|code|ref)\s?\d+
-bwelb\s?(?:id|code|ref)\s?\d+
+(oxyyssdrtlsq|sasawepb)[ _-]?[0-9]{4}
+fptliryvf[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(fcyvvn|yqlsvl)[ _-]?[0-9]{2}
+zbhqgf[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(cjjhs|qzjeoanjkb)[ _-]?[0-9]{3}
+(jivefwrm|dieklxeupeq)[ _-]?[0-9]{2}
+fthrtcfavm[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+cbvku[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+bwelb[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 hdexplsklxl[._-]?pahwcg
-(?:bsldo|qjbzqacemecf)[ _-]?\d{5}
+(bsldo|qjbzqacemecf)[ _-]?[0-9]{5}
 vvtzm[._-]?myhnrzkrfd
-(?:zqitmhe|asgifmivees)[ _-]?\d{4}
-audzqn\s?(?:id|code|ref)\s?\d+
+(zqitmhe|asgifmivees)[ _-]?[0-9]{4}
+audzqn[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 afyhf[._-]?qcnfyxva
-stfivoybay\s?(?:id|code|ref)\s?\d+
-(?:qohfiawxpe|lbyrkhnls)[ _-]?\d{3}
-fwhdjycy\s?(?:id|code|ref)\s?\d+
-ttltufn\s?(?:id|code|ref)\s?\d+
-(?:sslnamorwzb|ulvgcplc)[ _-]?\d{5}
+stfivoybay[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(qohfiawxpe|lbyrkhnls)[ _-]?[0-9]{3}
+fwhdjycy[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+ttltufn[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(sslnamorwzb|ulvgcplc)[ _-]?[0-9]{5}
 zotimrm[._-]?hwfw
-bbglfqs\s?(?:id|code|ref)\s?\d+
+bbglfqs[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 qwfrvgyjkbem[._-]?tohaklc
-(?:phin|sfwfynbghooo)[ _-]?\d{2}
-hvcfbf\s?(?:id|code|ref)\s?\d+
+(phin|sfwfynbghooo)[ _-]?[0-9]{2}
+hvcfbf[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 mpduextgu[._-]?bfopdr
-(?:szlkkjoppxuo|nmxjllijfbsc)[ _-]?\d{2}
-(?:skmht|yosnz)[ _-]?\d{3}
-mwqyd\s?(?:id|code|ref)\s?\d+
+(szlkkjoppxuo|nmxjllijfbsc)[ _-]?[0-9]{2}
+(skmht|yosnz)[ _-]?[0-9]{3}
+mwqyd[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 aqfavviqwpl[._-]?fadr
-(?:roqy|mnuvdmjlwti)[ _-]?\d{3}
-ddqvvya\s?(?:id|code|ref)\s?\d+
+(roqy|mnuvdmjlwti)[ _-]?[0-9]{3}
+ddqvvya[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 dpfmvuuybqn[._-]?xvkemv
 knoaawvx[._-]?sfdwmtfjv
 obgbtvx[._-]?xvwtusc
 nofkaqz[._-]?polvbnqqggwb
-(?:zvyhzbv|gliszlkw)[ _-]?\d{2}
-(?:epdooxlhkbcx|ynwbcsdkasge)[ _-]?\d{2}
-(?:gblffjjg|kfnwualtjwaz)[ _-]?\d{2}
-pcoovhldmf\s?(?:id|code|ref)\s?\d+
+(zvyhzbv|gliszlkw)[ _-]?[0-9]{2}
+(epdooxlhkbcx|ynwbcsdkasge)[ _-]?[0-9]{2}
+(gblffjjg|kfnwualtjwaz)[ _-]?[0-9]{2}
+pcoovhldmf[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 yezsx[._-]?fureitprp
 jcnjhwjqxn[._-]?qoqeg
 zxndxkjoni[._-]?eykxd
 lcfeyzgvgi[._-]?blmrha
 xeckvvqew[._-]?buwavqwlf
-qbgkotoi\s?(?:id|code|ref)\s?\d+
-rvooz\s?(?:id|code|ref)\s?\d+
+qbgkotoi[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+rvooz[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 dzcnyjji[._-]?hrlp
-(?:paskt|jyawshlfsn)[ _-]?\d{4}
-ocjdalzv\s?(?:id|code|ref)\s?\d+
-(?:ipzqpxqk|hxdvpcqgm)[ _-]?\d{5}
+(paskt|jyawshlfsn)[ _-]?[0-9]{4}
+ocjdalzv[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(ipzqpxqk|hxdvpcqgm)[ _-]?[0-9]{5}
 fqvykccrywk[._-]?ckbdkqnmpq
-fqpzimqux\s?(?:id|code|ref)\s?\d+
-vtdq\s?(?:id|code|ref)\s?\d+
-(?:wyvcqizqhdf|jejbhxk)[ _-]?\d{2}
-(?:pxjlgmz|ytofkwtd)[ _-]?\d{4}
-errqz\s?(?:id|code|ref)\s?\d+
+fqpzimqux[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+vtdq[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(wyvcqizqhdf|jejbhxk)[ _-]?[0-9]{2}
+(pxjlgmz|ytofkwtd)[ _-]?[0-9]{4}
+errqz[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 qwivia[._-]?aqubmo
-cbnjqrmobq\s?(?:id|code|ref)\s?\d+
-xvvgbsozpzy\s?(?:id|code|ref)\s?\d+
-uhorqdywba\s?(?:id|code|ref)\s?\d+
-vdvnxuor\s?(?:id|code|ref)\s?\d+
+cbnjqrmobq[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+xvvgbsozpzy[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+uhorqdywba[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+vdvnxuor[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 ywaalctccmtv[._-]?hzmfrzhdri
-(?:uuzktoagnlzk|naptckvxz)[ _-]?\d{2}
+(uuzktoagnlzk|naptckvxz)[ _-]?[0-9]{2}
 afpaq[._-]?isbzjp
-igojjytini\s?(?:id|code|ref)\s?\d+
+igojjytini[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 kretmtotc[._-]?gkvvy
-rwrwegljdtnb\s?(?:id|code|ref)\s?\d+
+rwrwegljdtnb[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 vyjysqs[._-]?pxblpqxgi
-(?:zrin|ekwk)[ _-]?\d{3}
-(?:kirtgvlq|jxwjdrxxelf)[ _-]?\d{4}
+(zrin|ekwk)[ _-]?[0-9]{3}
+(kirtgvlq|jxwjdrxxelf)[ _-]?[0-9]{4}
 mwipbycdptsg[._-]?xemw
-rsdvr\s?(?:id|code|ref)\s?\d+
-khrhhteycmii\s?(?:id|code|ref)\s?\d+
-(?:njwkcw|zfwbocolh)[ _-]?\d{4}
+rsdvr[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+khrhhteycmii[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(njwkcw|zfwbocolh)[ _-]?[0-9]{4}
 wdnot[._-]?hkdyqrdy
 biny[._-]?niophcgqabza
-(?:fjqrdjwkax|scbovt)[ _-]?\d{3}
-zyjthttrqcz\s?(?:id|code|ref)\s?\d+
+(fjqrdjwkax|scbovt)[ _-]?[0-9]{3}
+zyjthttrqcz[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 ovdf[._-]?noalyy
-idpygckfdcs\s?(?:id|code|ref)\s?\d+
+idpygckfdcs[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 keplkfrrvgwf[._-]?vroiiun
-(?:mlpqeykjr|rtjmuxei)[ _-]?\d{4}
+(mlpqeykjr|rtjmuxei)[ _-]?[0-9]{4}
 asam[._-]?wnsuofjkzuja
-xpwlwubtnl\s?(?:id|code|ref)\s?\d+
-mggky\s?(?:id|code|ref)\s?\d+
+xpwlwubtnl[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+mggky[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 lbqvsdk[._-]?xdxqtg
-kszrtnphpf\s?(?:id|code|ref)\s?\d+
+kszrtnphpf[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 twwthqh[._-]?emnhy
 pfscqnq[._-]?hsmxtdfbdok
-ljfkslktdplh\s?(?:id|code|ref)\s?\d+
+ljfkslktdplh[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 mkwxg[._-]?gqamhmxec
 cywlwxmqiwfc[._-]?orzcuxfagfx
-mvlphfpw\s?(?:id|code|ref)\s?\d+
+mvlphfpw[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 wobmn[._-]?iiaio
 kwemhwmpvqmv[._-]?emepva
-(?:xdqrgbohonsa|lxdplngwklbx)[ _-]?\d{2}
+(xdqrgbohonsa|lxdplngwklbx)[ _-]?[0-9]{2}
 elbbjrwgbu[._-]?npstv
-wuhmybgx\s?(?:id|code|ref)\s?\d+
+wuhmybgx[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 avsw[._-]?jaeuzzp
-(?:ivlsdmoxgc|msed)[ _-]?\d{3}
+(ivlsdmoxgc|msed)[ _-]?[0-9]{3}
 tpdzeseix[._-]?urvyohoquqqf
-svzfyav\s?(?:id|code|ref)\s?\d+
-pfjjmkvgy\s?(?:id|code|ref)\s?\d+
+svzfyav[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+pfjjmkvgy[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 fljzdvoonh[._-]?xtaensoua
-(?:fhbt|lwnl)[ _-]?\d{5}
-owudckba\s?(?:id|code|ref)\s?\d+
-(?:pdtyjsjdbtue|ktwhlbye)[ _-]?\d{2}
-xjinhn\s?(?:id|code|ref)\s?\d+
-(?:upfwx|umzhiuzodjfu)[ _-]?\d{3}
-wmaeohw\s?(?:id|code|ref)\s?\d+
+(fhbt|lwnl)[ _-]?[0-9]{5}
+owudckba[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(pdtyjsjdbtue|ktwhlbye)[ _-]?[0-9]{2}
+xjinhn[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(upfwx|umzhiuzodjfu)[ _-]?[0-9]{3}
+wmaeohw[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 hvhs[._-]?bxdzlwgoymee
-(?:gnaxitjhc|iqpqfyl)[ _-]?\d{3}
-(?:empyhl|kctpqhmdid)[ _-]?\d{3}
-(?:rbaajcylk|hjlx)[ _-]?\d{5}
-zajfcpertaom\s?(?:id|code|ref)\s?\d+
-dlsqn\s?(?:id|code|ref)\s?\d+
+(gnaxitjhc|iqpqfyl)[ _-]?[0-9]{3}
+(empyhl|kctpqhmdid)[ _-]?[0-9]{3}
+(rbaajcylk|hjlx)[ _-]?[0-9]{5}
+zajfcpertaom[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+dlsqn[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 rxtodarhf[._-]?marfmliqcgxd
-(?:gwzxqwpvfq|gfwdmsdkjgcd)[ _-]?\d{4}
-(?:sspunczsvijw|bkdyyhqla)[ _-]?\d{3}
-auirb\s?(?:id|code|ref)\s?\d+
-(?:hitjzobi|auasl)[ _-]?\d{3}
-zzimasut\s?(?:id|code|ref)\s?\d+
-(?:kihoc|rwzztfepthxc)[ _-]?\d{2}
+(gwzxqwpvfq|gfwdmsdkjgcd)[ _-]?[0-9]{4}
+(sspunczsvijw|bkdyyhqla)[ _-]?[0-9]{3}
+auirb[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(hitjzobi|auasl)[ _-]?[0-9]{3}
+zzimasut[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(kihoc|rwzztfepthxc)[ _-]?[0-9]{2}
 miwz[._-]?cibx
-efriimw\s?(?:id|code|ref)\s?\d+
-zjnjlpcudjly\s?(?:id|code|ref)\s?\d+
-(?:pxvrhj|tkdvtcoeik)[ _-]?\d{5}
+efriimw[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+zjnjlpcudjly[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(pxvrhj|tkdvtcoeik)[ _-]?[0-9]{5}
 uxmn[._-]?bpqb
-(?:dfvfxtnvksv|xgrvelxu)[ _-]?\d{2}
+(dfvfxtnvksv|xgrvelxu)[ _-]?[0-9]{2}
 zzdbh[._-]?wkooygchy
-(?:lxoaxreoz|hejax)[ _-]?\d{2}
-gbojo\s?(?:id|code|ref)\s?\d+
-(?:yfuflexh|dgstoqb)[ _-]?\d{2}
-blujwkwsapk\s?(?:id|code|ref)\s?\d+
-(?:ndfwsktvlgqz|yodmfn)[ _-]?\d{5}
-(?:nssfggkf|aggdmymoae)[ _-]?\d{3}
-fresqby\s?(?:id|code|ref)\s?\d+
-yeektx\s?(?:id|code|ref)\s?\d+
-taisvewhly\s?(?:id|code|ref)\s?\d+
-(?:pdeguqkbu|bcstnvwaw)[ _-]?\d{3}
-(?:thcyptkx|wcvjjr)[ _-]?\d{4}
-(?:byvb|hnllcjvkcd)[ _-]?\d{3}
-preahpiemxl\s?(?:id|code|ref)\s?\d+
-(?:yjlgbldxc|gdkcqiixmplu)[ _-]?\d{3}
-(?:dntttrteenb|ruyxmhsovo)[ _-]?\d{3}
-(?:ksfzl|zrdvqi)[ _-]?\d{5}
+(lxoaxreoz|hejax)[ _-]?[0-9]{2}
+gbojo[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(yfuflexh|dgstoqb)[ _-]?[0-9]{2}
+blujwkwsapk[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(ndfwsktvlgqz|yodmfn)[ _-]?[0-9]{5}
+(nssfggkf|aggdmymoae)[ _-]?[0-9]{3}
+fresqby[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+yeektx[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+taisvewhly[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(pdeguqkbu|bcstnvwaw)[ _-]?[0-9]{3}
+(thcyptkx|wcvjjr)[ _-]?[0-9]{4}
+(byvb|hnllcjvkcd)[ _-]?[0-9]{3}
+preahpiemxl[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(yjlgbldxc|gdkcqiixmplu)[ _-]?[0-9]{3}
+(dntttrteenb|ruyxmhsovo)[ _-]?[0-9]{3}
+(ksfzl|zrdvqi)[ _-]?[0-9]{5}
 sfphrk[._-]?eoqmmnowa
-(?:flcujxajs|apxdfyuzxdh)[ _-]?\d{4}
+(flcujxajs|apxdfyuzxdh)[ _-]?[0-9]{4}
 chmnezppvh[._-]?bajkkerqzkwy
-(?:irfzagrkbrfn|efvbbrlapsv)[ _-]?\d{5}
-yobbirtqbdzk\s?(?:id|code|ref)\s?\d+
-(?:wwvm|icswusaqlqem)[ _-]?\d{4}
+(irfzagrkbrfn|efvbbrlapsv)[ _-]?[0-9]{5}
+yobbirtqbdzk[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(wwvm|icswusaqlqem)[ _-]?[0-9]{4}
 qwybnx[._-]?myrsrek
-(?:ximnmwz|iqolqioaqhe)[ _-]?\d{2}
+(ximnmwz|iqolqioaqhe)[ _-]?[0-9]{2}
 cfvdwsgeabv[._-]?subfrxlx
 unpaovwqzqq[._-]?lruaarnxcs
-(?:iyhvmnn|xckeypcguq)[ _-]?\d{3}
+(iyhvmnn|xckeypcguq)[ _-]?[0-9]{3}
 bzwzavzgibmi[._-]?fkvpzimr
 hosvn[._-]?gdwxtmecshg
 rwiychzfmti[._-]?qphyxzdgbu
 nyjiciig[._-]?tjjvtbqe
-(?:qjejuuobw|vppevk)[ _-]?\d{5}
+(qjejuuobw|vppevk)[ _-]?[0-9]{5}
 qwmnnyysr[._-]?pblfcnymuz
-(?:dbpgprx|kdgnfkixdp)[ _-]?\d{2}
-(?:ropsgnt|fyzueqmelz)[ _-]?\d{3}
-(?:ldmusyddp|cfnqswf)[ _-]?\d{5}
+(dbpgprx|kdgnfkixdp)[ _-]?[0-9]{2}
+(ropsgnt|fyzueqmelz)[ _-]?[0-9]{3}
+(ldmusyddp|cfnqswf)[ _-]?[0-9]{5}
 vraqunjqstn[._-]?dajcklim
-(?:kddkpzcwh|vnbs)[ _-]?\d{3}
+(kddkpzcwh|vnbs)[ _-]?[0-9]{3}
 kjvcfe[._-]?hqobaj
 peogiuu[._-]?snnfyiqkcuhf
 wdlwrxgupca[._-]?kphb
-wzjeed\s?(?:id|code|ref)\s?\d+
-aozjuktw\s?(?:id|code|ref)\s?\d+
+wzjeed[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+aozjuktw[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 ucsulddzgpoc[._-]?ogphm
-woqqbyq\s?(?:id|code|ref)\s?\d+
-(?:zjdyvadtgup|mioajbj)[ _-]?\d{3}
-(?:ygmshrijxzm|taeqp)[ _-]?\d{3}
+woqqbyq[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(zjdyvadtgup|mioajbj)[ _-]?[0-9]{3}
+(ygmshrijxzm|taeqp)[ _-]?[0-9]{3}
 ltks[._-]?eszmmntlwnjz
-chczs\s?(?:id|code|ref)\s?\d+
-sflgtmxkqdsz\s?(?:id|code|ref)\s?\d+
-ddgbpllqbt\s?(?:id|code|ref)\s?\d+
-(?:zjts|cbqtggpibi)[ _-]?\d{2}
-(?:zmyobtjqhrm|llyinaeasek)[ _-]?\d{2}
-pthvujelqjon\s?(?:id|code|ref)\s?\d+
-(?:dxhwmoa|otbhqada)[ _-]?\d{2}
-ayjpo\s?(?:id|code|ref)\s?\d+
+chczs[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+sflgtmxkqdsz[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+ddgbpllqbt[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(zjts|cbqtggpibi)[ _-]?[0-9]{2}
+(zmyobtjqhrm|llyinaeasek)[ _-]?[0-9]{2}
+pthvujelqjon[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(dxhwmoa|otbhqada)[ _-]?[0-9]{2}
+ayjpo[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 jurfwl[._-]?zxas
 uskdnqjn[._-]?bnntdfgioc
 zrnvh[._-]?kicgvcebnr
 hrync[._-]?vnhvcs
 bukgusbndbcx[._-]?cimlrop
-zlyknmrijxbo\s?(?:id|code|ref)\s?\d+
+zlyknmrijxbo[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 kgdnhaljn[._-]?gzkqazsynu
-noyc\s?(?:id|code|ref)\s?\d+
-(?:qovnu|qvmkfaug)[ _-]?\d{5}
-(?:hlxj|lkjdcb)[ _-]?\d{5}
+noyc[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(qovnu|qvmkfaug)[ _-]?[0-9]{5}
+(hlxj|lkjdcb)[ _-]?[0-9]{5}
 rescwrws[._-]?wipaqn
-ozderpmhk\s?(?:id|code|ref)\s?\d+
-(?:jzyhdzgepu|vgbnwvgaaslq)[ _-]?\d{3}
-(?:ehdhp|dpxliliggp)[ _-]?\d{3}
-(?:cekbivllfh|rikmgyffoum)[ _-]?\d{2}
-tdjkvdqfsmll\s?(?:id|code|ref)\s?\d+
-ikzkzi\s?(?:id|code|ref)\s?\d+
+ozderpmhk[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(jzyhdzgepu|vgbnwvgaaslq)[ _-]?[0-9]{3}
+(ehdhp|dpxliliggp)[ _-]?[0-9]{3}
+(cekbivllfh|rikmgyffoum)[ _-]?[0-9]{2}
+tdjkvdqfsmll[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+ikzkzi[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 vgndeseu[._-]?htaapo
-sbzdr\s?(?:id|code|ref)\s?\d+
+sbzdr[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 kzrtgtsx[._-]?qenawcajve
-(?:omizhzsdhzrk|hcoretynlbwx)[ _-]?\d{4}
+(omizhzsdhzrk|hcoretynlbwx)[ _-]?[0-9]{4}
 nxjq[._-]?ssadb
 wqvmawekibvm[._-]?cmdtuush
-(?:hvucyxgld|qsvqtzv)[ _-]?\d{5}
+(hvucyxgld|qsvqtzv)[ _-]?[0-9]{5}
 hkcxjp[._-]?zokbcgrmjwx
-(?:ypkdmtydrccc|afmvn)[ _-]?\d{5}
+(ypkdmtydrccc|afmvn)[ _-]?[0-9]{5}
 srppbuncrg[._-]?kwhpaa
 zvplmjggk[._-]?owjizgoivd
-(?:uopka|ufiso)[ _-]?\d{3}
-foxo\s?(?:id|code|ref)\s?\d+
-omrxsbxhqlvg\s?(?:id|code|ref)\s?\d+
-eflov\s?(?:id|code|ref)\s?\d+
-vsxhwq\s?(?:id|code|ref)\s?\d+
-(?:dkpupy|kuqhp)[ _-]?\d{4}
-(?:urqxlv|hjgs)[ _-]?\d{5}
-(?:cvmyllw|pgyl)[ _-]?\d{3}
+(uopka|ufiso)[ _-]?[0-9]{3}
+foxo[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+omrxsbxhqlvg[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+eflov[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+vsxhwq[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(dkpupy|kuqhp)[ _-]?[0-9]{4}
+(urqxlv|hjgs)[ _-]?[0-9]{5}
+(cvmyllw|pgyl)[ _-]?[0-9]{3}
 ctaydzgoyfs[._-]?xymqg
 lhjulve[._-]?zbuxbdfjvnm
-equfdtgrvbcp\s?(?:id|code|ref)\s?\d+
-(?:eagsiwam|nklccjru)[ _-]?\d{2}
-(?:hcmaqgpds|esxoehy)[ _-]?\d{4}
+equfdtgrvbcp[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(eagsiwam|nklccjru)[ _-]?[0-9]{2}
+(hcmaqgpds|esxoehy)[ _-]?[0-9]{4}
 kiizyhxxkfuy[._-]?vwwqow
-xghppdpbj\s?(?:id|code|ref)\s?\d+
-(?:fxlinxtah|jjtgflsjrbei)[ _-]?\d{2}
-(?:wlajmku|romqzkcwucio)[ _-]?\d{5}
+xghppdpbj[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(fxlinxtah|jjtgflsjrbei)[ _-]?[0-9]{2}
+(wlajmku|romqzkcwucio)[ _-]?[0-9]{5}
 rokpitrapf[._-]?czelypnthn
-(?:sekqgdboq|vtarkjx)[ _-]?\d{3}
-iyyseix\s?(?:id|code|ref)\s?\d+
-rexpqkye\s?(?:id|code|ref)\s?\d+
-(?:rpnfonl|aihecenxpor)[ _-]?\d{4}
-(?:zzpjgqe|wfyuwshwosg)[ _-]?\d{5}
+(sekqgdboq|vtarkjx)[ _-]?[0-9]{3}
+iyyseix[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+rexpqkye[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(rpnfonl|aihecenxpor)[ _-]?[0-9]{4}
+(zzpjgqe|wfyuwshwosg)[ _-]?[0-9]{5}
 ohan[._-]?vzpmrzmnofyd
-(?:imuii|paboiti)[ _-]?\d{2}
-(?:njfv|tecs)[ _-]?\d{3}
+(imuii|paboiti)[ _-]?[0-9]{2}
+(njfv|tecs)[ _-]?[0-9]{3}
 kvyvcglryp[._-]?qeyztifthy
-(?:smukmudqat|rnwyqtedv)[ _-]?\d{3}
-ugatky\s?(?:id|code|ref)\s?\d+
-aeoxpvoidxpt\s?(?:id|code|ref)\s?\d+
+(smukmudqat|rnwyqtedv)[ _-]?[0-9]{3}
+ugatky[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+aeoxpvoidxpt[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 oppyraaxg[._-]?qmpfcbf
-blekz\s?(?:id|code|ref)\s?\d+
+blekz[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 pdhmaapsiz[._-]?rvuhlrreen
 sjtitc[._-]?nsbwrttfdzxw
 jzzg[._-]?ojsbbygq
 yvpmligalln[._-]?diexcjfkd
-dezticzyy\s?(?:id|code|ref)\s?\d+
-whmqv\s?(?:id|code|ref)\s?\d+
-(?:zglkyylweqns|eefgbjnpwwl)[ _-]?\d{5}
+dezticzyy[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+whmqv[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(zglkyylweqns|eefgbjnpwwl)[ _-]?[0-9]{5}
 wlfxk[._-]?iwvl
-(?:kriz|fueidqb)[ _-]?\d{2}
-(?:gcezfxz|hzfsa)[ _-]?\d{4}
-(?:ojmnblasempn|gpka)[ _-]?\d{3}
-ekcqybgn\s?(?:id|code|ref)\s?\d+
-wzhabnbd\s?(?:id|code|ref)\s?\d+
-endfygbl\s?(?:id|code|ref)\s?\d+
+(kriz|fueidqb)[ _-]?[0-9]{2}
+(gcezfxz|hzfsa)[ _-]?[0-9]{4}
+(ojmnblasempn|gpka)[ _-]?[0-9]{3}
+ekcqybgn[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+wzhabnbd[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+endfygbl[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 uzkbqhzdpkg[._-]?wnvviwfnev
 cqir[._-]?xvlkfznuq
 wotaekx[._-]?evvxtxamues
 uiwvkdkzvx[._-]?nlnqpsuhuc
 rqyccry[._-]?bgedctkpg
-ywkwsrkdciil\s?(?:id|code|ref)\s?\d+
-nndqii\s?(?:id|code|ref)\s?\d+
+ywkwsrkdciil[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+nndqii[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 mcmke[._-]?ulump
-ochlqpz\s?(?:id|code|ref)\s?\d+
+ochlqpz[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 qocoodwwyisk[._-]?xabb
 mrngpwfqulr[._-]?wkcyzsrqmuw
 ebwtijx[._-]?ccjycadjzl
-(?:cmvyrsqxk|qjdxzpjrmsjf)[ _-]?\d{2}
-tpcoiczah\s?(?:id|code|ref)\s?\d+
-(?:xkxlwat|umnxrzqeggix)[ _-]?\d{5}
-(?:pkqjpicinal|whsigl)[ _-]?\d{4}
-(?:nxkjptky|mbflvuda)[ _-]?\d{3}
-tgpmob\s?(?:id|code|ref)\s?\d+
-mopemg\s?(?:id|code|ref)\s?\d+
+(cmvyrsqxk|qjdxzpjrmsjf)[ _-]?[0-9]{2}
+tpcoiczah[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(xkxlwat|umnxrzqeggix)[ _-]?[0-9]{5}
+(pkqjpicinal|whsigl)[ _-]?[0-9]{4}
+(nxkjptky|mbflvuda)[ _-]?[0-9]{3}
+tgpmob[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+mopemg[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 xkzqjzrio[._-]?qytq
-jnloiy\s?(?:id|code|ref)\s?\d+
-ldlnrsjzrvh\s?(?:id|code|ref)\s?\d+
-(?:eafsqtofkf|dnjoyrov)[ _-]?\d{3}
+jnloiy[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+ldlnrsjzrvh[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(eafsqtofkf|dnjoyrov)[ _-]?[0-9]{3}
 uqgvlb[._-]?aycvzyqhzq
 odeljtkwxp[._-]?zrcwixpj
-nyvpghiocq\s?(?:id|code|ref)\s?\d+
-(?:lzpeayjs|oowpewvxwdv)[ _-]?\d{2}
-(?:lbrvjwyj|odyb)[ _-]?\d{5}
-idxecjpdus\s?(?:id|code|ref)\s?\d+
-ynjb\s?(?:id|code|ref)\s?\d+
-zqryxfqhmi\s?(?:id|code|ref)\s?\d+
+nyvpghiocq[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(lzpeayjs|oowpewvxwdv)[ _-]?[0-9]{2}
+(lbrvjwyj|odyb)[ _-]?[0-9]{5}
+idxecjpdus[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+ynjb[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+zqryxfqhmi[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 ajjlonw[._-]?ponprkxvx
 rfcgus[._-]?adbokrmkukbl
 fioo[._-]?hnbebqgbanjm
-(?:hjlfojytywe|jjnjitghuxv)[ _-]?\d{4}
-wjjqlfktkc\s?(?:id|code|ref)\s?\d+
+(hjlfojytywe|jjnjitghuxv)[ _-]?[0-9]{4}
+wjjqlfktkc[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 fjinf[._-]?wgsi
 wojprx[._-]?tclrxwlqdsh
-(?:fiizatvjyyq|ffgy)[ _-]?\d{3}
+(fiizatvjyyq|ffgy)[ _-]?[0-9]{3}
 lyuxdmxrkev[._-]?toickiprjv
-(?:kaqa|gwaaqxslxqxf)[ _-]?\d{2}
-mnmnuuqkw\s?(?:id|code|ref)\s?\d+
-pxug\s?(?:id|code|ref)\s?\d+
-wyts\s?(?:id|code|ref)\s?\d+
+(kaqa|gwaaqxslxqxf)[ _-]?[0-9]{2}
+mnmnuuqkw[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+pxug[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+wyts[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 wdmbispaoy[._-]?jhkaoubc
 vwypansksi[._-]?xxxomp
 qpsfgfdmcfz[._-]?tidk
 wmazimzupj[._-]?jnbzuog
-siyojrg\s?(?:id|code|ref)\s?\d+
+siyojrg[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 bafbuvgkm[._-]?uhxlmrj
-(?:xlhdgvdatrrp|pkxmp)[ _-]?\d{2}
-(?:ixnisvqlola|lsgeghhaaaza)[ _-]?\d{3}
-(?:ftucfueus|kuchjbcurecc)[ _-]?\d{4}
+(xlhdgvdatrrp|pkxmp)[ _-]?[0-9]{2}
+(ixnisvqlola|lsgeghhaaaza)[ _-]?[0-9]{3}
+(ftucfueus|kuchjbcurecc)[ _-]?[0-9]{4}
 ebelgsxmbcu[._-]?stxkindeb
-(?:dhasxql|efexnzffuijr)[ _-]?\d{5}
-(?:utqk|xxxhwrxwzn)[ _-]?\d{2}
-mfiarnho\s?(?:id|code|ref)\s?\d+
+(dhasxql|efexnzffuijr)[ _-]?[0-9]{5}
+(utqk|xxxhwrxwzn)[ _-]?[0-9]{2}
+mfiarnho[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 oaxevttbul[._-]?sgyb
-qmqkbgy\s?(?:id|code|ref)\s?\d+
-(?:fjhrqjeop|txgeqfaru)[ _-]?\d{3}
+qmqkbgy[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(fjhrqjeop|txgeqfaru)[ _-]?[0-9]{3}
 rlivaeqxka[._-]?iwysxczu
 toeypprmwaw[._-]?kocxdltqkb
 bsdlwrygh[._-]?mukf
 djurzjjxi[._-]?tduxwy
-vnoam\s?(?:id|code|ref)\s?\d+
-(?:kepz|jurhjch)[ _-]?\d{4}
-(?:kgeargoaut|dkszrtuwgu)[ _-]?\d{5}
+vnoam[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(kepz|jurhjch)[ _-]?[0-9]{4}
+(kgeargoaut|dkszrtuwgu)[ _-]?[0-9]{5}
 dkixkipew[._-]?tddrg
-blqbcqsj\s?(?:id|code|ref)\s?\d+
-(?:xmzwk|dokloxlhq)[ _-]?\d{2}
-murzvyxis\s?(?:id|code|ref)\s?\d+
-(?:usptqnjqwqda|mbbkq)[ _-]?\d{4}
-gzjrdzspsnh\s?(?:id|code|ref)\s?\d+
+blqbcqsj[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(xmzwk|dokloxlhq)[ _-]?[0-9]{2}
+murzvyxis[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(usptqnjqwqda|mbbkq)[ _-]?[0-9]{4}
+gzjrdzspsnh[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 fjyapoatv[._-]?prhoudghzoln
 gulrbxgzviju[._-]?hguw
-(?:kovft|mwmvpcflhhvf)[ _-]?\d{4}
-vkgdvozi\s?(?:id|code|ref)\s?\d+
-tmyzuxkuqz\s?(?:id|code|ref)\s?\d+
-(?:fylhju|lrqyep)[ _-]?\d{3}
-nugjzzfbsylt\s?(?:id|code|ref)\s?\d+
-(?:dlxdgjlnzfns|rdnswoeoyfy)[ _-]?\d{3}
-jrxfktv\s?(?:id|code|ref)\s?\d+
-dgyfmtzynfh\s?(?:id|code|ref)\s?\d+
-(?:wmqpeaxf|xfnlwate)[ _-]?\d{4}
+(kovft|mwmvpcflhhvf)[ _-]?[0-9]{4}
+vkgdvozi[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+tmyzuxkuqz[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(fylhju|lrqyep)[ _-]?[0-9]{3}
+nugjzzfbsylt[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(dlxdgjlnzfns|rdnswoeoyfy)[ _-]?[0-9]{3}
+jrxfktv[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+dgyfmtzynfh[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(wmqpeaxf|xfnlwate)[ _-]?[0-9]{4}
 bkhkaucncflu[._-]?szpr
-(?:hqpqxllsg|gpegmrte)[ _-]?\d{2}
-jucwrtlt\s?(?:id|code|ref)\s?\d+
+(hqpqxllsg|gpegmrte)[ _-]?[0-9]{2}
+jucwrtlt[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 qnvmrtd[._-]?ecqkhgubiit
 mxbb[._-]?zpmkcjihmhoq
-brjddiglddy\s?(?:id|code|ref)\s?\d+
+brjddiglddy[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 vzzkhd[._-]?ufqr
 tnfnkcn[._-]?nkypyrbwpzgn
-fdwdlhfshzo\s?(?:id|code|ref)\s?\d+
-(?:pufvswchpeg|gykqldlo)[ _-]?\d{2}
-(?:hxxtqgqsu|ozjfwkfex)[ _-]?\d{4}
-sqfgq\s?(?:id|code|ref)\s?\d+
-(?:hqow|cngmms)[ _-]?\d{2}
-(?:gawepola|irmszdoduh)[ _-]?\d{2}
-roxflmyqrgdx\s?(?:id|code|ref)\s?\d+
-ydemyofsrsd\s?(?:id|code|ref)\s?\d+
-kdfmbhnckcc\s?(?:id|code|ref)\s?\d+
-latmercyx\s?(?:id|code|ref)\s?\d+
-hfychjcddhxw\s?(?:id|code|ref)\s?\d+
+fdwdlhfshzo[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(pufvswchpeg|gykqldlo)[ _-]?[0-9]{2}
+(hxxtqgqsu|ozjfwkfex)[ _-]?[0-9]{4}
+sqfgq[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(hqow|cngmms)[ _-]?[0-9]{2}
+(gawepola|irmszdoduh)[ _-]?[0-9]{2}
+roxflmyqrgdx[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+ydemyofsrsd[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+kdfmbhnckcc[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+latmercyx[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+hfychjcddhxw[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 hjcmvypj[._-]?xegyybpfdqqe
 nibpxmb[._-]?lcbqj
-wsqxmfvz\s?(?:id|code|ref)\s?\d+
-dohancpm\s?(?:id|code|ref)\s?\d+
-(?:fioouz|vmijqrbcbxu)[ _-]?\d{5}
-lxgrzfdroth\s?(?:id|code|ref)\s?\d+
+wsqxmfvz[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+dohancpm[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(fioouz|vmijqrbcbxu)[ _-]?[0-9]{5}
+lxgrzfdroth[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
 ajxnabirk[._-]?ifozlw
-rdwrp\s?(?:id|code|ref)\s?\d+
-(?:wkqknjeroxv|mxbjtvg)[ _-]?\d{5}
-wgwpirazb\s?(?:id|code|ref)\s?\d+
-(?:izfuxwpzxk|efgjdqcmlp)[ _-]?\d{5}
-(?:niyq|jhrttlyapcm)[ _-]?\d{2}
-(?:tnfcikkkq|ppfrrsvs)[ _-]?\d{5}
-(?:nbltrjrr|ijlxv)[ _-]?\d{4}
+rdwrp[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(wkqknjeroxv|mxbjtvg)[ _-]?[0-9]{5}
+wgwpirazb[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+(izfuxwpzxk|efgjdqcmlp)[ _-]?[0-9]{5}
+(niyq|jhrttlyapcm)[ _-]?[0-9]{2}
+(tnfcikkkq|ppfrrsvs)[ _-]?[0-9]{5}
+(nbltrjrr|ijlxv)[ _-]?[0-9]{4}
 jwshqxt[._-]?aezyznafo
-(?:sygjyojr|tqoeytlphoi)[ _-]?\d{5}
+(sygjyojr|tqoeytlphoi)[ _-]?[0-9]{5}
 vwqujeqbus[._-]?sxcds
-(?:tzsv|oatwzycjn)[ _-]?\d{3}
-uafffats\s?(?:id|code|ref)\s?\d+
-zszzdoa\s?(?:id|code|ref)\s?\d+
+(tzsv|oatwzycjn)[ _-]?[0-9]{3}
+uafffats[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+zszzdoa[ \t\r\n\f\v]?(id|code|ref)[ \t\r\n\f\v]?[0-9]+
+idrrv[._-]?tpgeogmlsahi
+sygtym[._-]?ugrrwcpefqjx
+(qylb|qszqau)[ _-]?[0-9]{5}
