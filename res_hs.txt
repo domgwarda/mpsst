@@ -1,0 +1,6 @@
+PRZED echo
+PO echo
+PRZED echo
+/home/zydkoniarz/Uwr/mpsst/test/perf_test_v2/test6/test6_hs.sh
+PO echo
+5487
