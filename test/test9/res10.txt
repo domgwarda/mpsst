@@ -1,0 +1,26 @@
+Times for: engine= pcre; warmup= 5; test= 10; threads= 1;
+avg= 233.1 ms
+Times for: engine= hs; warmup= 5; test= 10; threads= 1;
+avg= 959.7 ms
+Times for: engine= pcre; warmup= 5; test= 10; threads= 1;
+avg= 23.6 ms
+Times for: engine= pcre; warmup= 5; test= 10; threads= 1;
+avg= 2377.5 ms
+Times for: engine= pcre; warmup= 5; test= 10; threads= 1;
+avg= 2306.1 ms
+Times for: engine= hs; warmup= 5; test= 10; threads= 1;
+avg= 4.6 ms
+Times for: engine= hs; warmup= 5; test= 10; threads= 1;
+avg= 4.8 ms
+Times for: engine= hs; warmup= 0; test= 10; threads= 1;
+avg= 5.3 ms
+Times for: engine= hs; warmup= 0; test= 1; threads= 1;
+avg= 5 ms
+Times for: engine= hs; warmup= 0; test= 1; threads= 1;
+INIT  = 395806 ms
+SCAN  = 11.632 ms (avg)
+TOTAL = 395818 ms
+Times for: engine= pcre; warmup= 0; test= 1; threads= 1;
+INIT  = 44 ms
+SCAN  = 2294.42 ms (avg)
+TOTAL = 2338.42 ms

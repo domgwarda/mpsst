@@ -1,0 +1,14 @@
+Times for: engine= pcre; warmup= 0; test= 10; threads= 1;
+avg= 84.8 ms
+Times for: engine= hs; warmup= 0; test= 10; threads= 1;
+avg= 0.2 ms
+Times for: engine= hs; warmup= 0; test= 10; threads= 1;
+avg= 0 ms
+Times for: engine= hs; warmup= 0; test= 10; threads= 1;
+avg= 0 ms
+Times for: engine= pcre; warmup= 0; test= 10; threads= 1;
+avg= 84 ms
+Times for: engine= pcre; warmup= 5; test= 10; threads= 1;
+avg= 83.3 ms
+Times for: engine= hs; warmup= 5; test= 10; threads= 1;
+avg= 0 ms
