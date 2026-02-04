@@ -14,6 +14,8 @@
 
 
 namespace po = boost::program_options;
+using ms = std::chrono::milliseconds;
+
 
 int main(int argc, char* argv[]){
     po::options_description desc("REQUIRED options");
@@ -72,6 +74,7 @@ int main(int argc, char* argv[]){
     } else {
         selected_engine = PCRE2; 
     }
+    auto t0 = std::chrono::steady_clock::now();
     EngineRegex engine(selected_engine);
     AbstractRegexHandler* regex_handler = engine.get_engine();
     
@@ -88,6 +91,7 @@ int main(int argc, char* argv[]){
         cerr<< "Error: You must provide either a regex source file (-r) or a binary database (-b).\n";
         return 1;
     }
+    auto t1 = std::chrono::steady_clock::now();
 
     // Optional debug / single file test
     //regex_handler.scan_file();
@@ -136,7 +140,7 @@ int main(int argc, char* argv[]){
             scanner.scan(root_path);
             chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
 
-            auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count();
+            auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - begin).count();
             times.push_back(duration);
             avg += duration;
         }
@@ -145,8 +149,18 @@ int main(int argc, char* argv[]){
 
         // std::cout << "Times for: engine= " << vm["engine"].as<std::string>() << "; warmup= " << warmup << "; test= " << tests << "; threads= " << vm["threads"].as<int>() <<  ";" <<endl;
         // std::cout << "avg= " << avg << " ms" << endl;
-        std::cout << avg << endl;
+        auto init_time = std::chrono::duration_cast<ms>(t1 - t0).count();
+        auto avg_scan_us = avg;
+        auto avg_scan_ms = avg_scan_us / 1000.0;
 
+        std::cout << "Times for: engine= " << vm["engine"].as<std::string>()
+                << "; warmup= " << warmup
+                << "; test= " << tests
+                << "; threads= " << vm["threads"].as<int>() << ";\n";
+
+        std::cout << "INIT  = " << init_time << " ms\n";
+        std::cout << "SCAN  = " << avg_scan_ms << " ms (avg)\n";
+        std::cout << "TOTAL = " << (init_time + avg_scan_ms) << " ms\n";
 
     }
 
