@@ -67,6 +67,7 @@
 \chead{\leftmark}
 \cfoot{\thepage}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % \author{}
 \title{\textbf{HyperScan vs PCRE}\\
@@ -78,6 +79,7 @@ Raport z projektu}
 % \subtitle{Redukcja}
 \date{}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 \thispagestyle{empty}
 \maketitle
@@ -171,7 +173,7 @@ złożoności oraz analizę wpływu typu regexów na skalowanie czasowe.
 
 
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 
 \subsubsection{Wyniki}
@@ -207,37 +209,29 @@ złożoności oraz analizę wpływu typu regexów na skalowanie czasowe.
 \subsubsection{Wnioski}
 
 \begin{itemize}
-    \item Wraz ze wzrostem liczby wzorców Hyperscan wyraźnie lepiej radzi sobie
+    \item Dla wszystkich typów regexów czas działania obu silników rośnie wraz z liczbą wzorców. Jednak wraz ze wzrostem liczby wzorców Hyperscan wyraźnie lepiej radzi sobie
     z szukaniem wzorców niż PCRE. Różnica pomiędzy silnikami rośnie wraz
-    z liczbą regexów i dla dużych zbiorów osiąga kilka rzędów wielkości.
+    z liczbą regexów i dla dużych zbiorów staje się bazdzo znacząca.
 
     \item Najlepsze wyniki dla obu silników uzyskano w przypadku regexów
-    strukturalnych. Wzorce o jasno określonej strukturze umożliwiają szybkie
-    odrzucanie niedopasowanych fragmentów tekstu, co przekłada się na niski
-    i stabilny czas wykonania.
+    strukturalnych oraz regexów z szerokim dopasowaniem, między którymi nie ma wyraźniej różnicy w zachowaniu żadnego z silników. W praktyce oznacza to, że obie te kategorie są przetwarzane w sposób bardziej stabilny, bez gwałtownych wzrostów czasu wraz z liczbą regexów.
 
     \item Hyperscan charakteryzuje się bardzo wysoką wydajnością we wszystkich
-    analizowanych przypadkach, jednak najlepsze rezultaty uzyskuje dla regexów
-    literalnych z granicami słowa oraz dla regexów strukturalnych.
+    analizowanych przypadkach - jego czas wykonania zmienia się tylko nieznacznie wraz ze wzrostem liczby i typu regexów.
 
-    \item Silnik PCRE zdecydowanie najlepiej radzi sobie właśnie z regexami
-    strukturalnymi, osiągając dla nich znacznie lepsze wyniki niż dla pozostałych
-    kategorii wzorców. W pozostałych grupach czas działania PCRE rośnie
+    \item Silnik PCRE najlepiej radzi sobie z regexami strukturalnymi oraz z szerokim dopasowaniem, osiągając dla nich znacznie lepsze wyniki niż dla regexów prawie słownych, w których czas działania PCRE rośnie
     zauważalnie szybciej.
-
-    \item Krótkie literały bez ograniczeń początku dopasowania oraz regexy
-    z szerokim dopasowaniem i alternacjami stanowią dla Hyperscana większe
-    obciążenie, choć nawet w tych przypadkach jego wydajność pozostaje
-    znacząco wyższa niż w przypadku PCRE.
     
 \end{itemize}
-
 Uzyskane wyniki wskazują, że im większa jest liczba jednocześnie
     analizowanych wzorców, tym przewaga Hyperscana nad PCRE staje się
     wyraźniejsza, co czyni go szczególnie dobrze przystosowanym do zadań
     typu multi-pattern matching.
 
+Dodatkowo "stały" czas HyperScana może wynikać z jużnie z pattern matchingu a poprostu otwierania, pobieraia itd plików
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 
 
 
@@ -274,6 +268,7 @@ Uzyskane wyniki wskazują, że im większa jest liczba jednocześnie
 
 \end{figure}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 
 \subsubsection{Wyniki - 1000 regexów}
@@ -305,6 +300,17 @@ Uzyskane wyniki wskazują, że im większa jest liczba jednocześnie
 
 \end{figure}
 
+\subsubsection{Wnioski}
+\begin{itemize}
+    \item Dla obu silników zwiększanie liczby wątków początkowo znacznie skraca czas wykoanania, co wskazuje na efektywne wykorzystanie równoległości.
+
+    \item Dla PCRE liczba wątków, przy której osiągany jest najlepszy czas, zależy od typu regexów. Dla regexów słownych minimalny czas uzyskiwany jest przy większej liczbie wątków niż dla regexów strukturalnych i z szerokim dopasowaniem
+    
+    \item Dla regexów strukturalnych i z szerokim dopasowaniem przy dużej liczbie wątków (rzędu $\geq 100$) czasy działania Hyperscana i PCRE stają się do siebie zbliżone.
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 
 \subsection{Jak ilość regexów vs ilość wątków wpływa na czas wykonania się programu?}
@@ -370,6 +376,20 @@ Uzyskane wyniki wskazują, że im większa jest liczba jednocześnie
 \end{subfigure}
 \end{figure}
 
+\subsubsection{Wnioski}
+\begin{itemize}
+    \item Dla HyperScana zwiększenie ilości wątków dla ma niewielki wpływ na czas działania
+
+    \item Dla PCRE większa liczba wątków rzeczywiście przyspiesza działanie, jednak nie kompensuje w pełni wzrostu czasu wynikającego ze zwiększania liczby regexów.
+
+    \item Dla PCRE to przy ilu wątkach osiąga najlepszy czas zależy od regexów, dla regexów typu słownych sporo dalej osiąga najniższy czas w przeciwieństwie do regexów strukturalnych czy z szerokim dopasowaniem gdzie osiąga najniższ czas dla podobnej ilości wątków co HyperScan 
+    
+    \item Podobnie jak w poprzedniej analizie, dla regexów strukturalnych i z szerokim dopasowaniem przy dużej liczbie wątków (rzędu $\geq 100$) czasy wykonywania obu silników stają się zbliżone.
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 \subsection{Jak ilość małych ($\leq 3$\,MB) plików wpływa na czas wykonywania?}
 
 \begin{figure}[H]
@@ -385,11 +405,17 @@ Do testów wykorzystano 100 wątków, a każdy program miał 3 podejścia do pro
 
 \subsubsection{Przykłady regexów użytych w teście}
 
-\begin{itemize}[leftmargin=*, itemsep=2pt]
-    \item \lstinline!^[0-9]+(\.[0-9]+)?\s?(l|ml)$!
-    \item \lstinline!^Saldo:\s-?[0-9]+,[0-9]{2}\sPLN$!
-    \item \lstinline!^Dawka:\s[0-9]+(mg|ml)$!
-\end{itemize}
+\lstset{
+  basicstyle=\ttfamily\small,
+  backgroundcolor=\color{gray!5},
+  frame=single,
+  rulecolor=\color{gray!60}
+}
+\begin{lstlisting}
+^[0-9]+(\.[0-9]+)?\s?(l|ml)$
+^Saldo:\s-?[0-9]+,[0-9]{2}\sPLN$
+^Dawka:\s[0-9]+(mg|ml)$
+\end{lstlisting}
 
 \subsubsection{Wnioski z wykresu}
 
