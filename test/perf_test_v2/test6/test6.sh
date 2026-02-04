@@ -17,19 +17,21 @@ cmake --build "$BUILD_DIR"
 
 chmod +x "$SCRIPT_DIR"/test6_hs.sh && chmod +x "$SCRIPT_DIR"/test6_pcre.sh
 
-for i in {1..100000}; do
+for i in {1..70}; do
     if (( i % 20 == 0 )); then
         TEST_TREE_DIR="$SCRIPT_DIR/../../../perf_test_data/test6/tree/branch$i"
         mkdir -p "$TEST_TREE_DIR"
     fi
 
-    base64 /dev/urandom | head -c 10KB > "$TEST_TREE_DIR/file$i.txt"
+    base64 /dev/urandom | head -c 3MB > "$TEST_TREE_DIR/file$i.txt"
 done
 
 TEST_TREE_DIR="$SCRIPT_DIR/../../../perf_test_data/test6/tree"
 
-"$SCRIPT_DIR"/test6_hs.sh
-"$SCRIPT_DIR"/test6_pcre.sh
+{
+  echo "70,"
+  "$SCRIPT_DIR"/test6_pcre.sh
+} >> "$SCRIPT_DIR"/res_pcre.txt
 
 
 

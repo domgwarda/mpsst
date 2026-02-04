@@ -5,11 +5,11 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 prog="$SCRIPT_DIR/../../build/main"
 
 indir="./test/performance_test/data/spamassassin"
-regex_all="./test/perf_test_v2/benchmark/easy_1000.rgx"
+regex_all="./test/perf_test_v2/benchmark/words_1000.rgx"
 
 # parametry testu
-WARMUP=4
-ITER=10
+WARMUP=3
+ITER=7
 
 # ile regexów testować (dostosuj do pliku)
 STEPS=(1 2 5 10 20 50 100 200 500 1000)
@@ -35,7 +35,7 @@ run_one() {
 
   # uruchom i wyciągnij linię z avg=
   local line
-  line="$("$prog" -f "$indir" -r "$tmp_rgx" -e "$engine" -w "$WARMUP" -t "$ITER" 2>/dev/null | grep -m1 "avg=" || true)"
+  line="$("$prog" -f "$indir" -r "$tmp_rgx" -e "$engine" -w "$WARMUP" -t "$ITER"  | grep -m1 "avg=" || true)"
 
   if [[ -z "$line" ]]; then
     echo "WARN: brak avg= dla engine=$engine count=$count" >&2

@@ -50,17 +50,20 @@ void HSFileScanner::scan_file(const string &path) {
         return;
     }
     
-    hs_scratch_t *scratch = nullptr;    // hs_scratch_t in Hyperscan is a temporary, per-thread workspace required for scanning
+    thread_local hs_scratch_t *scratch = nullptr;
 
-    if (hs_alloc_scratch(database, &scratch) != HS_SUCCESS) {
-        std::cerr << "Failed to allocate scratch space\n";
-        return;
+    if (!scratch) {
+        if (hs_alloc_scratch(database, &scratch) != HS_SUCCESS) {
+            std::cerr << "Failed to allocate scratch space (thread_local)\n";
+            scratch = nullptr;
+            return;
+        }
+        DEBUG("[scan_file] Allocated thread_local scratch=%p", (void*)scratch);
     }
 
     hs_stream_t *stream = nullptr;
     if (hs_open_stream(database, 0, &stream) != HS_SUCCESS) {
         std::cerr << "Failed to open Hyperscan stream\n";
-        hs_free_scratch(scratch);
         return;
     }
 
@@ -71,7 +74,6 @@ void HSFileScanner::scan_file(const string &path) {
     if (!in) {
         std::cerr << "Cannot open file for streaming scan: " << path << "\n";
         hs_close_stream(stream, scratch, nullptr, nullptr);
-        hs_free_scratch(scratch);
         return;
     }
 
@@ -106,7 +108,6 @@ void HSFileScanner::scan_file(const string &path) {
 
     free(ctx_path);
 
-    hs_free_scratch(scratch);
     in.close();
 }
 

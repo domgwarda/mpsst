@@ -7,8 +7,4 @@ prog="$SCRIPT_DIR/../../../build/main"
 regex="perf_test_data/test6/regex.rgx"
 indir="perf_test_data/test6/tree"
 
-${prog} -f "${indir}" -r "${regex}" -e pcre -t -w 1 -h 10
-${prog} -f "${indir}" -r "${regex}" -e pcre -t -w 1 -h 50
-${prog} -f "${indir}" -r "${regex}" -e pcre -t -w 1 -h 100
-${prog} -f "${indir}" -r "${regex}" -e pcre -t -w 1 -h 200
-${prog} -f "${indir}" -r "${regex}" -e pcre -t -w 1 -h 500
+${prog} -f "${indir}" -r "${regex}" -e pcre -t 1 -w 1 -h 100
